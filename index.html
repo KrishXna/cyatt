@@ -8,96 +8,239 @@
   </head>
   <body>
     <!-- Navbar -->
-    <div class="w-full fixe sticky top-0 left-0 py-4 bg-[#E2EDF3]">
-      <div class="flex justify-between mx-auto max-w-7xl px-4">
-        <div>
-          <img src="./assets/cyattlogo.jpeg" alt="logo" class="w-20" />
-        </div>
-        <div class="flex justify-center items-center gap-4">
-          <div class="flex flex-col">
-            <div>
-              <span class="text-cyan-500">Need Help ? </span>
-              <span class="text-sm lg:text-lg">Speak with a</span>
+    <div class="w-full">
+      <div
+        class="h- top-0 left-0 bg-ce bg-cover bg-no-repeat relative"
+        style="background-image: url(./assets/banner.jpeg)"
+      >
+        <div class="absolute top-0 left-0 right-0 inset-0 bg-black/50"></div>
+        <div class="border shadow-sm sticky z-50 top-0 w-full">
+          <div
+            class="flex justify-between mx-auto max-w-7xl px-4 z-10 relative"
+          >
+            <img
+              src="./assets/Bsides Goa logo 2.png"
+              alt="logo"
+              class="w-[180px] h-[170px]"
+            />
+            <div class="flex justify-center items-center gap-4">
+              <div class="flex flex-col">
+                <div>
+                  <span class="text-cyan-500">Need Help ? </span>
+                  <span class="text-sm lg:text-lg">Speak with a</span>
+                </div>
+                <p class="text-sm lg:text-lg">Licenced Insurance Agent</p>
+              </div>
+              <button class="bg-cyan-500 px-2 py-4 rounded-md text-white">
+                +123-123-123
+              </button>
             </div>
-            <p class="text-sm lg:text-lg">Licenced Insurance Agent</p>
           </div>
-          <button class="bg-cyan-500 px-2 py-4 rounded-md text-white">
-            +123-123-123
-          </button>
         </div>
+
+          <!-- Hero Section -->
+          <div class="w-full bg-[#E2EDF3 z-10 relative">
+            <div class="mx-auto max-w-7xl px-4">
+              <div
+                class="md:flex justify-between items-center gap-20 mt-20 py-20"
+              >
+                <!-- Hero Left -->
+                <div class="left w-full md:w-1/2">
+                  <div class="bg-[#] rounded-4xl">
+                    <div class="content">
+                      <h1 class="text-4xl font-bold text-white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Aspernatur, eius facilis.
+                      </h1>
+                      <p class="py-4 text-white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Suscipit temporibus quis ullam labore.
+                      </p>
+                    </div>
+                    <!--Hero Left Form -->
+                    <!-- <div class="bg-[#F8F8F8] rounded-lg p-10 w-">
+                  <form>
+                    <div class="flex flex-col">
+                      <label for="name">Full Name:</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="e.g Cyatt"
+                        class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
+                      />
+                    </div>
+                    <div class="flex flex-col pt-4">
+                      <label for="name">Email:</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="e.g cyatt@gmail.com"
+                        class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
+                      />
+                    </div>
+                    <div class="flex flex-col pt-4">
+                      <label for="name">Contact No:</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="e.g +123-123-123"
+                        class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
+                      />
+                    </div>
+                    <div class="flex flex-col pt-4">
+                      <label for="name">Message:</label>
+                      <textarea
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="e.g Type message..."
+                        class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
+                      ></textarea>
+                    </div>
+                  </form>
+                </div> -->
+                  </div>
+                </div>
+
+                <!-- Hero Right -->
+                <div class="right w-full md:w-1/2">
+                  <div class="bg-[#F8F8F8] rounded-lg p-10 w-">
+                    <form>
+                      <div class="flex flex-col">
+                        <label for="name">Full Name:</label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          placeholder="e.g Cyatt"
+                          class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
+                        />
+                      </div>
+                      <div class="flex flex-col pt-4">
+                        <label for="name">Email:</label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          placeholder="e.g cyatt@gmail.com"
+                          class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
+                        />
+                      </div>
+                      <div class="flex flex-col pt-4">
+                        <label for="name">Contact No:</label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          placeholder="e.g +123-123-123"
+                          class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
+                        />
+                      </div>
+                      <div class="flex flex-col pt-4">
+                        <label for="name">Message:</label>
+                        <textarea
+                          type="text"
+                          id="name"
+                          name="name"
+                          placeholder="e.g Type message..."
+                          class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
+                        ></textarea>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
-    </div>
-    <!-- Navbar End -->
-    <!-- Hero Section -->
-    <div class="w-full bg-[#E2EDF3] ">
-      <div class="mx-auto max-w-7xl px-4">
-        <div class="md:flex justify-between gap-4 gap">
-          <!-- Hero Left -->
-          <div class="left w-full md:w-1/2 bg-[#E2EDF3]">
-            <div class="bg-[#ccc] rounded-4xl">
-              <div class="content">
-                <h1 class="text-3xl font-bold">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aspernatur, eius facilis.
-                </h1>
-                <p class="py-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Suscipit temporibus quis ullam labore.
-                </p>
-              </div>
-              <!--Hero Left Form -->
-              <div class=" bg-[#F8F8F8] rounded-lg p-10 w-1/2">
-                <form>
-                  <div class="flex flex-col">
-                    <label for="name">Full Name:</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="e.g Cyatt"
-                      class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
-                    />
-                  </div>
-                  <div class="flex flex-col pt-4">
-                    <label for="name">Email:</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="e.g cyatt@gmail.com"
-                      class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
-                    />
-                  </div>
-                  <div class="flex flex-col pt-4">
-                    <label for="name">Contact No:</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="e.g +123-123-123"
-                      class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
-                    />
-                  </div>
-                  <div class="flex flex-col pt-4">
-                    <label for="name">Message:</label>
-                    <textarea
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="e.g Type message..."
-                      class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
-                    ></textarea>
-                  </div>
-                </form>
-              </div>
+      <!-- Banner -->
+      <div class="bg-yellow-300 w-full py-10">
+        <!-- <div class="mx-auto max-w-7xl px-4"> -->
+        <div class="flex justify-evenly gap-10">
+          <img src="./assets/smm service/canva icon.png" alt="logo" class="" />
+          <img
+            src="./assets/smm service/adobe illustrator icon.png"
+            alt="logo"
+          />
+          <img src="./assets/smm service/hootsuite icon.png" alt="logo" />
+          <img src="./assets/smm service/photoshop icon.png" alt="logo" />
+          <img src="./assets/smm service/canva icon.png" alt="logo" />
+        </div>
+        <!-- </div> -->
+      </div>
+      <!-- Card Section -->
+      <div class="w-full py-20">
+        <div class="mx-auto max-w-7xl px-4">
+          <div class="flex justify-center">
+            <div class="text-center max-w-lg">
+              <h2 class="py-4 text-4xl">
+                We've helped thousands find afffordable auto insurance.
+              </h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Consequatur velit asperiores nemo non inventore, saepe itaque
+                nobis architecto adipisci eaque.
+              </p>
             </div>
           </div>
 
-          <!-- Hero Right -->
-          <div class="right border w-full md:w-1/2 border-red-500"></div>
-      </div>
-    </div>
+          <!-- Cards -->
+          <div class="md:flex gap-8 pt-20">
+            <div class="p-4 rounded-xl max-w-sm shadow-2xl">
+              <h3>Choose your Coverage amount and term</h3>
 
-    <!-- Hero Section End -->
+              <p>
+                Select your coverage amount and term Use the calculator to help,
+                if you wish
+              </p>
+              <div class="overflow-hidden">
+                <img src="./assets/smm service/photoshop icon.png" alt="" />
+              </div>
+            </div>
+            <div class="p-4 rounded-xl max-w-sm shadow-2xl">
+              <h3>Choose your Coverage amount and term</h3>
+
+              <p>
+                Select your coverage amount and term Use the calculator to help,
+                if you wish
+              </p>
+              <div class="overflow-hidden">
+                <img src="./assets/smm service/photoshop icon.png" alt="" />
+              </div>
+            </div>
+            <div class="p-4 rounded-xl max-w-sm shadow-2xl">
+              <h3>Choose your Coverage amount and term</h3>
+
+              <p>
+                Select your coverage amount and term Use the calculator to help,
+                if you wish
+              </p>
+              <div class="overflow-hidden">
+                <img src="./assets/smm service/photoshop icon.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center py-20">
+            <div class="text-center max-w-lg">
+              <h2 class="py-4 text-4xl">
+                We've helped thousands find afffordable auto insurance.
+              </h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Consequatur velit asperiores nemo non inventore, saepe itaque
+                nobis architecto adipisci eaque.
+              </p>
+              <button
+                class="bg-cyan-500 px-2 py-4 w-1/2 rounded-md text-white font-bold mt-8"
+              >
+                Contact
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
   </body>
 </html>
