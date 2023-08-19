@@ -6,43 +6,50 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
+  <style>
+    .bgwhite{
+      background-color: white;
+    }
+  </style>
   <body>
     <!-- Navbar -->
-    <div class="w-full">
+    <div class="w-full relativ">
+      <div class="navbar fixed z-50 top-0 w-full">
+        <div
+          class="md:flex justify-between mx-auto max-w-7xl px-4 z-10 relative"
+        >
+          <img
+            src="./assets/Bsides Goa logo 2.png"
+            alt="logo"
+            class="w-[180px] h-[100px]"
+          />
+          <div class="flex justify-center items-center gap-4">
+            <div class="flex flex-col">
+              <div>
+                <span class="text-cyan-500">Need Help ? </span>
+                <span class="text-sm lg:text-lg">Speak with a</span>
+              </div>
+              <p class="text-sm lg:text-lg">Licenced Insurance Agent</p>
+            </div>
+            <button class="bg-cyan-500 px-2 py-4 rounded-md text-white">
+              +123-123-123
+            </button>
+          </div>
+        </div>
+      </div>
       <div
         class="h- top-0 left-0 bg-ce bg-cover bg-no-repeat relative"
         style="background-image: url(./assets/banner.jpeg)"
       >
+      <!-- Layer -->
         <div class="absolute top-0 left-0 right-0 inset-0 bg-black/50"></div>
-        <div class="border shadow-sm sticky z-50 top-0 w-full">
-          <div
-            class="flex justify-between mx-auto max-w-7xl px-4 z-10 relative"
-          >
-            <img
-              src="./assets/Bsides Goa logo 2.png"
-              alt="logo"
-              class="w-[180px] h-[170px]"
-            />
-            <div class="flex justify-center items-center gap-4">
-              <div class="flex flex-col">
-                <div>
-                  <span class="text-cyan-500">Need Help ? </span>
-                  <span class="text-sm lg:text-lg">Speak with a</span>
-                </div>
-                <p class="text-sm lg:text-lg">Licenced Insurance Agent</p>
-              </div>
-              <button class="bg-cyan-500 px-2 py-4 rounded-md text-white">
-                +123-123-123
-              </button>
-            </div>
-          </div>
-        </div>
+       
 
           <!-- Hero Section -->
-          <div class="w-full bg-[#E2EDF3 z-10 relative">
+          <div class="w-full bg-[#E2EDF3 z-10 relative pt-40">
             <div class="mx-auto max-w-7xl px-4">
               <div
-                class="md:flex justify-between items-center gap-20 mt-20 py-20"
+                class="md:flex justify-between items-center gap-20 py-20"
               >
                 <!-- Hero Left -->
                 <div class="left w-full md:w-1/2">
@@ -158,8 +165,7 @@
       </div>
       <!-- Banner -->
       <div class="bg-yellow-300 w-full py-10">
-        <!-- <div class="mx-auto max-w-7xl px-4"> -->
-        <div class="flex justify-evenly gap-10">
+        <div class="flex flex-wrap justify-evenly gap-10">
           <img src="./assets/smm service/canva icon.png" alt="logo" class="" />
           <img
             src="./assets/smm service/adobe illustrator icon.png"
@@ -169,7 +175,6 @@
           <img src="./assets/smm service/photoshop icon.png" alt="logo" />
           <img src="./assets/smm service/canva icon.png" alt="logo" />
         </div>
-        <!-- </div> -->
       </div>
       <!-- Card Section -->
       <div class="w-full py-20">
@@ -189,7 +194,7 @@
 
           <!-- Cards -->
           <div class="md:flex gap-8 pt-20">
-            <div class="p-4 rounded-xl max-w-sm shadow-2xl">
+            <div class="p-4 rounded-xl w-full md:max-w-sm shadow-2xl">
               <h3>Choose your Coverage amount and term</h3>
 
               <p>
@@ -200,7 +205,7 @@
                 <img src="./assets/smm service/photoshop icon.png" alt="" />
               </div>
             </div>
-            <div class="p-4 rounded-xl max-w-sm shadow-2xl">
+            <div class="p-4 rounded-xl w-full md:max-w-sm shadow-2xl">
               <h3>Choose your Coverage amount and term</h3>
 
               <p>
@@ -211,7 +216,7 @@
                 <img src="./assets/smm service/photoshop icon.png" alt="" />
               </div>
             </div>
-            <div class="p-4 rounded-xl max-w-sm shadow-2xl">
+            <div class="p-4 rounded-xl w-full md:max-w-sm shadow-2xl">
               <h3>Choose your Coverage amount and term</h3>
 
               <p>
@@ -223,6 +228,7 @@
               </div>
             </div>
           </div>
+
           <div class="flex justify-center py-20">
             <div class="text-center max-w-lg">
               <h2 class="py-4 text-4xl">
@@ -240,7 +246,24 @@
               </button>
             </div>
           </div>
+          
         </div>
       </div>
+      <script>
+        window.onscroll = function() {myFunction()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        console.log(sticky);
+
+        function myFunction() {
+          if (window.pageYOffset >="100px") {
+            navbar.classList.add("bgwhite")
+          } else {
+            navbar.classList.remove("bgwhite");
+          }
+        }
+        
+      </script>
   </body>
 </html>
