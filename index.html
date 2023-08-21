@@ -5,11 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cyatt</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
   </head>
   <style>
-    .bgwhite{
+    .bgwhite {
       background-color: white;
+    }
+    .parallax {
+      background-image: url("./assets/banner.jpeg");
+      min-height: 600px;
+      margin-top: 100px;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+    .box-content:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      width: 0%;
+      height: 0%;
+      z-index: -2;
+      background-color: #C9F31d;
+      transition: 200ms all;
+      border-radius: 10px;
+    }
+    .box-content:after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 0%;
+      z-index: -2;
+      background-color: #C9F31d;
+      transition: 200ms all;
+      border-radius: 10px;
+    }
+
+    .box-content:hover::before,.box-content:hover::after{
+      width: 100%;
+      height: 100%;
     }
   </style>
   <body>
@@ -17,24 +56,27 @@
     <div class="w-full">
       <div id="navbar" class="navbar fixed z-50 top-0 w-full">
         <div
-          class="md:flex justify-between mx-auto max-w-7xl px-4 z-10 relative"
+          class="flex justify-between items-center mx-auto max-w-7xl px-4 z-10 relative"
         >
           <img
             src="./assets/Bsides Goa logo 2.png"
             alt="logo"
             class="w-[180px] h-[100px]"
           />
-          <div class="flex justify-center items-center gap-4">
+          <div class="hidden md:flex justify-center items-center gap-4">
             <div class="flex flex-col">
               <div>
-                <span class="text-cyan-500">Need Help ? </span>
+                <span class="text-[#C9F31d]">Need Help ? </span>
                 <span class="text-sm lg:text-lg">Speak with a</span>
               </div>
               <p class="text-sm lg:text-lg">Licenced Insurance Agent</p>
             </div>
-            <button class="bg-cyan-500 px-2 py-4 rounded-md text-white">
+            <button class="bg-[#C9F31d] px-2 py-4 rounded-md">
               +123-123-123
             </button>
+          </div>
+          <div class="md:hidden block text-2xl">
+            <i class="fa-solid fa-bars"></i>
           </div>
         </div>
       </div>
@@ -42,31 +84,28 @@
         class="top-0 left-0 bg-ce bg-cover bg-no-repeat relative"
         style="background-image: url(./assets/banner.jpeg)"
       >
-      <!-- Layer -->
+        <!-- Layer -->
         <div class="absolute top-0 left-0 right-0 inset-0 bg-black/50"></div>
-       
 
-          <!-- Hero Section -->
-          <div class="w-full  z-10 relative pt-40">
-            <div class="mx-auto max-w-7xl px-4">
-              <div
-                class="md:flex justify-between items-center gap-20 py-20"
-              >
-                <!-- Hero Left -->
-                <div class="left w-full md:w-1/2">
-                  <div class="rounded-4xl">
-                    <div class="content">
-                      <h1 class="text-4xl font-bold text-white">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Aspernatur, eius facilis.
-                      </h1>
-                      <p class="py-4 text-white">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Suscipit temporibus quis ullam labore.
-                      </p>
-                    </div>
-                    <!--Hero Left Form -->
-                    <!-- <div class="bg-[#F8F8F8] rounded-lg p-10 w-">
+        <!-- Hero Section -->
+        <div class="w-full z-10 relative pt-40">
+          <div class="mx-auto max-w-7xl px-4">
+            <div class="md:flex justify-between items-center gap-20 py-20">
+              <!-- Hero Left -->
+              <div class="left w-full md:w-1/2">
+                <div class="rounded-4xl">
+                  <div class="content">
+                    <h1 class="text-4xl font-bold text-white">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aspernatur, eius facilis.
+                    </h1>
+                    <p class="py-4 text-white">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Suscipit temporibus quis ullam labore.
+                    </p>
+                  </div>
+                  <!--Hero Left Form -->
+                  <!-- <div class="bg-[#F8F8F8] rounded-lg p-10 w-">
                   <form>
                     <div class="flex flex-col">
                       <label for="name">Full Name:</label>
@@ -110,212 +149,341 @@
                     </div>
                   </form>
                 </div> -->
-                  </div>
                 </div>
+              </div>
 
-                <!-- Hero Right -->
-                <div class="right w-full md:w-1/2">
-                  <div class="bg-[#F8F8F8] rounded-lg p-10 w-">
-                    <form>
-                      <div class="flex flex-col">
-                        <label for="name">Full Name:</label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          placeholder="e.g Cyatt"
-                          class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
-                        />
-                      </div>
-                      <div class="flex flex-col pt-4">
-                        <label for="name">Email:</label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          placeholder="e.g cyatt@gmail.com"
-                          class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
-                        />
-                      </div>
-                      <div class="flex flex-col pt-4">
-                        <label for="name">Contact No:</label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          placeholder="e.g +123-123-123"
-                          class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
-                        />
-                      </div>
-                      <div class="flex flex-col pt-4">
-                        <label for="name">Message:</label>
-                        <textarea
-                          type="text"
-                          id="name"
-                          name="name"
-                          placeholder="e.g Type message..."
-                          class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
-                        ></textarea>
-                      </div>
-                    </form>
-                  </div>
+              <!-- Hero Right -->
+              <div class="right w-full md:w-1/2">
+                <div class="bg-[#0000002f] rounded-lg p-10">
+                  <form>
+                    <div class="flex flex-col">
+                      <label for="name" class="text-white font-semibold">Full Name:</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="e.g Cyatt"
+                        class="border-b bg-transparent mt-2"
+                      />
+                    </div>
+                    <div class="flex flex-col pt-4">
+                      <label for="name">Email:</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="e.g cyatt@gmail.com"
+                        class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
+                      />
+                    </div>
+                    <div class="flex flex-col pt-4">
+                      <label for="name">Contact No:</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="e.g +123-123-123"
+                        class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
+                      />
+                    </div>
+                    <div class="flex flex-col pt-4">
+                      <label for="name">Message:</label>
+                      <textarea
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="e.g Type message..."
+                        class="border outline-none text-sm px-2 w- h-8 rounded bg-slate-100 text-black placeholder:text-slate-400 mt-1"
+                      ></textarea>
+                    </div>
+                    <button class="px-2 py-2 bg-[#C9F31d] mt-4 w-1/3 h-12">Submit</button>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
+        </div>
       </div>
       <!-- Banner -->
       <div class="bg-yellow-300 w-full py-10">
         <div class="flex flex-wrap justify-evenly gap-10">
-          <img src="./assets/smm service/canva icon.png" alt="logo" class="" />
+          <img
+            src="./assets/smm service/canva icon.png"
+            alt="logo"
+            class="hover:scale-125 cursor-pointer duration-100 delay-100"
+          />
           <img
             src="./assets/smm service/adobe illustrator icon.png"
             alt="logo"
+            class="hover:scale-110 cursor-pointer duration-100 delay-100"
           />
-          <img src="./assets/smm service/hootsuite icon.png" alt="logo" />
-          <img src="./assets/smm service/photoshop icon.png" alt="logo" />
-          <img src="./assets/smm service/canva icon.png" alt="logo" />
+          <img
+            src="./assets/smm service/hootsuite icon.png"
+            alt="logo"
+            class="hover:scale-110 cursor-pointer duration-100 delay-100"
+          />
+          <img
+            src="./assets/smm service/photoshop icon.png"
+            alt="logo"
+            class="hover:scale-110 cursor-pointer duration-100 delay-100"
+          />
+          <img
+            src="./assets/smm service/canva icon.png"
+            alt="logo"
+            class="hover:scale-110 cursor-pointer duration-100 delay-100"
+          />
         </div>
       </div>
-      <!-- Card Section -->
-      <div class="w-full py-20">
-        <div class="mx-auto max-w-7xl px-4">
-          <div class="flex justify-center">
-            <div class="text-center max-w-lg">
-              <h2 class="py-4 text-4xl">
-                We've helped thousands find afffordable auto insurance.
-              </h2>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Consequatur velit asperiores nemo non inventore, saepe itaque
-                nobis architecto adipisci eaque.
-              </p>
+      <!-- About Us -->
+      <div>
+        <div class="mx-auto max-w-7xl px-4 pt-20">
+          <h2
+            class="pb-20 max-w-3xl mx-aut md:pl-32 pt-20 text-cente text-4xl lg:text-5xl font-bold"
+          >
+            Transform Your Business with Cutting-Edge IT Services
+          </h2>
+          <div class="md:flex justify-between w-full">
+            <div class="parallax w-full"></div>
+
+            <div
+              class="md:flex justify-betwee gap-20 w-full"
+              style="height: px"
+            >
+              <div class="flex flex-col px-10">
+                <p class="lg:pt-0 pt-10 text-xl">
+                  We take great pride in our ability to cover a wide range of
+                  domains, encompassing web development, digital marketing, and
+                  creative design. Our team possesses the diverse skill set
+                  required to deliver exceptional outcomes. With a proven track
+                  record of successful projects, we assure you that our team
+                  will provide you with the highest level of expertise and
+                  deliver tailored solutions that meet your specific needs
+                </p>
+                <button
+                  class="mt-20 border rounded-full w-32 h-32 cursor-pointer hover:bg-[#C9F31D] duration-300 delay-75"
+                >
+                  Explore us
+                </button>
+              </div>
+            </div>
+            <div class="relative -top-0 max-w-[200px] hidden md:block">
+              <img
+                src="./assets/smm service/Social Media Analytics.png"
+                alt="about_img"
+                class="h-[%] rounded-md"
+              />
             </div>
           </div>
-
-          <!-- Cards -->
-          <div class="md:flex gap-8 pt-20">
-            <div class="p-4 rounded-xl w-full md:max-w-sm shadow-2xl">
-              <h3>Choose your Coverage amount and term</h3>
-
-              <p>
-                Select your coverage amount and term Use the calculator to help,
-                if you wish
-              </p>
-              <div class="overflow-hidden">
-                <img src="./assets/smm service/photoshop icon.png" alt="" />
-              </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card Section -->
+    <div class="w-full md:pt-40">
+      <div class="mx-auto max-w-7xl px-4">
+        <div class="flex justify-center">
+          <div class="text-center max-w-lg">
+            <h2 class="py-4 text-4xl">
+              We've helped thousands find afffordable auto insurance.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Consequatur velit asperiores nemo non inventore, saepe itaque
+              nobis architecto adipisci eaque.
+            </p>
+          </div>
+        </div>
+        <!-- card1 -->
+        <div class="md:flex justify-center gap-10 pt-20">
+          <div 
+            class="p- rounded-xl w-full md:max-w-sm shadow-md box relative"
+            style="background-image: url(./assets/dot.webp)"
+          >
+            <div class="overflow-hidden box-img bg-black rounded ">
+              <img
+                src="./assets/smm service/photoshop icon.png"
+                alt="img"
+                class=""
+              />
             </div>
-            <div class="p-4 rounded-xl w-full md:max-w-sm shadow-2xl">
-              <h3>Choose your Coverage amount and term</h3>
-
+            <div class="p-4 box-content relative cursor-pointer">
+              <h3 class="text-2xl font-bold py-4">
+                Choose your Coverage amount.
+              </h3>
               <p>
                 Select your coverage amount and term Use the calculator to help,
                 if you wish
               </p>
-              <div class="overflow-hidden">
-                <img src="./assets/smm service/photoshop icon.png" alt="" />
-              </div>
-            </div>
-            <div class="p-4 rounded-xl w-full md:max-w-sm shadow-2xl">
-              <h3>Choose your Coverage amount and term</h3>
-
-              <p>
-                Select your coverage amount and term Use the calculator to help,
-                if you wish
-              </p>
-              <div class="overflow-hidden">
-                <img src="./assets/smm service/photoshop icon.png" alt="" />
+              <div class="py-4">
+                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12">
+                  <i class="fas fa-arrow-right"></i> Explore
+                </button>
               </div>
             </div>
           </div>
-
-          <div class="flex justify-center py-20">
-            <div class="text-center max-w-lg">
-              <h2 class="py-4 text-4xl">
-                We've helped thousands find afffordable auto insurance.
-              </h2>
+          <!-- Card2 -->
+          <div 
+            class="p- rounded-xl w-full md:max-w-sm shadow-md box relative mt-10 md:mt-0"
+            style="background-image: url(./assets/dot.webp)"
+          >
+            <div class="overflow-hidden box-img bg-black ">
+              <img
+                src="./assets/smm service/photoshop icon.png"
+                alt="img"
+                class=""
+              />
+            </div>
+            <div class="p-4 box-content relative cursor-pointer">
+              <h3 class="text-2xl font-bold py-4">
+                Choose your Coverage amount.
+              </h3>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Consequatur velit asperiores nemo non inventore, saepe itaque
-                nobis architecto adipisci eaque.
+                Select your coverage amount and term Use the calculator to help,
+                if you wish
               </p>
-              <button
-                class="bg-cyan-500 px-2 py-4 w-1/2 rounded-md text-white font-bold mt-8"
-              >
-                Contact
-              </button>
+              <div class="py-4">
+                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12">
+                  <i class="fas fa-arrow-right"></i> Explore
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Card3 -->
+          <div 
+            class="p- rounded-xl w-full md:max-w-sm shadow-md box relative  mt-10 md:mt-0"
+            style="background-image: url(./assets/dot.webp)"
+          >
+            <div class="overflow-hidden box-img bg-black ">
+              <img
+                src="./assets/smm service/photoshop icon.png"
+                alt="img"
+                class=""
+              />
+            </div>
+            <div class="p-4 box-content relative cursor-pointer">
+              <h3 class="text-2xl font-bold py-4">
+                Choose your Coverage amount.
+              </h3>
+              <p>
+                Select your coverage amount and term Use the calculator to help,
+                if you wish
+              </p>
+              <div class="py-4">
+                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12">
+                  <i class="fas fa-arrow-right"></i> Explore
+                </button>
+              </div>
             </div>
           </div>
           
         </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center py-20">
+          <div class="text-center max-w-lg">
+            <h2 class="py-4 text-4xl">
+              We've helped thousands find afffordable auto insurance.
+            </h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Consequatur velit asperiores nemo non inventore, saepe itaque
+              nobis architecto adipisci eaque.
+            </p>
+            <button
+              class="bg-[#C9F31d] px-2 py-4 w-1/2 rounded-md  font-bold mt-8"
+            >
+              Contact
+            </button>
+          </div>
+        </div>
       </div>
-      <!-- Footer -->
-      <div class="bg-black text-white w-full py-8">
-        <div class="mx-auto max-w-7xl px-4">
-          <div class="flex justify-between flex-wrap">
-            <div class="md:w-1/3 w-full">
-              <img src="./assets/cyattlogo.png" alt="logo" class="w-32 relative -top-4 -left-4">
-              <!-- Social Links -->
-              <div class="">
-                <ul class="flex gap-4">
-                  <li class="text-2xl"><a href="https://www.facebook.com/cyatt.it/" target="_blank"><span><i class="fa-brands fa-facebook-f"></i></span></a></li>
-                  <li class="text-2xl"><a href="https://www.instagram.com/cyattdotcom/?hl=en" target="_blank"><span><i class="fa-brands fa-instagram"></i></span></a></li>
-                  <li class="text-2xl"><a href="https://www.linkedin.com/company/cyatt/" target="_blank"><span><i class="fa-brands fa-linkedin"></i></span></a></li>
+    </div>
+    <!-- Footer -->
+    <div class="bg-black text-white w-full py-8">
+      <div class="mx-auto max-w-7xl px-4">
+        <div class="flex justify-between flex-wrap">
+          <div class="md:w-1/3 w-full">
+            <img
+              src="./assets/cyattlogo.png"
+              alt="logo"
+              class="w-32 relative -top-4 -left-4"
+            />
+            <!-- Social Links -->
+            <div class="">
+              <ul class="flex gap-4">
+                <li class="text-2xl">
+                  <a href="https://www.facebook.com/cyatt.it/" target="_blank"
+                    ><span><i class="fa-brands fa-facebook-f"></i></span
+                  ></a>
+                </li>
+                <li class="text-2xl">
+                  <a
+                    href="https://www.instagram.com/cyattdotcom/?hl=en"
+                    target="_blank"
+                    ><span><i class="fa-brands fa-instagram"></i></span
+                  ></a>
+                </li>
+                <li class="text-2xl">
+                  <a
+                    href="https://www.linkedin.com/company/cyatt/"
+                    target="_blank"
+                    ><span><i class="fa-brands fa-linkedin"></i></span
+                  ></a>
+                </li>
               </ul>
-
-
-              </div>
             </div>
-            <div class="md:w-1/3 w-full mt-8 md:mt-0">
-              <h2 class="text-xl font-bold">Company</h2>
-              <ul class="flex flex-col gap-4">
-                <li class="hover:underline cursor-pointer mt-4">Home</li>
-                <li class="hover:underline cursor-pointer">About</li>
-                <li class="hover:underline cursor-pointer">Contact</li>
-                <li class="hover:underline cursor-pointer">Services</li>
-              </ul>
-            </div>
-            <div class="md:w-1/3 w-full mt-8 md:mt-0">
-              <h2 class="text-xl font-bold">Contact Us</h2>
-              <ul>
-
+          </div>
+          <div class="md:w-1/3 w-full mt-8 md:mt-0">
+            <h2 class="text-xl font-bold">Company</h2>
+            <ul class="flex flex-col gap-4">
+              <li class="hover:underline cursor-pointer mt-4">Home</li>
+              <li class="hover:underline cursor-pointer">About</li>
+              <li class="hover:underline cursor-pointer">Contact</li>
+              <li class="hover:underline cursor-pointer">Services</li>
+            </ul>
+          </div>
+          <div class="md:w-1/3 w-full mt-8 md:mt-0">
+            <h2 class="text-xl font-bold">Contact Us</h2>
+            <ul>
               <li>
-                3rd Floor, Samarth Tower, Mansarovar Ext Rd, Narayan Vihar, Jaipur, Rajasthan 302020
+                3rd Floor, Samarth Tower, Mansarovar Ext Rd, Narayan Vihar,
+                Jaipur, Rajasthan 302020
               </li>
               <li class="mt-4">
-                228 Sheikh Zayed Rd - Business Bay - Dubai - United Arab Emirates
+                228 Sheikh Zayed Rd - Business Bay - Dubai - United Arab
+                Emirates
               </li>
               <li class="mt-4">
-                <a href="tel:">+919521223123</a>+91-9521223123
+                <a href="tel:919521223123">+919521223123</a>+91-9521223123
               </li>
               <li>
                 <a href="mailto:team@cyatt.com">team@cyatt.com</a>team@cyatt.com
               </li>
             </ul>
-            </div>
           </div>
-          
+        </div>
       </div>
-      </div>
-      <div class="w-full text-center text-white py-4 bg-[#363636]">
-        &copy; Cyatt2023
-      </div>
-      <script>
-        window.onscroll = function() {
-          myFunction();
-        };
-    
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-    
-        function myFunction() {
-          if (window.pageYOffset >= 10) {
-            navbar.classList.add("bgwhite");
-          } else {
-            navbar.classList.remove("bgwhite");
-          }
+    </div>
+    <div class="w-full text-center text-white py-4 bg-[#363636]">
+      &copy; Cyatt 2023
+    </div>
+
+    <!-- Javascript -->
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= 10) {
+          navbar.classList.add("bgwhite");
+        } else {
+          navbar.classList.remove("bgwhite");
         }
-      </script>
+      }
+    </script>
   </body>
 </html>
