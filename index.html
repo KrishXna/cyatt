@@ -26,23 +26,25 @@
     }
     .show{
       height: 100vh;
-      transition: 0.3s;
+      transition: 0.5s ease;
       position: absolute;
       left: 0;
       inset: 0;
       overflow: hidden;
+
     }
     .hide{
-      /* display: none; */
       position: absolute;
       left: -100%;
+      transition: 3s ease-out;
+      height: 100vh;
+      overflow: hidden;
+
     }
     .parallax {
       background-image: url("./assets/banner.jpeg");
       min-height: 400px;
       object-fit: cover;
-      /* margin-top: 100px; */
-      /* background-attachment: fixed; */
       background-repeat: no-repeat;
     }
    @media only screen and (min-width: 768px){
@@ -156,7 +158,6 @@
           <ul class="flex flex-col justify-center mt- items-center gap-6 uppercase font-bold">
             <a href="#home" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li class="">Home</li></a>
             <a href="#about" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li>About</li></a>
-            <!-- <a href="#contact" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li>Contact</li></a> -->
             <a href="#services" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li >Services</li></a>
             <a href="#testimonial" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li>Testimonoal</li></a>
           </ul>
