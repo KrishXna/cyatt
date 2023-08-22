@@ -96,6 +96,12 @@
       transform: scale(1.02);
       transition: 1s ease;
     }
+    input::before{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      border: 2px solid red
+    }
   </style>
   <body>
     <!-- Navbar -->
@@ -437,7 +443,7 @@
 <div class="swiper">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper flex">
-    <div class="swiper-slide ">
+    <div class="swiper-slide  px-4 md:px-0 ">
       <div class="bg-[#EBEBEB] rounded-2xl max-w-[500px] mx-auto mt-20">
         <div class=" relative">
           <div class="absolute left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%]  w-20 h-20 rounded-full flex justify-center items-center overflow-hidden bg-white">
@@ -453,7 +459,7 @@
         </div>
       </div>
     </div>
-    <div class="swiper-slide">
+    <div class="swiper-slide px-4 md:px-0">
       <div class="bg-[#EBEBEB] max-w-[500px] rounded-2xl mx-auto mt-20">
         <div class=" relative">
           <div class="absolute left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%]  w-20 h-20 rounded-full flex justify-center items-center overflow-hidden bg-white">
@@ -469,7 +475,7 @@
         </div>
       </div>
     </div>
-    <div class="swiper-slide">
+    <div class="swiper-slide px-4 md:px-0">
       <div class="bg-[#EBEBEB] max-w-[500px] rounded-2xl mx-auto mt-20">
         <div class="relative">
           <div class="absolute left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%]  w-20 h-20 rounded-full flex justify-center items-center overflow-hidden bg-white">
