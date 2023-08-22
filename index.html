@@ -16,6 +16,7 @@
     }
     .show{
       height: 100vh;
+      transition: 0.3s;
       position: absolute;
       inset: 0;
     }
@@ -38,7 +39,8 @@
       height: 0%;
       z-index: -2;
       background-color: #C9F31d;
-      transition: 200ms all;
+      transition: 1000ms all;
+
       border-radius: 10px;
     }
     .box-content:after {
@@ -50,7 +52,7 @@
       height: 0%;
       z-index: -2;
       background-color: #C9F31d;
-      transition: 200ms all;
+      transition: 1000ms all;
       border-radius: 10px;
     }
     .box-content:hover::before,.box-content:hover::after{
@@ -65,7 +67,7 @@
     <div class="w-full relative">
       <div id="navbar" class="navbar fixed z-10 top-0 w-full">
         <div
-          class="flex justify-between items-center mx-auto max-w-7xl px-4 z-10 relative"
+          class="flex justify-between items-center mx-auto max-w-7xl px-4 z-10 relative shadow-xl md:shadow-none "
         >
           <img
             src="./assets/Bsides Goa logo 2.png"
@@ -88,15 +90,17 @@
             <i class="fa-solid fa-bars" id="icon"></i>
           </div>
         </div>
-        <div id="navmenu" class="mt- hide md:hidden">
-          <ul class="flex flex-col justify-center h-[100vh] items-center gap-10 uppercase font-bold">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#testimonoal">Testimonoal</a></li>
-
+        <div id="navmenu" class="hide md:hidden relative">
+          <ul class="flex flex-col justify-center mt-60 items-center gap-6 uppercase font-bold">
+            <a href="#home" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li class="">Home</li></a>
+            <a href="#about" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li>About</li></a>
+            <a href="#contact" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li>Contact</li></a>
+            <a href="#services" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li >Services</li></a>
+            <a href="#testimonoal" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li>Testimonoal</li></a>
           </ul>
+          <div class="absolute bg-gray-600 py-2 w-full -bottom-7 text-white left-[50%] translate-x-[-50%] translate-y-[-50%]  text-center">
+            <p class="py-2">&copy; CYATT 2023-24</p>
+          </div>
         </div>
       </div>
       <div
@@ -276,7 +280,7 @@
               class="md:flex justify-betwee gap-20 w-full"
               style="height: px"
             >
-              <div class="flex flex-col px-10">
+              <div class="flex flex-col justify-center items-center px-10">
                 <p class="lg:pt-0 pt-10 text-xl">
                   We take great pride in our ability to cover a wide range of
                   domains, encompassing web development, digital marketing, and
@@ -287,13 +291,13 @@
                   deliver tailored solutions that meet your specific needs
                 </p>
                 <button
-                  class="mt-20 border rounded-full w-32 h-32 cursor-pointer hover:bg-[#C9F31D] duration-300 delay-75"
+                  class="mt-20 border rounded-full w-40 h-40 cursor-pointer hover:bg-[#C9F31D] duration-500 delay- hover:scale-150"
                 >
-                  Explore us
+                  Explore us <i class="fa-solid fa-arrow-right -rotate-45"></i>
                 </button>
               </div>
             </div>
-            <div class="relative -top-0 max-w-[200px] hidden md:block">
+            <div class="relative max-w-[200px] hidden md:block">
               <img
                 src="./assets/smm service/Social Media Analytics.png"
                 alt="about_img"
@@ -322,7 +326,7 @@
         <!-- card1 -->
         <div class="md:flex justify-center gap-10 pt-20">
           <div 
-            class="p- rounded-xl w-full md:max-w-sm shadow-md box relative"
+            class="rounded-xl w-full md:max-w-sm shadow-md box relative"
             style="background-image: url(./assets/dot.webp)"
           >
             <div class="overflow-hidden box-img bg-black rounded ">
@@ -332,7 +336,7 @@
                 class=""
               />
             </div>
-            <div class="p-4 box-content relative cursor-pointer">
+            <div class="p-4 box-content relative cursor-pointer group">
               <h3 class="text-2xl font-bold py-4">
                 Choose your Coverage amount.
               </h3>
@@ -340,9 +344,9 @@
                 Select your coverage amount and term Use the calculator to help,
                 if you wish
               </p>
-              <div class="py-4">
-                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 hover:bg-[#C9F31d]">
-                  <i class="fas fa-arrow-right"></i> Explore
+              <div class="py-4 relative">
+                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-white duration-300">
+                  <i class="fas fa-arrow-right absolute left-4 top-8 group group-hover:left-36 duration-500"></i> Explore
                 </button>
               </div>
             </div>
@@ -359,7 +363,7 @@
                 class=""
               />
             </div>
-            <div class="p-4 box-content relative cursor-pointer">
+            <div class="p-4 box-content relative cursor-pointer group">
               <h3 class="text-2xl font-bold py-4">
                 Choose your Coverage amount.
               </h3>
@@ -367,16 +371,16 @@
                 Select your coverage amount and term Use the calculator to help,
                 if you wish
               </p>
-              <div class="py-4">
-                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12">
-                  <i class="fas fa-arrow-right"></i> Explore
+              <div class="py-4 relative">
+                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-white duration-500">
+                  <i class="fas fa-arrow-right absolute left-4 top-8 group group-hover:left-36 duration-500"></i> Explore
                 </button>
               </div>
             </div>
           </div>
           <!-- Card3 -->
           <div 
-            class="p- rounded-xl w-full md:max-w-sm shadow-md box relative  mt-10 md:mt-0"
+            class="p- rounded-xl w-full md:max-w-sm shadow-md box relative mt-10 md:mt-0"
             style="background-image: url(./assets/dot.webp)"
           >
             <div class="overflow-hidden box-img bg-black ">
@@ -386,7 +390,7 @@
                 class=""
               />
             </div>
-            <div class="p-4 box-content relative cursor-pointer">
+            <div class="p-4 box-content relative cursor-pointer group">
               <h3 class="text-2xl font-bold py-4">
                 Choose your Coverage amount.
               </h3>
@@ -394,9 +398,9 @@
                 Select your coverage amount and term Use the calculator to help,
                 if you wish
               </p>
-              <div class="py-4">
-                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12">
-                  <i class="fas fa-arrow-right"></i> Explore
+              <div class="py-4 relative">
+                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-white duration-500">
+                  <i class="fas fa-arrow-right absolute left-4 top-8 group group-hover:left-36 duration-500"></i> Explore
                 </button>
               </div>
             </div>
