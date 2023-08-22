@@ -16,13 +16,11 @@
   </head>
   <style>
     .swiper {
-  /* width: 100vw; */
-  height: 500px;
-  /* border: 2px solid red; */
-  }
-  input:focus, textarea:focus{
-    border-bottom: 2px solid #000
-  }
+    height: 500px;
+    }
+    input:focus, textarea:focus{
+      border-bottom: 2px solid #000
+    }
     .bgwhite {
       background-color: white;
     }
@@ -97,10 +95,30 @@
       transition: 1s ease;
     }
     input::before{
-      content: "";
       position: absolute;
+      content: "";
       bottom: 0;
-      border: 2px solid red
+      left: 0;
+      width: 0%;
+      height: 0%;
+      z-index: -2;
+      border: #C9F31d;
+      transition: 1000ms all;
+    }
+    input::after{
+      position: absolute;
+      content: "mm";
+      bottom: 0;
+      right: 0;
+      width: 0%;
+      height: 0%;
+      z-index: -2;
+      border: #C9F31d;
+      transition: 1000ms all;
+    }
+    input:focus::before{
+      width: 100%;
+      height: 4px;
     }
   </style>
   <body>
@@ -157,8 +175,6 @@
           <div class="mx-auto max-w-7xl px-4">
             <div class="lg:flex justify-between items-center gap-20 py-20">
               <!-- Hero Left -->
-              
-              
               <div class="left w-full md:w-1/2">
                 <div class="rounded-4xl">
                   <div class="content">
@@ -191,39 +207,33 @@
                       />
                     </div>
                     <div class="flex flex-col pt-8">
-                      <label for="name" class="text-black font-semibold">Email:</label>
+                      <label for="email" class="text-black font-semibold">Email:</label>
                       <input
                         type="text"
-                        id="name"
+                        id="email"
                         name="name"
                         placeholder="cyatt@gmail.com"
                         class="border-b border-[#c6c6c6] bg-transparent mt-2 outline-none text-black"
-
-
                       />
                     </div>
                     <div class="flex flex-col pt-8">
-                      <label for="name" class="text-black font-semibold">Contact No:</label>
+                      <label for="contact" class="text-black font-semibold">Contact No:</label>
                       <input
                         type="text"
-                        id="name"
+                        id="contact"
                         name="name"
                         placeholder="+123-123-123"
                         class="border-b border-[#c6c6c6] bg-transparent mt-2 outline-none text-black"
-
-
                       />
                     </div>
                     <div class="flex flex-col pt-8">
-                      <label for="name" class="text-black font-semibold">Message:</label>
+                      <label for="message" class="text-black font-semibold">Message:</label>
                       <textarea
                         type="text"
-                        id="name"
+                        id="message"
                         name="name"
                         placeholder="Type message..."
                         class="border-b border-[#c6c6c6] bg-transparent mt-2 outline-none text-black"
-
-
                       ></textarea>
                     </div>
                     <button class="px-2 py-2 bg-[#000] text-white rounded mt-4 w-1/3 h-12 hover:bg-black/70">Submit</button>
@@ -305,9 +315,9 @@
               />
             </div>
           </div>
-          <div class="absolute right-2 bottom-32 md:bottom-10 hover:scale-105 duration-500">
-            <div class="w-16 h-16 bg-black relative top-6 -left-8"></div>
-            <div class="w-16 h-16 bg-[#C9F31D]"></div>
+          <div class="absolute right-2 bottom-32 md:bottom-10 hover:scale-105 duration-500 ">
+            <div class="w-16 h-16 bg-black relative top-6 -left-8 animate-trans-bottom"></div>
+            <div class="w-16 h-16 bg-[#C9F31D] relative -z-10 animate-trans-top"></div>
           </div>
         </div>
       </div>
@@ -434,9 +444,6 @@
         </div>
       </div>
     </div>
-
-  
-   
     <!-- Testimonial -->
 <!-- Slider main container -->
 <div id="testimonial" class="max-w-7xl mx-auto">
