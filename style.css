@@ -953,6 +953,10 @@ video {
   width: 500px;
 }
 
+.w-\[200px\] {
+  width: 200px;
+}
+
 .max-w-3xl {
   max-width: 48rem;
 }
@@ -975,6 +979,10 @@ video {
 
 .max-w-md {
   max-width: 28rem;
+}
+
+.max-w-\[500px\] {
+  max-width: 500px;
 }
 
 .translate-x-1\/2 {
