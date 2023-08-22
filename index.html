@@ -16,7 +16,7 @@
   </head>
   <style>
     .swiper {
-  width: 50vw;
+  /* width: 100vw; */
   height: 500px;
   /* border: 2px solid red; */
   
@@ -36,7 +36,8 @@
     }
     .parallax {
       background-image: url("./assets/banner.jpeg");
-      min-height: 600px;
+      min-height: 400px;
+      object-fit: cover;
       /* margin-top: 100px; */
       /* background-attachment: fixed; */
       background-repeat: no-repeat;
@@ -44,6 +45,7 @@
    @media only screen and (min-width: 768px){
     .parallax{
       background-attachment: fixed;
+      min-height: 600px;
     }
    }
    @media only screen and (max-width: 639px) {
@@ -90,7 +92,7 @@
     }
     .card:hover{
       transform: scale(1.02);
-      transition: 0.2s ease-in-out;
+      transition: 1s ease;
     }
   </style>
   <body>
@@ -101,9 +103,9 @@
           class="flex justify-between items-center mx-auto max-w-7xl px-4 z-10 relative shadow-xl md:shadow-none"
         >
           <img
-            src="./assets/Bsides Goa logo 2.png"
+            src="./assets/Cyattblacklogo.png"
             alt="logo"
-            class="w-[180px] h-[100px]"
+            class="w-[150px] h-[100px]"
           />
           <div class="hidden md:flex justify-center items-center gap-4">
             <div class="flex flex-col">
@@ -127,7 +129,7 @@
             <a href="#about" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li>About</li></a>
             <!-- <a href="#contact" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li>Contact</li></a> -->
             <a href="#services" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li >Services</li></a>
-            <a href="#testimonoal" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li>Testimonoal</li></a>
+            <a href="#testimonial" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li>Testimonoal</li></a>
           </ul>
           <div class="absolute bg-gray-600 py-2 w-full -bottom-7 text-white left-[50%] translate-x-[-50%] translate-y-[-50%]  text-center">
             <p class="py-2">&copy; CYATT 2023-24</p>
@@ -216,7 +218,7 @@
 
                       ></textarea>
                     </div>
-                    <button class="px-2 py-2 bg-[#000] text-white rounded mt-4 w-1/3 h-12">Submit</button>
+                    <button class="px-2 py-2 bg-[#000] text-white rounded mt-4 w-1/3 h-12 hover:bg-black/70">Submit</button>
                   </form>
                 </div>
               </div>
@@ -262,8 +264,9 @@
           >
             Transform Your Business with Cutting-Edge IT Services
           </h2>
-          <div class="md:flex justify-between w-full">
-            <div class="parallax w-full"></div>
+          <div class="md:flex justify-between w-full"> 
+            <div class="parallax w-full
+      "></div>
 
             <div
               class="md:flex gap-20 w-full"
@@ -286,15 +289,15 @@
                 </button>
               </div>
             </div>
-            <div class="relative max-w-[200px] -top-40 hidden lg:block">
+            <div class="relative max-w-[200px] -top-40 hidden lg:block ">
               <img
                 src="./assets/smm service/Social Media Analytics.png"
                 alt="about_img"
-                class="rounded-md"
+                class="rounded-md hover:scale-105 duration-500"
               />
             </div>
           </div>
-          <div class="absolute right-2 bottom-32 md:bottom-10">
+          <div class="absolute right-2 bottom-32 md:bottom-10 hover:scale-105 duration-500">
             <div class="w-16 h-16 bg-black relative top-6 -left-8"></div>
             <div class="w-16 h-16 bg-[#C9F31D]"></div>
           </div>
@@ -319,12 +322,13 @@
         <!-- card1 -->
         <div class="md:flex justify-center gap-10 pt-20">
           <div 
-            class="card rounded-xl rounded-t-none w-full md:max-w-sm shadow-md box relative"
+            class="card rounded-xl w-full md:max-w-sm shadow-md box relative"
             style="background-image: url(./assets/dot.webp)"
           >
-            <div class="overflow-hidden box-img bg-black">
+            <div class="overflow-hidden box-img bg-black rounded-t-xl h-[200px]">
               <img
-                src="./assets/smm service/photoshop icon.png"
+              src="./assets/smm service/Social Media Management.png"
+
                 alt="img"
                 class=""
               />
@@ -338,8 +342,8 @@
                 if you wish
               </p>
               <div class="py-4 relative">
-                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-white duration-300">
-                  <i class="fas fa-arrow-right absolute left-4 top-8 group group-hover:right-10 duration-500"></i> Explore
+                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-white group-hover:duration-500 ">
+                  <i class="fas fa-arrow-right absolute left-4 top-8 group group-hover:right-20 duration-500"></i> Explore
                 </button>
               </div>
             </div>
@@ -349,9 +353,10 @@
             class="card rounded-xl w-full md:max-w-sm shadow-md box relative mt-10 md:mt-0"
             style="background-image: url(./assets/dot.webp)"
           >
-            <div class="overflow-hidden box-img bg-black ">
+            <div class="overflow-hidden box-img bg-black rounded-t-xl h-[200px] ">
               <img
-                src="./assets/smm service/photoshop icon.png"
+              src="./assets/smm service/Social Media Campaigns.jpg"
+
                 alt="img"
                 class=""
               />
@@ -376,9 +381,9 @@
             class="card rounded-xl w-full md:max-w-sm shadow-md box relative mt-10 md:mt-0"
             style="background-image: url(./assets/dot.webp)"
           >
-            <div class="overflow-hidden box-img bg-black ">
+            <div class="overflow-hidden box-img bg-black rounded-t-xl h-[200px]">
               <img
-                src="./assets/smm service/photoshop icon.png"
+                src="./assets/smm service/Social Media Campaigns.jpg"
                 alt="img"
                 class=""
               />
@@ -392,8 +397,8 @@
                 if you wish
               </p>
               <div class="py-4 relative">
-                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-white duration-500">
-                  <i class="fas fa-arrow-right absolute left-4 top-8 group group-hover:right-10 duration-500"></i> Explore
+                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-white group:du">
+                  <i class="fas fa-arrow-right absolute left-4 top-8 group group-hover:right-10 group-hover:duration-500"></i> Explore
                 </button>
               </div>
             </div>
@@ -413,7 +418,7 @@
               nobis architecto adipisci eaque.
             </p>
             <button
-              class="bg-[#C9F31d] px-2 py-4 w-1/2 rounded-md  font-bold mt-8"
+              class="bg-[#C9F31d] hover:bg-[#C9F31d]/70 px-2 py-4 w-1/2 rounded-md  font-bold mt-8"
             >
               Contact
             </button>
@@ -426,6 +431,7 @@
    
     <!-- Testimonial -->
 <!-- Slider main container -->
+<div id="testimonial" class="max-w-7xl mx-auto">
 <div class="swiper">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper flex">
@@ -478,11 +484,13 @@
       </div>
     </div>
   </div>
-  <div class="swiper-pagination"></div>
+  <div class="swiper-pagination opacity-0"></div>
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
   <div class="swiper-scrollbar hidden"></div>
 </div>
+</div>
+
  <!-- Footer -->
  <div id="contact" class="bg-black text-white w-full py-8">
   <div class="mx-auto max-w-7xl px-4">
