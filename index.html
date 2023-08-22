@@ -38,9 +38,22 @@
       background-image: url("./assets/banner.jpeg");
       min-height: 600px;
       /* margin-top: 100px; */
-      background-attachment: fixed;
+      /* background-attachment: fixed; */
       background-repeat: no-repeat;
     }
+   @media only screen and (min-width: 768px){
+    .parallax{
+      background-attachment: fixed;
+    }
+   }
+   @media only screen and (max-width: 639px) {
+    .swiper-button-prev{
+      display: none;
+    }
+    .swiper-button-next{
+      display: none;
+    }
+  }
     .box-content:before {
       position: absolute;
       content: "";
