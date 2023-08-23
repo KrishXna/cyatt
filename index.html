@@ -14,6 +14,9 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis&family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <style>
     .swiper {
@@ -71,7 +74,7 @@
       width: 0%;
       height: 0%;
       z-index: -2;
-      background-color: #C9F31d;
+      /* background-color: #C9F31d; */
       transition: 1000ms all;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -85,7 +88,7 @@
       width: 0%;
       height: 0%;
       z-index: -2;
-      background-color: #C9F31d;
+      /* background-color: #C9F31d; */
       transition: 1000ms all;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -99,7 +102,7 @@
     }
     .card:hover{
       transform: scale(1.02);
-      transition: .6s ease-in;
+      transition: 1s ease;
     }
     input::before{
       position: absolute;
@@ -131,6 +134,10 @@
     resize: none;
     }
 
+    body{
+      font-family: kanit;
+    }
+
   </style>
   <body>
     <!-- Navbar -->
@@ -147,11 +154,7 @@
           <div class="hidden md:flex justify-center items-center gap-4">
             <div class="flex flex-col">
               <div>
-<<<<<<< HEAD
                 <span class="text-black font-semibold">Need Help ? </span>
-=======
-                <span class="text-black">Need Some Help ? </span>
->>>>>>> 721acde (some)
                 <span class="text-sm lg:text-lg">Speak with a</span>
               </div>
               <p class="text-sm lg:text-lg">Licenced Insurance Agent</p>
@@ -178,7 +181,7 @@
       </div>
       <!-- Navbar End Here -->
       <div
-        class="top-0 left-0 bg-ce bg-cover bg-no-repeat relative"
+        class="top-0 left-0 bg-cover bg-no-repeat relative"
         style="background-image: url(./assets/banner.jpeg)"
       >
         <!-- Layer -->
@@ -208,8 +211,7 @@
               <div class="right w-full lg:w-1/3 mt-10 md:mt-0">
                 <div class="bg-[#ffffffd3] rounded-lg p-10">
                   <form 
-                  id="contactForm"
-                  autocomplete="off"
+                  autocomplete="off" id="contactForm"
                   >
                     <div class="flex flex-col">
                       <label for="name" class="text-black font-semibold">Full Name:</label>
@@ -217,7 +219,7 @@
                         type="text"
                         id="name"
                         name="name"
-                        placeholder="Cyatt"
+                        placeholder="I am"
                         class="border-b border-[#c6c6c6] bg-transparent mt-2 outline-none text-black"
                       />
                     </div>
@@ -226,8 +228,8 @@
                       <input
                         type="text"
                         id="email"
-                        name="email"
-                        placeholder="cyatt@gmail.com"
+                        name="name"
+                        placeholder="My email"
                         class="border-b border-[#c6c6c6] bg-transparent mt-2 outline-none text-black"
                       />
                     </div>
@@ -236,8 +238,8 @@
                       <input
                         type="text"
                         id="contact"
-                        name="contact"
-                        placeholder="+123-123-123"
+                        name="name"
+                        placeholder="Contact me on"
                         class="border-b border-[#c6c6c6] bg-transparent mt-2 outline-none text-black"
                       />
                     </div>
@@ -246,14 +248,14 @@
                       <textarea
                         type="text"
                         id="message"
-                        name="message"
+                        name="name"
                         rows="4"
                         cols="7"
-                        placeholder="Type message..."
+                        placeholder="I need..."
                         class="border-b border-[#c6c6c6] bg-transparent mt-2 outline-none text-black"
                       ></textarea>
                     </div>
-                    <button type="submit" class="px-2 py-2 bg-[#000] text-white rounded mt-4 w-1/3 h-12 hover:bg-black/70">Submit</button>
+                    <button class="px-2 py-2 bg-[#000] text-white rounded mt-4 w-1/3 h-12 hover:bg-[#C9f31d] hover:text-black font-semibold">Submit</button>
                   </form>
                 </div>
               </div>
@@ -261,6 +263,7 @@
           </div>
         </div>
       </div>
+
 
       <!-- About Us -->
       <div id="about">
@@ -345,11 +348,13 @@
       <div class="mx-auto max-w-7xl px-4">
         <div class="flex justify-center">
           <div class="text-center max-w-lg">
+<<<<<<< HEAD
             <h2 class="py-4 text-4xl font-semibold uppercase">Our Services</h2>
             <h2 class="py-4 text-4xl">
               We've helped thousands find afffordable auto insurance.
             </h2>
             <p class="pb-20">
+
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Consequatur velit asperiores nemo non inventore, saepe itaque
               nobis architecto adipisci eaque.
@@ -357,6 +362,7 @@
           </div>
         </div>
         <!-- card1 -->
+<<<<<<< HEAD
         <div class="md:grid lg:grid-cols-3 md:grid-cols-2 justify-center gap-10 pt-20 p-10 md:p-0">
           <div 
 
@@ -366,7 +372,6 @@
             <div class="overflow-hidden box-img bg-black rounded-t-xl h-[200px]">
               <img
               src="./assets/smm service/Social Media Management.png"
-
                 alt="img"
                 class=""
               />
@@ -380,6 +385,7 @@
                 if you wish
               </p>
               <div class="py-4 relative">
+
                 <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-white group-hover:duration-500 ">
                   <i class="fas fa-arrow-right absolute left-4 top-8 group-hover:right-20 duration-500"></i> Explore
                 </button>
@@ -387,7 +393,6 @@
               </div>
             </div>
           </div>
-        </div>
           <!-- Card2 -->
           <div 
 
@@ -411,14 +416,13 @@
                 if you wish
               </p>
               <div class="py-4 relative">
-                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-white duration-500">
+
+                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-[#C9F31d] group-hover:duration-500 ">
                   <i class="fas fa-arrow-right absolute left-4 top-8 group-hover:right-20 duration-500"></i> Explore
                 </button>
-
               </div>
             </div>
           </div>
-        </div>
           <!-- Card3 -->
           <div 
 
@@ -441,6 +445,7 @@
                 if you wish
               </p>
               <div class="py-4 relative">
+
                 <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-white group:du">
                   <i class="fas fa-arrow-right absolute left-4 top-8 group-hover:right-20 group-hover:duration-500"></i> Explore
                 </button>
@@ -468,9 +473,8 @@
               if you wish
             </p>
             <div class="py-4 relative">
-              <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-white group:du">
-                <i class="fas fa-arrow-right absolute left-4 top-8 group-hover:right-20 group-hover:duration-500"></i> Explore
-              </button>
+
+              <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-[#C9F31d] group-hover:duration-500 ">
             </div>
           </div>
         </div>
@@ -495,6 +499,7 @@
             if you wish
           </p>
           <div class="py-4 relative">
+
             <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-white group:du">
               <i class="fas fa-arrow-right absolute left-4 top-8 group-hover:right-20 group-hover:duration-500"></i> Explore
             </button>
@@ -522,45 +527,32 @@
           if you wish
         </p>
         <div class="py-4 relative">
+
           <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-white group:du">
+
             <i class="fas fa-arrow-right absolute left-4 top-8 group-hover:right-20 group-hover:duration-500"></i> Explore
           </button>
         </div>
       </div>
     </div>
-
           
         </div>
           </div>
         </div>
 
-        <!-- <div class="flex justify-center py-20">
 
-          <div class="text-center max-w-lg">
-            <h2 class="py-4 text-4xl">
-              WHAT PEOPLE SAYS
-            </h2> -->
-            <!-- <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Consequatur velit asperiores nemo non inventore, saepe itaque
-              nobis architecto adipisci eaque.
-            </p> -->
-            <!-- <button
-              class="bg-[#C9F31d] hover:bg-[#C9F31d]/70 px-2 py-4 w-1/2 rounded-md  font-bold mt-8"
-            >
-              Contact
-            </button> -->
-          <!-- </div>
-        </div> -->
+
       </div>
     </div>
 
+    
     <!-- Testimonial -->
 <!-- Slider main container -->
 <div id="testimonial" class="max-w-7xl mx-auto">
   <div class="flex justify-center pt-20">
     <div class="text-center max-w-lg">
       <h2 class="py-4 text-4xl font-semibold">
+      <h2 class="py-4 text-3xl font-semibold">
         CLIENT TESTIMONIALS
       </h2>
     </div>
@@ -696,8 +688,7 @@
   &copy; Cyatt 2023-24
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="./script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/appwrite@11.0.0"></script>;
   </body>
 </html>
