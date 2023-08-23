@@ -17,7 +17,7 @@ navbar.addEventListener("click", function () {
     navmenu.classList.remove("hide");
     navmenu.classList.add("show");
     navmenu.classList.add("bgwhite");
-
+    navbar.classList.add("bgwhite");
     changeIcon();
   } else {
     navmenu.classList.remove("show");
