@@ -13,7 +13,7 @@ window.onscroll = function () {
   }
 };
 
-navbar.addEventListener("click", function () {
+icon.addEventListener("click", function () {
   if (navmenu.classList.contains("hide")) {
     navmenu.classList.remove("hide");
     navmenu.classList.add("show");
