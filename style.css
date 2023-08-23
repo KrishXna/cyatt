@@ -644,6 +644,54 @@ video {
   top: 2rem;
 }
 
+.top-10 {
+  top: 2.5rem;
+}
+
+.-top-8 {
+  top: -2rem;
+}
+
+.top-12 {
+  top: 3rem;
+}
+
+.top-2 {
+  top: 0.5rem;
+}
+
+.-top-2 {
+  top: -0.5rem;
+}
+
+.top-4 {
+  top: 1rem;
+}
+
+.top-7 {
+  top: 1.75rem;
+}
+
+.left-20 {
+  left: 5rem;
+}
+
+.left-10 {
+  left: 2.5rem;
+}
+
+.left-8 {
+  left: 2rem;
+}
+
+.left-14 {
+  left: 3.5rem;
+}
+
+.left-16 {
+  left: 4rem;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -744,6 +792,10 @@ video {
 
 .w-32 {
   width: 8rem;
+}
+
+.w-36 {
+  width: 9rem;
 }
 
 .w-\[150px\] {
@@ -929,6 +981,11 @@ video {
   background-color: rgb(18 18 18 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#1d1d1d\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 29 29 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#363636\] {
   --tw-bg-opacity: 1;
   background-color: rgb(54 54 54 / var(--tw-bg-opacity));
@@ -976,6 +1033,7 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+
 .bg-yellow-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
@@ -1002,6 +1060,7 @@ video {
 .bg-\[\#\] {
   background-color: #;
 }
+
 
 .bg-cover {
   background-size: cover;
@@ -1143,11 +1202,6 @@ video {
   text-transform: uppercase;
 }
 
-.text-\[\#C9F31d\] {
-  --tw-text-opacity: 1;
-  color: rgb(201 243 29 / var(--tw-text-opacity));
-}
-
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1265,6 +1319,58 @@ video {
 
 .group:hover .group-hover\:right-20 {
   right: 5rem;
+}
+
+.group:hover .group-hover\:left-10 {
+  left: 2.5rem;
+}
+
+.group:hover .group-hover\:left-40 {
+  left: 10rem;
+}
+
+.group:hover .group-hover\:left-32 {
+  left: 8rem;
+}
+
+.group:hover .group-hover\:left-36 {
+  left: 9rem;
+}
+
+.group:hover .group-hover\:left-0 {
+  left: 0px;
+}
+
+.group:hover .group-hover\:left-4 {
+  left: 1rem;
+}
+
+.group:hover .group-hover\:left-16 {
+  left: 4rem;
+}
+
+.group:hover .group-hover\:left-24 {
+  left: 6rem;
+}
+
+.group:hover .group-hover\:left-14 {
+  left: 3.5rem;
+}
+
+.group:hover .group-hover\:left-28 {
+  left: 7rem;
+}
+
+.group:hover .group-hover\:top-8 {
+  top: 2rem;
+}
+
+.group:hover .group-hover\:top-7 {
+  top: 1.75rem;
+}
+
+.group:hover .group-hover\:left-12 {
+  left: 3rem;
 }
 
 .group:hover .group-hover\:bg-white {
