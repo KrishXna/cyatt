@@ -1,6 +1,7 @@
 var navbar = document.getElementById("navbar");
 var navmenu = document.getElementById("navmenu");
 var icon = document.getElementById("icon");
+var contactForm = document.getElementById("contactForm");
 
 var sticky = navbar.offsetTop;
 
@@ -36,6 +37,7 @@ function changeIcon() {
   }
 }
 
+// Testimonial Slider
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
@@ -65,4 +67,50 @@ const swiper = new Swiper(".swiper", {
   scrollbar: {
     el: ".swiper-scrollbar",
   },
+});
+
+contactForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+
+  const formDataObj = {};
+
+  formData.forEach(function (value, key) {
+    formDataObj[key] = value;
+  });
+
+  // Validate form fields
+  const { name, email, contact, message } = formDataObj;
+
+  if (!name || !email || !message || !contact) {
+    alert("Please fill in all required fields.");
+    return;
+  }
+  // alert("Data submitted successfully.");
+  this.reset();
+
+  const { Client, ID, Databases } = Appwrite;
+  const client = new Client();
+  const databases = new Databases(client);
+
+  client
+    .setEndpoint("https://cloud.appwrite.io/v1") // Your API Endpoint
+    .setProject("64ba1b7466f6731fb61e"); // Your project ID
+
+  const promise = databases.createDocument(
+    "64ba4ae247cd5174dd91", //databaseId
+    "64e5a0031d0afb07bac9", //collectionId
+    ID.unique(),
+    formDataObj
+  );
+
+  promise.then(
+    function (response) {
+      // console.log({ response }); // Success
+    },
+    function (error) {
+      console.log({ error }); // Failure
+    }
+  );
 });
