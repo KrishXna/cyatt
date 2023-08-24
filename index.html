@@ -5,45 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cyatt</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="icon" href="assets/cyattlogo.png">
+    <link rel="icon" href="assets/cyattlogo.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dosis&family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis&family=Kanit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <style>
     .swiper {
-    height: 500px;
+      height: 500px;
     }
-    input:focus, textarea:focus{
-      border-bottom: 2px solid #000
+    input:focus,
+    textarea:focus {
+      border-bottom: 2px solid #000;
     }
     .bgwhite {
       background-color: white;
     }
-    .show{
+    .show {
       height: 100vh;
       transition: 0.5s ease;
       position: absolute;
       left: 0;
       inset: 0;
       overflow: hidden;
-
     }
-    .hide{
+    .hide {
       position: absolute;
       left: -100%;
       transition: 0.5s ease-out;
       height: 140vh;
       overflow: hidden;
-      right:100%;
+      right: 100%;
       top: 0;
     }
     .parallax {
@@ -52,20 +55,20 @@
       object-fit: cover;
       background-repeat: no-repeat;
     }
-   @media only screen and (min-width: 768px){
-    .parallax{
-      background-attachment: fixed;
-      min-height: 600px;
+    @media only screen and (min-width: 768px) {
+      .parallax {
+        background-attachment: fixed;
+        min-height: 600px;
+      }
     }
-   }
-   @media only screen and (max-width: 639px) {
-    .swiper-button-prev{
-      display: none;
+    @media only screen and (max-width: 639px) {
+      .swiper-button-prev {
+        display: none;
+      }
+      .swiper-button-next {
+        display: none;
+      }
     }
-    .swiper-button-next{
-      display: none;
-    }
-  }
     .box-content:before {
       position: absolute;
       content: "";
@@ -78,7 +81,6 @@
       transition: 1000ms all;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
-
     }
     .box-content:after {
       position: absolute;
@@ -92,65 +94,54 @@
       transition: 1000ms all;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
-
     }
-    .box-content:hover::before,.box-content:hover::after{
+    .box-content:hover::before,
+    .box-content:hover::after {
       width: 100%;
       height: 100%;
       transition-duration: 500ms;
       transition-delay: 20ms;
     }
-    .card:hover{
+    .card:hover {
       transform: scale(1.02);
       transition: 1s ease;
     }
-    input::before{
-      position: absolute;
-      content: "";
-      bottom: 0;
-      left: 0;
-      width: 0%;
-      height: 0%;
-      z-index: -2;
-      border: #C9F31d;
-      transition: 1000ms all;
-    }
-    input::after{
-      position: absolute;
-      content: "mm";
-      bottom: 0;
-      right: 0;
-      width: 0%;
-      height: 0%;
-      z-index: -2;
-      border: #C9F31d;
-      transition: 1000ms all;
-    }
-    input:focus::before{
-      width: 100%;
-      height: 4px;
-    }
     textarea {
-    resize: none;
+      resize: none;
     }
-
-    body{
+    body {
       font-family: kanit;
     }
-
+    .faq-active {
+      max-height: 400px;
+    }
+    .answer {
+      transition: 0.4s ease-in-out;
+    }
+    .faq-icon {
+      transition: transform 0.4s ease-in-out;
+    }
+    .faq-icon.active {
+      transform: rotate(-180deg);
+    }
+    .client-work-card:hover {
+      transition: 0.4s ease;
+      /* border: 2px solid red; */
+    }
   </style>
   <body>
     <!-- Navbar -->
     <div class="w-full relative">
-      <div id="navbar" class="navbar fixed z-10 top-0 w-full">
+      <div id="navbar" class="navbar fixed z-20 top-0 w-full">
         <div
           class="flex justify-between items-center mx-auto max-w-7xl px-4 z-10 relative shadow-xl md:shadow-none"
         >
-        <a href="https://cyatt.com/index.html" target="_blank"><img
-          src="./assets/Cyatt black logo.png"
-          alt="logo"
-          class="p-4 h-24"
-        /></a>
+          <a href="https://cyatt.com/index.html" target="_blank"
+            ><img
+              src="./assets/Cyatt black logo.png"
+              alt="logo"
+              class="p-4 h-24"
+          /></a>
           <div class="hidden md:flex justify-center items-center gap-4">
             <div class="flex flex-col">
               <div>
@@ -159,20 +150,40 @@
               </div>
               <p class="text-sm lg:text-lg">Licenced Insurance Agent</p>
             </div>
-            <a href="tel:919521223123"><button class="bg-[#C9F31d] px-2 py-4 rounded-md font-bold">
-              +91-9521 223 123
-            </button></a>
+            <a href="tel:919521223123"
+              ><button class="bg-[#C9F31d] px-2 py-4 rounded-md font-bold">
+                +91-9521 223 123
+              </button></a
+            >
           </div>
           <div class="md:hidden block text-3xl pr-2 cursor-pointer">
             <i class="fa-solid fa-bars" id="icon"></i>
           </div>
         </div>
         <div id="navmenu" class="hide md:hidden pt-40 relative">
-          <ul class="flex flex-col justify-center mt- items-center gap-6 uppercase font-bold">
-            <a href="#home" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li class="">Home</li></a>
-            <a href="#about" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li>About</li></a>
-            <a href="#services" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li >Services</li></a>
-            <a href="#testimonial" class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"><li>Testimonoal</li></a>
+          <ul
+            class="flex flex-col justify-center mt- items-center gap-6 uppercase font-bold"
+          >
+            <a
+              href="#home"
+              class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"
+              ><li class="">Home</li></a
+            >
+            <a
+              href="#about"
+              class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"
+              ><li>About</li></a
+            >
+            <a
+              href="#services"
+              class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"
+              ><li>Services</li></a
+            >
+            <a
+              href="#testimonial"
+              class="hover:bg-black hover:text-white w-1/2 text-center rounded py-4 cursor-pointer hover:scale-150 duration-100 delay-75"
+              ><li>Testimonoal</li></a
+            >
           </ul>
           <!-- <div class="absolute bg-gray-600 py-2 w-full -bottom-7 text-white left-[50%] translate-x-[-50%] translate-y-[-50%]  text-center">
             <p class="py-2">&copy; CYATT 2023-24</p>
@@ -188,7 +199,7 @@
         <div class="absolute top-0 left-0 right-0 inset-0 bg-black/50"></div>
 
         <!-- Hero Section -->
-        <div id="home" class="w-full z- relative pt-40">
+        <div id="home" class="w-full relative pt-40">
           <div class="mx-auto max-w-7xl px-4">
             <div class="lg:flex justify-between items-center gap-20 py-20">
               <!-- Hero Left -->
@@ -204,17 +215,17 @@
                       Suscipit temporibus quis ullam labore.
                     </p>
                   </div>
-                 </div>
+                </div>
               </div>
 
               <!-- Hero Right -->
               <div class="right w-full lg:w-1/3 mt-10 md:mt-0">
                 <div class="bg-[#ffffffd3] rounded-lg p-10">
-                  <form 
-                  autocomplete="off" id="contactForm"
-                  >
+                  <form autocomplete="off" id="contactForm">
                     <div class="flex flex-col">
-                      <label for="name" class="text-black font-semibold">Full Name:</label>
+                      <label for="name" class="text-black font-semibold"
+                        >Full Name:</label
+                      >
                       <input
                         type="text"
                         id="name"
@@ -224,7 +235,9 @@
                       />
                     </div>
                     <div class="flex flex-col pt-8">
-                      <label for="email" class="text-black font-semibold">Email:</label>
+                      <label for="email" class="text-black font-semibold"
+                        >Email:</label
+                      >
                       <input
                         type="text"
                         id="email"
@@ -234,7 +247,9 @@
                       />
                     </div>
                     <div class="flex flex-col pt-8">
-                      <label for="contact" class="text-black font-semibold">Contact No:</label>
+                      <label for="contact" class="text-black font-semibold"
+                        >Contact No:</label
+                      >
                       <input
                         type="text"
                         id="contact"
@@ -244,7 +259,9 @@
                       />
                     </div>
                     <div class="flex flex-col pt-8">
-                      <label for="message" class="text-black font-semibold">Message:</label>
+                      <label for="message" class="text-black font-semibold"
+                        >Message:</label
+                      >
                       <textarea
                         type="text"
                         id="message"
@@ -255,7 +272,11 @@
                         class="border-b border-[#c6c6c6] bg-transparent mt-2 outline-none text-black"
                       ></textarea>
                     </div>
-                    <button class="px-2 py-2 bg-[#000] text-white rounded mt-4 w-1/3 h-12 hover:bg-[#C9f31d] hover:text-black font-semibold">Submit</button>
+                    <button
+                      class="px-2 py-2 bg-[#000] text-white rounded mt-4 w-1/3 h-12 hover:bg-[#C9f31d] hover:text-black font-semibold tracking-wide"
+                    >
+                      Submit
+                    </button>
                   </form>
                 </div>
               </div>
@@ -263,25 +284,49 @@
           </div>
         </div>
       </div>
-    
+      <!--  -->
+      <!-- <div
+        class="relative bg-white text-white h-[500px] pt-16 pb-16 max-w-7xl mx-auto px-4"
+      >
+        <div class="sticky top-[px] md:pb-6 pb-4">
+          <div class="absolute right-0 translate-x-1/2 z-[0]">
+            <div class="w-40">
+              <img
+                src="./assets/smm service/Social Media Analytics.png"
+                alt="about_img"
+                class="rounded-md hover:scale-105 duration-500"
+              />
+            </div>
+          </div>
+          <p class="text-black max-w-5xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dolorum
+            recusandae obcaecati porro! Aut dicta saepe exercitationem adipisci
+            perspiciatis odio deserunt quo iure reiciendis officia nihil eos
+            tempora facilis autem earum quidem, a repellat nemo in voluptatem
+            doloribus nulla voluptatum distinctio dignissimos? Rerum quos fuga
+            dignissimos explicabo, inventore est officia.
+          </p>
+        </div>
+      </div> -->
+      <!--  -->
+
       <!-- About Us -->
       <div id="about">
         <!-- <h1 class="text-center text-4xl lg:text-5xl font-bold my-20">About Us</h1> -->
         <div class="mx-auto max-w-7xl px-4 pt-20 relative">
-          <h2 class="py-4 text-3xl font-semibold text-center uppercase">About us</h2>
+          <h2 class="py-4 text-3xl font-semibold text-center uppercase">
+            About us
+          </h2>
           <h2
-            class="pb-20 max-w-3xl  md:pl-32 pt-10 text-cente text-4xl lg:text-5xl font-semibold"
+            class="pb-20 max-w-3xl md:pl-32 pt-10 text-cente text-4xl lg:text-5xl font-semibold"
           >
             Transform Your Business with Cutting-Edge IT Services
           </h2>
-          <div class="md:flex justify-between w-full"> 
-            <div class="parallax w-full
-"></div>
 
-            <div
-              class="md:flex gap-20 w-full"
-              style="height: px"
-            >
+          <div class="md:flex justify-between w-full">
+            <div class="parallax w-full"></div>
+
+            <div class="md:flex gap-20 w-full" style="height: px">
               <div class="flex flex-col justify-center items-center px-10">
                 <p class="lg:pt-0 pt-10 text-xl">
                   We take great pride in our ability to cover a wide range of
@@ -292,14 +337,17 @@
                   will provide you with the highest level of expertise and
                   deliver tailored solutions that meet your specific needs
                 </p>
-                <a href="https://cyatt.com/about.html" target="_blank"><button
-                  class="mt-20 border rounded-full w-32 h-32 cursor-pointer hover:bg-[#C9F31D] duration-500 hover:scale-125 md:hover:scale-125 font-semibold"
-                > 
-                  Explore us <i class="fa-solid fa-arrow-right -rotate-45"></i>
-                </button></a>
+                <a href="https://cyatt.com/about.html" target="_blank"
+                  ><button
+                    class="mt-20 border rounded-full w-32 h-32 cursor-pointer hover:bg-[#C9F31D] duration-500 hover:scale-125 md:hover:scale-125 font-semibold"
+                  >
+                    Explore us
+                    <i class="fa-solid fa-arrow-right -rotate-45"></i></button
+                ></a>
               </div>
             </div>
-            <div class="relative max-w-[200px] -top-40 hidden lg:block ">
+
+            <div class="relative max-w-[200px] -top-40 hidden lg:block">
               <img
                 src="./assets/smm service/Social Media Analytics.png"
                 alt="about_img"
@@ -307,40 +355,46 @@
               />
             </div>
           </div>
-          <div class="absolute right-2 bottom-32 md:bottom-10 hover:scale-105 duration-500 ">
-            <div class="w-16 h-16 bg-black relative top-6 -left-8 animate-trans-bottom"></div>
-            <div class="w-16 h-16 bg-[#C9F31D] relative -z-10 animate-trans-top"></div>
+          <div
+            class="absolute right-2 bottom-32 md:bottom-10 hover:scale-105 duration-500"
+          >
+            <div
+              class="w-16 h-16 bg-black relative top-6 -left-8 animate-trans-bottom"
+            ></div>
+            <div
+              class="w-16 h-16 bg-[#C9F31D] relative -z-10 animate-trans-top"
+            ></div>
           </div>
         </div>
       </div>
     </div>
 
-      <!-- Banner -->
-      
-      <div class="bg-[#fffff] w-full py-10 mt-20">
-        <div class="flex flex-wrap justify-evenly gap-10">
-          <img
-            src="./assets/smm service/canva icon.png"
-            alt="logo"
-            class="hover:scale-125 cursor-pointer duration-100 delay-100"
-          />
-          <img
-            src="./assets/smm service/adobe illustrator icon.png"
-            alt="logo"
-            class="hover:scale-125 cursor-pointer duration-100 delay-100"
-          />
-          <img
-            src="./assets/smm service/hootsuite icon.png"
-            alt="logo"
-            class="hover:scale-125 cursor-pointer duration-100 delay-100"
-          />
-          <img
-            src="./assets/smm service/photoshop icon.png"
-            alt="logo"
-            class="hover:scale-125 cursor-pointer duration-100 delay-100"
-          />
-        </div>
+    <!-- Banner -->
+
+    <div class="bg-[#fffff] w-full py-10 mt-20">
+      <div class="flex flex-wrap justify-evenly gap-10">
+        <img
+          src="./assets/smm service/canva icon.png"
+          alt="logo"
+          class="hover:scale-125 cursor-pointer duration-100 delay-100"
+        />
+        <img
+          src="./assets/smm service/adobe illustrator icon.png"
+          alt="logo"
+          class="hover:scale-125 cursor-pointer duration-100 delay-100"
+        />
+        <img
+          src="./assets/smm service/hootsuite icon.png"
+          alt="logo"
+          class="hover:scale-125 cursor-pointer duration-100 delay-100"
+        />
+        <img
+          src="./assets/smm service/photoshop icon.png"
+          alt="logo"
+          class="hover:scale-125 cursor-pointer duration-100 delay-100"
+        />
       </div>
+    </div>
 
     <!-- Card Section -->
     <div id="services" class="w-full pt-10 md:pt-20">
@@ -359,68 +413,60 @@
           </div>
         </div>
         <!-- card1 -->
-        <div class="md:grid lg:grid-cols-3 md:grid-cols-2 justify-center gap-10 pt-20 md:p-0">
-          <div 
+        <div
+          class="md:grid lg:grid-cols-3 md:grid-cols-2 justify-center gap-10 pt-20 md:p-0"
+        >
+          <div
             class="card rounded-xl w-full md:max-w-sm shadow-md box relative mx-auto"
-            style="background-image: url(./assets/dot.webp)"
           >
-            <div class="overflow-hidden box-img bg-black rounded-t-xl h-[200px]">
+            <div
+              class="overflow-hidden box-img bg-black rounded-t-xl h-[200px]"
+            >
               <img
-              src="./assets/smm service/Social Media Management.png"
-
+                src="./assets/smm service/Social Media Management.png"
                 alt="img"
                 class=""
               />
             </div>
-            <div class="p-4 box-content relative cursor-pointer group">
-              <h3 class="text-2xl font-bold py-4">
+            <div
+              class="p-4 box-content relative cursor-pointer group overflow-hidden"
+            >
+              <h3 class="text-2xl font-bold py-4 z-10 relative">
                 Choose your Coverage amount.
               </h3>
-              <p>
+              <p class="relative z-10">
                 Select your coverage amount and term Use the calculator to help,
                 if you wish
               </p>
-              <div class="py-4 relative">
-                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-[#C9F31d] group-hover:duration-500 ">
-                  <i class="fas fa-arrow-right absolute left-4 top-8 group-hover:right-20  duration-500"></i> Explore
-                </button>
+              <div class="py-4 relative z-10">
+                <div
+                  class="flex justify-center items-center bg-[#000] text-white px-2 py-1 rounded w-[170px] h-12 group-hover:text-[#000] group-hover:bg-[#c9fc1d] duration-500 delay-75 relative"
+                >
+                  <span
+                    ><i
+                      class="fas fa-arrow-right absolute right-32 top-4 group-hover:right-10 duration-500"
+                    ></i
+                  ></span>
+                  <span
+                    class="absolute top- left-16 group-hover:top- group-hover:left-12"
+                    >Explore</span
+                  >
+                </div>
               </div>
+              <div
+                style="background-image: url(./assets/dot.webp)"
+                class="animate-spin-slowest absolute top-0 inset-0"
+              ></div>
             </div>
           </div>
           <!-- Card2 -->
-          <div 
+          <div
             class="card rounded-xl w-full md:max-w-sm shadow-md box relative mt-10 md:mt-0 mx-auto"
             style="background-image: url(./assets/dot.webp)"
           >
-            <div class="overflow-hidden box-img bg-black rounded-t-xl h-[200px] ">
-              <img
-              src="./assets/smm service/Social Media Campaigns.jpg"
-
-                alt="img"
-                class=""
-              />
-            </div>
-            <div class="p-4 box-content relative cursor-pointer group">
-              <h3 class="text-2xl font-bold py-4">
-                Choose your Coverage amount.
-              </h3>
-              <p>
-                Select your coverage amount and term Use the calculator to help,
-                if you wish
-              </p>
-              <div class="py-4 relative">
-                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-[#C9F31d] group-hover:duration-500 ">
-                  <i class="fas fa-arrow-right absolute left-4 top-8 group-hover:right-20 duration-500"></i> Explore
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- Card3 -->
-          <div 
-            class="card rounded-xl w-full md:max-w-sm shadow-md box relative mt-10 md:mt-0 mx-auto"
-            style="background-image: url(./assets/dot.webp)"
-          >
-            <div class="overflow-hidden box-img bg-black rounded-t-xl h-[200px]">
+            <div
+              class="overflow-hidden box-img bg-black rounded-t-xl h-[200px]"
+            >
               <img
                 src="./assets/smm service/Social Media Campaigns.jpg"
                 alt="img"
@@ -436,259 +482,728 @@
                 if you wish
               </p>
               <div class="py-4 relative">
-                <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-[#C9F31d] group-hover:duration-500 ">
-                  <i class="fas fa-arrow-right absolute left-4 top-8 group-hover:right-20 group-hover:duration-500"></i> Explore
+                <button
+                  class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-[#C9F31d] group-hover:duration-500"
+                >
+                  <i
+                    class="fas fa-arrow-right absolute left-4 top-8 group-hover:right-20 duration-500"
+                  ></i>
+                  Explore
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Card3 -->
+          <div
+            class="card rounded-xl w-full md:max-w-sm shadow-md box relative mt-10 md:mt-0 mx-auto"
+            style="background-image: url(./assets/dot.webp)"
+          >
+            <div
+              class="overflow-hidden box-img bg-black rounded-t-xl h-[200px]"
+            >
+              <img
+                src="./assets/smm service/Social Media Campaigns.jpg"
+                alt="img"
+                class=""
+              />
+            </div>
+            <div class="p-4 box-content relative cursor-pointer group">
+              <h3 class="text-2xl font-bold py-4">
+                Choose your Coverage amount.
+              </h3>
+              <p>
+                Select your coverage amount and term Use the calculator to help,
+                if you wish
+              </p>
+              <div class="py-4 relative">
+                <button
+                  class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-[#C9F31d] group-hover:duration-500"
+                >
+                  <i
+                    class="fas fa-arrow-right absolute left-4 top-8 group-hover:right-20 group-hover:duration-500"
+                  ></i>
+                  Explore
                 </button>
               </div>
             </div>
           </div>
           <!-- 4 -->
-          <div 
-          class="card rounded-xl w-full md:max-w-sm shadow-md box relative mt-10 md:mt-0 mx-auto"
-          style="background-image: url(./assets/dot.webp)"
-        >
-          <div class="overflow-hidden box-img bg-black rounded-t-xl h-[200px]">
-            <img
-              src="./assets/smm service/Social Media Campaigns.jpg"
-              alt="img"
-              class=""
-            />
+          <div
+            class="card rounded-xl w-full md:max-w-sm shadow-md box relative mt-10 md:mt-0 mx-auto"
+            style="background-image: url(./assets/dot.webp)"
+          >
+            <div
+              class="overflow-hidden box-img bg-black rounded-t-xl h-[200px]"
+            >
+              <img
+                src="./assets/smm service/Social Media Campaigns.jpg"
+                alt="img"
+                class=""
+              />
+            </div>
+            <div class="p-4 box-content relative cursor-pointer group">
+              <h3 class="text-2xl font-bold py-4">
+                Choose your Coverage amount.
+              </h3>
+              <p>
+                Select your coverage amount and term Use the calculator to help,
+                if you wish
+              </p>
+              <div class="py-4 relative">
+                <button
+                  class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-[#C9F31d] group-hover:duration-500"
+                >
+                  <i
+                    class="fas fa-arrow-right absolute left-4 top-8 group-hover:right-20 group-hover:duration-500"
+                  ></i>
+                  Explore
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="p-4 box-content relative cursor-pointer group">
-            <h3 class="text-2xl font-bold py-4">
-              Choose your Coverage amount.
-            </h3>
-            <p>
-              Select your coverage amount and term Use the calculator to help,
-              if you wish
-            </p>
-            <div class="py-4 relative">
-              <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-[#C9F31d] group-hover:duration-500 ">
-                <i class="fas fa-arrow-right absolute left-4 top-8 group-hover:right-20 group-hover:duration-500"></i> Explore
-              </button>
+          <!-- 5 -->
+          <div
+            class="card rounded-xl w-full md:max-w-sm shadow-md box relative mt-10 md:mt-0 mx-auto"
+            style="background-image: url(./assets/dot.webp)"
+          >
+            <div
+              class="overflow-hidden box-img bg-black rounded-t-xl h-[200px]"
+            >
+              <img
+                src="./assets/smm service/Social Media Campaigns.jpg"
+                alt="img"
+                class=""
+              />
+            </div>
+            <div class="p-4 box-content relative cursor-pointer group">
+              <h3 class="text-2xl font-bold py-4">
+                Choose your Coverage amount.
+              </h3>
+              <p>
+                Select your coverage amount and term Use the calculator to help,
+                if you wish
+              </p>
+              <div class="py-4 relative">
+                <button
+                  class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-[#C9F31d] group-hover:duration-500"
+                >
+                  <i
+                    class="fas fa-arrow-right absolute left-4 top-8 group-hover:right-20 group-hover:duration-500"
+                  ></i>
+                  Explore
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- 6 -->
+          <div
+            class="card rounded-xl w-full md:max-w-sm shadow-md box relative mt-10 md:mt-0 mx-auto"
+            style="background-image: url(./assets/dot.webp)"
+          >
+            <div
+              class="overflow-hidden box-img bg-black rounded-t-xl h-[200px]"
+            >
+              <img
+                src="./assets/smm service/Social Media Campaigns.jpg"
+                alt="img"
+                class=""
+              />
+            </div>
+            <div class="p-4 box-content relative cursor-pointer group">
+              <h3 class="text-2xl font-bold py-4">
+                Choose your Coverage amount.
+              </h3>
+              <p>
+                Select your coverage amount and term Use the calculator to help,
+                if you wish
+              </p>
+              <div class="py-4 relative">
+                <button
+                  class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-[#C9F31d] group-hover:duration-500"
+                >
+                  <i
+                    class="fas fa-arrow-right absolute left-4 top-8 group-hover:left-10 group-hover:duration-500"
+                  ></i>
+                  Explore
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        <!-- 5 -->
-        <div 
-        class="card rounded-xl w-full md:max-w-sm shadow-md box relative mt-10 md:mt-0 mx-auto"
-        style="background-image: url(./assets/dot.webp)"
-      >
-        <div class="overflow-hidden box-img bg-black rounded-t-xl h-[200px]">
-          <img
-            src="./assets/smm service/Social Media Campaigns.jpg"
-            alt="img"
-            class=""
-          />
-        </div>
-        <div class="p-4 box-content relative cursor-pointer group">
-          <h3 class="text-2xl font-bold py-4">
-            Choose your Coverage amount.
-          </h3>
+      </div>
+    </div>
+    <!-- Our Portfolio -->
+    <div class="w-full py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="header-content max-w-2xl text-center mx-auto">
+          <h2 class="text-3xl py-2 font-semibold">Our recent work</h2>
           <p>
-            Select your coverage amount and term Use the calculator to help,
-            if you wish
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+            suscipit perspiciatis ad vitae possimus totam iure animi tempora
+            laudantium, labore quam cumque recusandae! Optio eveniet dolore
+            mollitia culpa veniam ad!
           </p>
-          <div class="py-4 relative">
-            <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-[#C9F31d] group-hover:duration-500 ">
-              <i class="fas fa-arrow-right absolute left-4 top-8 group-hover:right-20 group-hover:duration-500"></i> Explore
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- 6 -->
-      <div 
-      class="card rounded-xl w-full md:max-w-sm shadow-md box relative mt-10 md:mt-0 mx-auto"
-      style="background-image: url(./assets/dot.webp)"
-    >
-      <div class="overflow-hidden box-img bg-black rounded-t-xl h-[200px]">
-        <img
-          src="./assets/smm service/Social Media Campaigns.jpg"
-          alt="img"
-          class=""
-        />
-      </div>
-      <div class="p-4 box-content relative cursor-pointer group">
-        <h3 class="text-2xl font-bold py-4">
-          Choose your Coverage amount.
-        </h3>
-        <p>
-          Select your coverage amount and term Use the calculator to help,
-          if you wish
-        </p>
-        <div class="py-4 relative">
-          <button class="bg-[#121212] text-white px-2 py-1 rounded w-1/2 h-12 group-hover:text-[#000] group-hover:bg-[#C9F31d] group-hover:duration-500 ">
-            <i class="fas fa-arrow-right absolute left-4 top-8 group-hover:right-20 group-hover:duration-500"></i> Explore
-          </button>
-        </div>
-      </div>
-    </div>
-          
-        </div>
-          </div>
-        </div>
-        <!-- <div class="flex justify-center py-20">
-          <div class="text-center max-w-lg">
-            <h2 class="py-4 text-4xl">
-              WHAT PEOPLE SAYS
-            </h2> -->
-            <!-- <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Consequatur velit asperiores nemo non inventore, saepe itaque
-              nobis architecto adipisci eaque.
-            </p> -->
-            <!-- <button
-              class="bg-[#C9F31d] hover:bg-[#C9F31d]/70 px-2 py-4 w-1/2 rounded-md  font-bold mt-8"
+          <a href="#" target="_blank"
+            ><button
+              class="mt-8 mb-8 border rounded-full w-32 h-32 cursor-pointer hover:bg-[#C9F31D] duration-500 hover:scale-125 md:hover:scale-125 font-semibold"
             >
-              Contact
-            </button> -->
-          <!-- </div>
-        </div> -->
+              Explore us
+              <i class="fa-solid fa-arrow-right -rotate-45"></i></button
+          ></a>
+        </div>
+        <!--Client Work Card -->
+        <div class="card-wrapper py-20">
+          <div class="max-w-6xl mx-auto lg:flex gap-20">
+            <div class="max-w-3xl client-work-card group sm:px-4">
+              <div class="relative">
+                <div class="group-hover:animate-top relative">
+                  <div
+                    class="background bg-cover w-[500px] h-60 group-hover:animate-to group-hover:animate-top group-hover:z-30 group-hover:delay- relative"
+                    style="background-image: url(./assets/banner.jpeg)"
+                  >
+                    <!-- <img src=".//assets/Bsides Goa logo 2.png" alt="" /> -->
+                  </div>
+                  <!-- <div
+                      class="layer absolute top-0 left-0 inset-0 bg-black"
+                    ></div> -->
+                </div>
+                <div
+                  class="background bg-cover w-[500px] h-60 absolute -top-4 -left-4 transition-all group-hover:z-10"
+                  style="
+                    background-image: url(./assets/Social\ Media\ Management.png);
+                  "
+                >
+                  <!-- <img src=".//assets/Bsides Goa logo 2.png" alt="" /> -->
+                </div>
+                <div
+                  class="opacity-0 group-hover:opacity-100 z-50 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[0%]"
+                >
+                  <!-- <a
+                      href="#"
+                      target="_blank"
+                      class="flex flex-col items-center text-[#c9f31d] hover:text-black"
+                    >
+                      <button
+                        class="border mb-2 rounded-full w-12 h-12 cursor-pointer hover:bg-[#C9F31D] duration-500 hover:scale-110 md:hover:scale-110 font-semibold"
+                      >
+                        <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                      </button>
+                      View Work
+                    </a> -->
+                </div>
+              </div>
+            </div>
+            <div class="max-w-3xl py-10 md:py-0">
+              <h2 class="text-3xl py-2 font-semibold">
+                Nice Block Apple & Mango
+                <span>
+                  <!-- <i class="fa-solid fa-link"></i> -->
+                  <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                </span>
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                suscipit perspiciatis ad vitae possimus totam iure animi tempora
+                laudantium, labore quam cumque recusandae! Optio eveniet dolore
+                mollitia culpa veniam ad!
+              </p>
+              <div
+                class="btn-wrapper flex justify-center sm:justify-start gap-2 sm:gap-4 mt-4"
+              >
+                <button
+                  class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
+                >
+                  branding
+                </button>
+                <button
+                  class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
+                >
+                  branding
+                </button>
+                <button
+                  class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
+                >
+                  branding
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- 2 Client Work -->
+          <div class="max-w-6xl mx-auto lg:flex gap-20 py-20">
+            <div class="max-w-3xl py-10 lg:py-0">
+              <h2 class="text-3xl py-2 font-semibold">
+                Nice Block Apple & Mango
+                <span>
+                  <!-- <i class="fa-solid fa-link"></i> -->
+                  <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                </span>
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                suscipit perspiciatis ad vitae possimus totam iure animi tempora
+                laudantium, labore quam cumque recusandae! Optio eveniet dolore
+                mollitia culpa veniam ad!
+              </p>
+              <div
+                class="btn-wrapper flex justify-center sm:justify-start gap-2 sm:gap-4 mt-4"
+              >
+                <button
+                  class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
+                >
+                  branding
+                </button>
+                <button
+                  class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
+                >
+                  branding
+                </button>
+                <button
+                  class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
+                >
+                  branding
+                </button>
+              </div>
+            </div>
+            <div class="max-w-3xl client-work-card group sm:px-4">
+              <div class="relative">
+                <div class="group-hover:animate-top relative">
+                  <div
+                    class="background bg-cover w-[500px] h-60 group-hover:animate-to group-hover:animate-top group-hover:z-30 group-hover:delay- relative"
+                    style="background-image: url(./assets/banner.jpeg)"
+                  >
+                    <!-- <img src=".//assets/Bsides Goa logo 2.png" alt="" /> -->
+                  </div>
+                  <!-- <div
+                      class="layer absolute top-0 left-0 inset-0 bg-black"
+                    ></div> -->
+                </div>
+                <div
+                  class="background bg-cover w-[500px] h-60 absolute -top-4 -left-4 transition-all group-hover:z-10"
+                  style="
+                    background-image: url(./assets/Social\ Media\ Management.png);
+                  "
+                >
+                  <!-- <img src=".//assets/Bsides Goa logo 2.png" alt="" /> -->
+                </div>
+                <div
+                  class="opacity-0 group-hover:opacity-100 z-50 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[0%]"
+                >
+                  <!-- <a
+                      href="#"
+                      target="_blank"
+                      class="flex flex-col items-center text-[#c9f31d] hover:text-black"
+                    >
+                      <button
+                        class="border mb-2 rounded-full w-12 h-12 cursor-pointer hover:bg-[#C9F31D] duration-500 hover:scale-110 md:hover:scale-110 font-semibold"
+                      >
+                        <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                      </button>
+                      View Work
+                    </a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3client -->
+          <div class="card-wrapper">
+            <div class="max-w-6xl mx-auto lg:flex gap-20">
+              <div class="max-w-3xl client-work-card group sm:px-4">
+                <div class="relative">
+                  <div class="group-hover:animate-top relative">
+                    <div
+                      class="background bg-cover w-[500px] h-60 group-hover:animate-to group-hover:animate-top group-hover:z-30 group-hover:delay- relative"
+                      style="background-image: url(./assets/banner.jpeg)"
+                    >
+                      <!-- <img src=".//assets/Bsides Goa logo 2.png" alt="" /> -->
+                    </div>
+                    <!-- <div
+                        class="layer absolute top-0 left-0 inset-0 bg-black"
+                      ></div> -->
+                  </div>
+                  <div
+                    class="background bg-cover w-[500px] h-60 absolute -top-4 -left-4 transition-all group-hover:z-10"
+                    style="
+                      background-image: url(./assets/Social\ Media\ Management.png);
+                    "
+                  >
+                    <!-- <img src=".//assets/Bsides Goa logo 2.png" alt="" /> -->
+                  </div>
+                  <div
+                    class="opacity-0 group-hover:opacity-100 z-50 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[0%]"
+                  >
+                    <!-- <a
+                        href="#"
+                        target="_blank"
+                        class="flex flex-col items-center text-[#c9f31d] hover:text-black"
+                      >
+                        <button
+                          class="border mb-2 rounded-full w-12 h-12 cursor-pointer hover:bg-[#C9F31D] duration-500 hover:scale-110 md:hover:scale-110 font-semibold"
+                        >
+                          <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                        </button>
+                        View Work
+                      </a> -->
+                  </div>
+                </div>
+              </div>
+              <div class="max-w-3xl py-10 lg:py-0">
+                <h2 class="text-3xl py-2 font-semibold">
+                  Nice Block Apple & Mango
+                  <span>
+                    <!-- <i class="fa-solid fa-link"></i> -->
+                    <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                  </span>
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                  suscipit perspiciatis ad vitae possimus totam iure animi tempora
+                  laudantium, labore quam cumque recusandae! Optio eveniet dolore
+                  mollitia culpa veniam ad!
+                </p>
+                <div
+                  class="btn-wrapper flex justify-center sm:justify-start gap-2 sm:gap-4 mt-4"
+                >
+                  <button
+                    class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
+                  >
+                    branding
+                  </button>
+                  <button
+                    class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
+                  >
+                    branding
+                  </button>
+                  <button
+                    class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
+                  >
+                    branding
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 4 Client Work -->
+            <div class="max-w-6xl mx-auto lg:flex gap-20 pt-20">
+              <div class="max-w-3xl py-10 lg:py-0">
+                <h2 class="text-3xl py-2 font-semibold">
+                  Nice Block Apple & Mango
+                  <span>
+                    <!-- <i class="fa-solid fa-link"></i> -->
+                    <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                  </span>
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                  suscipit perspiciatis ad vitae possimus totam iure animi tempora
+                  laudantium, labore quam cumque recusandae! Optio eveniet dolore
+                  mollitia culpa veniam ad!
+                </p>
+                <div
+                  class="btn-wrapper flex justify-center sm:justify-start gap-2 sm:gap-4 mt-4"
+                >
+                  <button
+                    class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
+                  >
+                    branding
+                  </button>
+                  <button
+                    class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
+                  >
+                    branding
+                  </button>
+                  <button
+                    class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
+                  >
+                    branding
+                  </button>
+                </div>
+              </div>
+              <div class="max-w-3xl client-work-card group sm:px-4">
+                <div class="relative">
+                  <div class="group-hover:animate-top relative">
+                    <div
+                      class="background bg-cover w-[500px] h-60 group-hover:animate-to group-hover:animate-top group-hover:z-30 group-hover:delay- relative"
+                      style="background-image: url(./assets/banner.jpeg)"
+                    >
+                      <!-- <img src=".//assets/Bsides Goa logo 2.png" alt="" /> -->
+                    </div>
+                    <!-- <div
+                        class="layer absolute top-0 left-0 inset-0 bg-black"
+                      ></div> -->
+                  </div>
+                  <div
+                    class="background bg-cover w-[500px] h-60 absolute -top-4 -left-4 transition-all group-hover:z-10"
+                    style="
+                      background-image: url(./assets/Social\ Media\ Management.png);
+                    "
+                  >
+                    <!-- <img src=".//assets/Bsides Goa logo 2.png" alt="" /> -->
+                  </div>
+                  <div
+                    class="opacity-0 group-hover:opacity-100 z-50 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[0%]"
+                  >
+                    <!-- <a
+                        href="#"
+                        target="_blank"
+                        class="flex flex-col items-center text-[#c9f31d] hover:text-black"
+                      >
+                        <button
+                          class="border mb-2 rounded-full w-12 h-12 cursor-pointer hover:bg-[#C9F31D] duration-500 hover:scale-110 md:hover:scale-110 font-semibold"
+                        >
+                          <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                        </button>
+                        View Work
+                      </a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
       </div>
     </div>
-    
+
+    <!-- FAQ -->
+    <div class="faq-wrapper w-full py-20">
+      <div class="faq max-w-4xl mx-auto px-4 cursor-pointer">
+        <h2 class="text-4xl font-semibold py-4">FAQ</h2>
+
+        <div class="question flex justify-between items-center py-4">
+          <h2 class="text-xl">Who are we ?</h2>
+          <i class="fa-solid fa-angle-down faq-icon"></i>
+        </div>
+        <div class="answer border-b border-black max-h-0 overflow-hidden">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+            rem rerum cum eligendi in laborum eos consectetur voluptas, suscipit
+            sunt?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloremque eveniet neque laudantium expedita earum incidunt
+            consequatur. Suscipit doloremque, dignissimos harum quia mollitia,
+            sapiente alias sed eum illum officia temporibus accusamus.
+          </p>
+        </div>
+      </div>
+      <div class="faq max-w-4xl mx-auto px-4 cursor-pointer">
+        <div class="question flex justify-between items-center py-4">
+          <h2 class="text-xl">Who are we ?</h2>
+          <i class="fa-solid fa-angle-down faq-icon"></i>
+        </div>
+        <div class="answer border-b border-black max-h-0 overflow-hidden">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+            rem rerum cum eligendi in laborum eos consectetur voluptas, suscipit
+            sunt?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloremque eveniet neque laudantium expedita earum incidunt
+            consequatur. Suscipit doloremque, dignissimos harum quia mollitia,
+            sapiente alias sed eum illum officia temporibus accusamus. Lorem
+            ipsum dolor, sit amet consectetur adipisicing elit. Dolor
+            accusantium numquam repellat doloremque dolores quos aut! Eveniet
+            odit laboriosam iure?krishna
+          </p>
+        </div>
+      </div>
+      <div class="faq max-w-4xl mx-auto px-4 py-4 cursor-pointer">
+        <div class="question flex justify-between items-center py-4">
+          <h2 class="text-xl">Who are we ?</h2>
+          <i class="fa-solid fa-angle-down faq-icon"></i>
+        </div>
+        <div class="answer border-b border-black max-h-0 overflow-hidden">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+            rem rerum cum eligendi in laborum eos consectetur voluptas, suscipit
+            sunt?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloremque eveniet neque laudantium expedita earum incidunt
+            consequatur. Suscipit doloremque, dignissimos harum quia mollitia,
+            sapiente alias sed eum illum officia temporibus accusamus.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <!-- Testimonial -->
-<!-- Slider main container -->
-<div id="testimonial" class="max-w-7xl mx-auto">
-  <div class="flex justify-center pt-20">
-    <div class="text-center max-w-lg">
-      <h2 class="py-4 text-3xl font-semibold">
-        CLIENT TESTIMONIALS
-      </h2>
-    </div>
-  </div>
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper flex">
-    <div class="swiper-slide  px-4 md:px-0 ">
-      <div class="bg-[#EBEBEB] rounded-2xl max-w-[500px] mx-auto mt-20">
-        <div class=" relative">
-          <div class="absolute left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%]  w-20 h-20 rounded-full flex justify-center items-center overflow-hidden bg-white">
-            <img src="./assets/smm service/canva icon.png" alt="user_name">
-          </div>
-          <div>
-          <div class="flex flex-col justify-center items-center h-[300px] px-4">
-            <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, obcaecati quae. Placeat ipsam mollitia id architecto culpa nam, qui saepe!"</p>
-            <h2 class="text-2xl font-bold text-orange-400">Carlito C.</h2>
-            <p class="font-thin">Dart Arts</p>
-          </div>
-          </div>
+    <div id="testimonial" class="max-w-7xl mx-auto">
+      <div class="flex justify-center pt-20">
+        <div class="text-center max-w-lg">
+          <h2 class="py-4 text-3xl font-semibold">CLIENT TESTIMONIALS</h2>
         </div>
       </div>
-    </div>
-    <div class="swiper-slide px-4 md:px-0">
-      <div class="bg-[#EBEBEB] max-w-[500px] rounded-2xl mx-auto mt-20">
-        <div class=" relative">
-          <div class="absolute left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%]  w-20 h-20 rounded-full flex justify-center items-center overflow-hidden bg-white">
-            <img src="./assets/smm service/canva icon.png" alt="user_name">
+      <div class="swiper">
+        <div class="swiper-wrapper flex">
+          <div class="swiper-slide px-4 md:px-0">
+            <div class="bg-[#EBEBEB] rounded-2xl max-w-[500px] mx-auto mt-20">
+              <div class="relative">
+                <div
+                  class="absolute left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] w-20 h-20 rounded-full flex justify-center items-center overflow-hidden bg-white"
+                >
+                  <img
+                    src="./assets/smm service/canva icon.png"
+                    alt="user_name"
+                  />
+                </div>
+                <div>
+                  <div
+                    class="flex flex-col justify-center items-center h-[300px] px-4"
+                  >
+                    <p>
+                      "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Rem, obcaecati quae. Placeat ipsam mollitia id architecto
+                      culpa nam, qui saepe!"
+                    </p>
+                    <h2 class="text-2xl font-bold text-orange-400">
+                      Carlito C.
+                    </h2>
+                    <p class="font-thin">Dart Arts</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-          <div class="flex flex-col justify-center items-center h-[300px] px-4">
-            <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, obcaecati quae. Placeat ipsam mollitia id architecto culpa nam, qui saepe!"</p>
-            <h2 class="text-2xl font-bold text-orange-400">Carlito C.0</h2>
-            <p class="font-thin">Dart Arts</p>
+          <div class="swiper-slide px-4 md:px-0">
+            <div class="bg-[#EBEBEB] max-w-[500px] rounded-2xl mx-auto mt-20">
+              <div class="relative">
+                <div
+                  class="absolute left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] w-20 h-20 rounded-full flex justify-center items-center overflow-hidden bg-white"
+                >
+                  <img
+                    src="./assets/smm service/canva icon.png"
+                    alt="user_name"
+                  />
+                </div>
+                <div>
+                  <div
+                    class="flex flex-col justify-center items-center h-[300px] px-4"
+                  >
+                    <p>
+                      "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Rem, obcaecati quae. Placeat ipsam mollitia id architecto
+                      culpa nam, qui saepe!"
+                    </p>
+                    <h2 class="text-2xl font-bold text-orange-400">
+                      Carlito C.0
+                    </h2>
+                    <p class="font-thin">Dart Arts</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="swiper-slide px-4 md:px-0">
+            <div class="bg-[#EBEBEB] max-w-[500px] rounded-2xl mx-auto mt-20">
+              <div class="relative">
+                <div
+                  class="absolute left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] w-20 h-20 rounded-full flex justify-center items-center overflow-hidden bg-white"
+                >
+                  <img
+                    src="./assets/smm service/canva icon.png"
+                    alt="user_name"
+                  />
+                </div>
+                <div>
+                  <div
+                    class="flex flex-col justify-center items-center h-[300px] px-4"
+                  >
+                    <p>
+                      "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Rem, obcaecati quae. Placeat ipsam mollitia id architecto
+                      culpa nam, qui saepe!"
+                    </p>
+                    <h2 class="text-2xl font-bold text-orange-400">
+                      Carlito C.1
+                    </h2>
+                    <p class="font-thin">Dart Arts</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="swiper-pagination opacity-"></div>
+        <div class="swiper-button-prev cursor-pointer"></div>
+        <div class="swiper-button-next cursor-pointer"></div>
+        <div class="swiper-scrollbar hidden"></div>
       </div>
     </div>
-    <div class="swiper-slide px-4 md:px-0">
-      <div class="bg-[#EBEBEB] max-w-[500px] rounded-2xl mx-auto mt-20">
-        <div class="relative">
-          <div class="absolute left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%]  w-20 h-20 rounded-full flex justify-center items-center overflow-hidden bg-white">
-            <img src="./assets/smm service/canva icon.png" alt="user_name">
-          </div>
-          <div>
-          <div class="flex flex-col justify-center items-center h-[300px] px-4">
-            <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, obcaecati quae. Placeat ipsam mollitia id architecto culpa nam, qui saepe!"</p>
-            <h2 class="text-2xl font-bold text-orange-400">Carlito C.1</h2>
-            <p class="font-thin">Dart Arts</p>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="swiper-pagination opacity-0"></div>
-  <div class="swiper-button-prev cursor-pointer"></div>
-  <div class="swiper-button-next cursor-pointer"></div>
-  <div class="swiper-scrollbar hidden"></div>
-</div>
-</div>
 
- <!-- Footer -->
- <div id="contact" class="bg-black text-white w-full py-8">
-  <div class="mx-auto max-w-7xl px-4">
-    <div class="flex justify-between flex-wrap">
-      <div class="md:w-1/3 w-full">
-        <a href="https://cyatt.com/" target="_blank"><img
-          src="./assets/cyattlogo.png"
-          alt="logo"
-          class="w-32 relative -top-4 -left-4"
-        /></a>
-        <!-- Social Links -->
-        <div class="">
-          <ul class="flex gap-4">
-            <li class="text-2xl">
-              <a href="https://www.facebook.com/cyatt.it/" target="_blank"
-                ><span><i class="fa-brands fa-facebook-f"></i></span
-              ></a>
-            </li>
-            <li class="text-2xl">
-              <a
-                href="https://www.instagram.com/cyattdotcom/?hl=en"
-                target="_blank"
-                ><span><i class="fa-brands fa-instagram"></i></span
-              ></a>
-            </li>
-            <li class="text-2xl">
-              <a
-                href="https://www.linkedin.com/company/cyatt/"
-                target="_blank"
-                ><span><i class="fa-brands fa-linkedin"></i></span
-              ></a>
-            </li>
-          </ul>
+    <!-- Footer -->
+    <div id="contact" class="bg-black text-white w-full py-8">
+      <div class="mx-auto max-w-7xl px-4">
+        <div class="flex justify-between flex-wrap">
+          <div class="md:w-1/3 w-full">
+            <a href="https://cyatt.com/" target="_blank"
+              ><img
+                src="./assets/cyattlogo.png"
+                alt="logo"
+                class="w-32 relative -top-4 -left-4"
+            /></a>
+            <!-- Social Links -->
+            <div class="">
+              <ul class="flex gap-4">
+                <li class="text-2xl">
+                  <a href="https://www.facebook.com/cyatt.it/" target="_blank"
+                    ><span><i class="fa-brands fa-facebook-f"></i></span
+                  ></a>
+                </li>
+                <li class="text-2xl">
+                  <a
+                    href="https://www.instagram.com/cyattdotcom/?hl=en"
+                    target="_blank"
+                    ><span><i class="fa-brands fa-instagram"></i></span
+                  ></a>
+                </li>
+                <li class="text-2xl">
+                  <a
+                    href="https://www.linkedin.com/company/cyatt/"
+                    target="_blank"
+                    ><span><i class="fa-brands fa-linkedin"></i></span
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:w-1/3 w-full mt-8 md:mt-0">
+            <h2 class="text-xl font-bold">Company</h2>
+            <ul class="flex flex-col gap-4">
+              <li class="hover:underline cursor-pointer mt-4">Home</li>
+              <li class="hover:underline cursor-pointer">About</li>
+              <li class="hover:underline cursor-pointer">Services</li>
+              <li class="hover:underline cursor-pointer">Testimonials</li>
+              <li class="hover:underline cursor-pointer">
+                <a href="https://cyatt.com/privacy-policy.html" target="_blank"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li class="hover:underline cursor-pointer">
+                <a href="https://cyatt.com/term-services.html" target="_blank"
+                  >Terms Of Services</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="md:w-1/3 w-full mt-8 md:mt-0">
+            <h2 class="text-xl font-bold">Contact Us</h2>
+            <ul>
+              <li class="mt-4">
+                3rd Floor, Samarth Tower, Mansarovar Ext Rd, Narayan Vihar,
+                Jaipur, Rajasthan 302020
+              </li>
+              <li class="mt-4">
+                228 Sheikh Zayed Rd - Business Bay - Dubai - United Arab
+                Emirates
+              </li>
+              <li class="mt-4 hover:underline">
+                <a href="tel:919521223123">+919521223123</a>
+              </li>
+              <li class="mt-4 hover:underline">
+                <a href="mailto:team@cyatt.com">team@cyatt.com</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="md:w-1/3 w-full mt-8 md:mt-0">
-        <h2 class="text-xl font-bold">Company</h2>
-        <ul class="flex flex-col gap-4">
-          <li class="hover:underline cursor-pointer mt-4">Home</li>
-          <li class="hover:underline cursor-pointer">About</li>
-          <li class="hover:underline cursor-pointer">Services</li>
-          <li class="hover:underline cursor-pointer">Testimonials</li>
-          <li class="hover:underline cursor-pointer"><a href="https://cyatt.com/privacy-policy.html" target="_blank">Privacy Policy</a></li>
-          <li class="hover:underline cursor-pointer"><a href="https://cyatt.com/term-services.html" target="_blank">Terms Of Services</a></li>
-        </ul>
-      </div>
-      <div class="md:w-1/3 w-full mt-8 md:mt-0">
-        <h2 class="text-xl font-bold">Contact Us</h2>
-        <ul>
-          <li class="mt-4">
-            3rd Floor, Samarth Tower, Mansarovar Ext Rd, Narayan Vihar,
-            Jaipur, Rajasthan 302020
-          </li>
-          <li class="mt-4">
-            228 Sheikh Zayed Rd - Business Bay - Dubai - United Arab
-            Emirates
-          </li>
-          <li class="mt-4 hover:underline">
-            <a href="tel:919521223123">+919521223123</a>
-          </li>
-          <li class="mt-4 hover:underline">
-            <a href="mailto:team@cyatt.com">team@cyatt.com</a>
-          </li>
-        </ul>
-      </div>
     </div>
-  </div>
-</div>
-<div class="w-full text-center text-white py-4 bg-[#363636]">
-  &copy; Cyatt 2023-24
-</div>
+    <div class="w-full text-center text-white py-4 bg-[#363636]">
+      &copy; Cyatt 2023-24
+    </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

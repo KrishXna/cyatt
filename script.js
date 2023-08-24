@@ -2,6 +2,8 @@ var navbar = document.getElementById("navbar");
 var navmenu = document.getElementById("navmenu");
 var icon = document.getElementById("icon");
 var contactForm = document.getElementById("contactForm");
+var faq = document.querySelectorAll(".faq");
+var faqIcon = document.querySelectorAll(".faq-icon");
 
 var sticky = navbar.offsetTop;
 
@@ -113,4 +115,15 @@ contactForm.addEventListener("submit", function (e) {
       console.log({ error }); // Failure
     }
   );
+});
+
+faq.forEach((e) => {
+  var question = e.querySelector(".question");
+  var answer = e.querySelector(".answer");
+  var faqIcon = e.querySelector(".faq-icon");
+
+  question.addEventListener("click", () => {
+    answer.classList.toggle("faq-active");
+    faqIcon.classList.toggle("active");
+  });
 });
