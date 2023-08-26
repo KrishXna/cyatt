@@ -1,6 +1,8 @@
 var navbar = document.getElementById("navbar");
 var navmenu = document.getElementById("navmenu");
 var icon = document.getElementById("icon");
+var logo = document.getElementById("logo");
+
 var contactForm = document.getElementById("contactForm");
 var faq = document.querySelectorAll(".faq");
 var faqIcon = document.querySelectorAll(".faq-icon");
@@ -10,17 +12,23 @@ var sticky = navbar.offsetTop;
 window.onscroll = function () {
   if (window.pageYOffset >= 3) {
     navbar.classList.add("bgwhite");
+    icon.classList.remove("active-invert");
+    logo.classList.remove("active-invert");
   } else {
     navbar.classList.remove("bgwhite");
+    icon.classList.add("active-invert");
+    logo.classList.add("active-invert");
   }
 };
 
-icon.addEventListener("click", function () {
+navbar.addEventListener("click", function () {
   if (navmenu.classList.contains("hide")) {
     navmenu.classList.remove("hide");
     navmenu.classList.add("show");
     navmenu.classList.add("bgwhite");
     navbar.classList.add("bgwhite");
+    logo.classList.remove("active-invert");
+
     changeIcon();
   } else {
     navmenu.classList.remove("show");
