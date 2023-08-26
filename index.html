@@ -61,22 +61,6 @@
       background-repeat: no-repeat;
     }
 
-    @media only screen and (min-width: 768px) {
-      .parallax {
-        background-attachment: fixed;
-        min-height: 600px;
-      }
-    }
-
-    @media only screen and (max-width: 639px) {
-      .swiper-button-prev {
-        /* display: none; */
-      }
-      .swiper-button-next {
-        display: none;
-      }
-    }
-
     .box-content:before {
       position: absolute;
       content: "";
@@ -210,7 +194,7 @@
       top: 17px;
     }
     .hero-section:before {
-      min-height: 1556px;
+      height: 1556px;
       content: "";
       position: absolute;
       width: 2300px;
@@ -243,6 +227,27 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+    }
+
+    @media only screen and (min-width: 768px) {
+      .parallax {
+        background-attachment: fixed;
+        min-height: 600px;
+      }
+    }
+
+    @media (max-width: 639px) {
+      .swiper-button-prev {
+        /* display: none; */
+      }
+      .swiper-button-next {
+        display: none;
+      }
+      .hero-section::before {
+        width: 2700px;
+        left: -110%;
+        width: 2000px;
+      }
     }
   </style>
 
