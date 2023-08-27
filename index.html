@@ -271,8 +271,8 @@
   <body>
     <!-- Navbar -->
     <div class="overflow-hidden lg:pb-40 xl:pb-14">
-      <div class="relative hero-section lg:h-[100vh">
-        <div id="navbar" class="fixed z-20 top-0 w-full">
+      <div class="relative hero-section">
+        <div id="navbar" class="cursor-pointer fixed z-50 top-0 w-full">
           <div
             class="flex justify-between items-center mx-auto max-w-7xl px-4 z-10 relative shadow-xl md:shadow-none"
           >
@@ -285,11 +285,13 @@
             /></a>
             <div class="hidden md:flex justify-center items-center gap-4">
               <div class="flex flex-col">
-                <div>
+                <div id="text" class="active-invert">
                   <span class="text-black font-semibold">Need Help ? </span>
                   <span class="text-sm lg:text-lg">Speak with a</span>
                 </div>
-                <p class="text-sm lg:text-lg">Licenced Insurance Agent</p>
+                <p id="para" class="text-sm lg:text-lg active-invert">
+                  Licenced Insurance Agent
+                </p>
               </div>
               <a href="tel:919521223123">
                 <button class="bg-[#C9F31d] px-2 py-4 rounded-md font-bold">
@@ -304,8 +306,9 @@
               ></i>
             </div>
           </div>
+
           <!-- MOBILE NAV MENU -->
-          <div id="navmenu" class="hide md:hidden pt-40 relative">
+          <div id="navmenu" class="bg-white hide md:hidden pt-40 relative">
             <ul
               class="flex flex-col justify-center mt- items-center gap-6 uppercase font-bold"
             >
@@ -511,7 +514,6 @@
     </div>
 
     <!-- About Us  -->
-
     <div id="about">
       <div class="max-w-7xl px-4 mx-auto">
         <div class="md:flex w-full">

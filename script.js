@@ -2,6 +2,8 @@ var navbar = document.getElementById("navbar");
 var navmenu = document.getElementById("navmenu");
 var icon = document.getElementById("icon");
 var logo = document.getElementById("logo");
+var text = document.getElementById("text");
+var para = document.getElementById("para");
 
 var contactForm = document.getElementById("contactForm");
 var faq = document.querySelectorAll(".faq");
@@ -10,16 +12,16 @@ var faqIcon = document.querySelectorAll(".faq-icon");
 var sticky = navbar.offsetTop;
 
 window.onscroll = function () {
-  if (window.pageYOffset >= 3) {
+  if (window.pageYOffset >= 10) {
     navbar.classList.add("bgwhite");
     icon.classList.remove("active-invert");
     logo.classList.remove("active-invert");
+    text.classList.remove("active-invert");
+    para.classList.remove("active-invert");
   } else {
-    // if (navbar.classList.contains("bg-white")) {
-    navbar.classList.remove("bgwhite");
-    icon.classList.add("active-invert");
-    logo.classList.add("active-invert");
-    // }
+    // navbar.classList.remove("bgwhite");
+    // icon.classList.add("active-invert");
+    // logo.classList.add("active-invert");
   }
 };
 
@@ -27,10 +29,12 @@ navbar.addEventListener("click", function () {
   if (navmenu.classList.contains("hide")) {
     navmenu.classList.remove("hide");
     navmenu.classList.add("show");
-    navmenu.classList.add("bgwhite");
+    navmenu.classList.add("white");
     navbar.classList.add("bgwhite");
     logo.classList.remove("active-invert");
     icon.classList.remove("active-invert");
+    text.classList.remove("active-invert");
+    para.classList.remove("active-invert");
 
     changeIcon();
   } else {
