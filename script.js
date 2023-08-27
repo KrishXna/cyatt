@@ -15,19 +15,22 @@ window.onscroll = function () {
     icon.classList.remove("active-invert");
     logo.classList.remove("active-invert");
   } else {
+    // if (navbar.classList.contains("bg-white")) {
     navbar.classList.remove("bgwhite");
     icon.classList.add("active-invert");
     logo.classList.add("active-invert");
+    // }
   }
 };
 
-navbar.addEventListener("click", function () {
+icon.addEventListener("click", function () {
   if (navmenu.classList.contains("hide")) {
     navmenu.classList.remove("hide");
     navmenu.classList.add("show");
     navmenu.classList.add("bgwhite");
     navbar.classList.add("bgwhite");
     logo.classList.remove("active-invert");
+    icon.classList.remove("active-invert");
 
     changeIcon();
   } else {
