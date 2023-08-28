@@ -25,6 +25,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <style>
+    .swiper-wrapper {
+      transition-timing-function: linear;
+    }
     .navbar {
       transition: 0.3s ease-in-out;
     }
@@ -464,25 +467,61 @@
                       </div>
                       <input
                         class="outline-none border border-[#d3d3d3] form-control h-10 w-full rounded-lg pl-4"
-                        id="phone"
+                        id="contact"
                         type="tel"
-                        name="phone"
+                        name="contact"
                         placeholder="Phone No"
                       />
+                    </div>
+                    <div class="group-img relative pt-2 pb-4">
+                      <select
+                        name="services"
+                        id="services"
+                        class="select outline-none border border-[#d3d3d3] form-control h-10 w-full rounded-lg px-2"
+                      >
+                        <option value="" disabled="" selected="">
+                          Select *
+                        </option>
+                        <option value="Branding Design">Branding</option>
+                        <option value="Social Engine Optimization">
+                          Social Engine Optimization
+                        </option>
+                        <option value="Social Media Marketing">
+                          Social Media Marketing
+                        </option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Mobile Development">
+                          Mobile Development
+                        </option>
+                        <option value="UI/UX Design">UI/UX Design</option>
+                      </select>
                     </div>
                     <p class="text-lg pb-4">Preferred Consult Method:</p>
                     <div class="flex gap-4 pb-4">
                       <div
                         class="flex justify-center items-center gap-2 bg-[#c9f31d] rounded-full px-4 py-2"
                       >
-                        <!-- <input type="radio" class="w-4 h-4 rounded-full" /> -->
+                        <input
+                          type="radio"
+                          id="Preferredoption"
+                          name="Preferredoption"
+                          value="Virtual"
+                          checked
+                          class="w-4 h-4 rounded-full"
+                        />
                         <p>Virtual</p>
                       </div>
 
                       <div
                         class="flex justify-center items-center gap-2 bg-[#c9f31d border rounded-full px-4 py-2"
                       >
-                        <!-- <input type="radio" class="rounded-full w-4 h-4" /> -->
+                        <input
+                          type="radio"
+                          id="Preferredoption"
+                          name="Preferredoption"
+                          value="In Office"
+                          class="w-4 h-4 rounded-full"
+                        />
                         <p>In Office</p>
                       </div>
                     </div>
@@ -847,7 +886,7 @@
           <div
             class="swiper-slide roll__slide swiper-slide-duplicate swiper-slide-duplicate-next"
             role="group"
-            aria-label="5 / 6"
+            aria-label="6 / 6"
             style="width: 261.75px"
             data-swiper-slide-index="5"
           >
@@ -856,7 +895,7 @@
           <div
             class="swiper-slide roll__slide swiper-slide-duplicate"
             role="group"
-            aria-label="6 / 6"
+            aria-label="1 / 6"
             style="width: 261.75px"
             data-swiper-slide-index="0"
           >
@@ -865,9 +904,33 @@
           <div
             class="swiper-slide roll__slide swiper-slide-duplicate"
             role="group"
-            aria-label="1 / 6"
+            aria-label="2 / 6"
             style="width: 261.75px"
             data-swiper-slide-index="1"
+          >
+            <img
+              src="./assets/smm service/adobe illustrator icon.png"
+              alt="logo"
+            />
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate"
+            role="group"
+            aria-label="3 / 6"
+            style="width: 261.75px"
+            data-swiper-slide-index="2"
+          >
+            <img
+              src="./assets/smm service/adobe illustrator icon.png"
+              alt="logo"
+            />
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate"
+            role="group"
+            aria-label="4 / 6"
+            style="width: 261.75px"
+            data-swiper-slide-index="3"
           >
             <img
               src="./assets/smm service/adobe illustrator icon.png"
@@ -1131,6 +1194,7 @@
       &copy; Cyatt 2023-24
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/appwrite@11.0.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
     <script src="slowNumber.js"></script>

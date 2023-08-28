@@ -58,43 +58,23 @@ function changeIcon() {
 
 // Testimonial Slider
 const swiper = new Swiper(".swiper", {
-  loop: true,
-  freemode: true,
-  autoplay: {
-    delay: 0,
-  },
+  // freemode: true,
   speed: 3000, //add
-  slidesPerView: 4,
-  slidesPerColumn: 2,
+  // slidesPerView: 4,
+  // slidesPerColumn: 2,
   spaceBetween: 30,
   // centeredSlides: true,
-
   // centerInsufficientSlides: true,
   // cssMode: true,
 
   // Optional parameters
   direction: "horizontal",
-  // loop: true,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false,
-  // },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+  loop: true,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
   },
 
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
   breakpoints: {
     300: {
       slidesPerView: 2,
@@ -109,8 +89,6 @@ const swiper = new Swiper(".swiper", {
       slidesPerColumn: 2,
     },
   },
-
-  // And if we need scrollbar
   scrollbar: {
     el: ".swiper-scrollbar",
   },
@@ -128,13 +106,14 @@ contactForm.addEventListener("submit", function (e) {
   });
 
   // Validate form fields
-  const { name, email, contact, message } = formDataObj;
+  const { name, email, contact, services, Preferredoption } = formDataObj;
+  console.log(formDataObj);
 
-  if (!name || !email || !message || !contact) {
+  if ((!name || !email || !services || !contact, !Preferredoption)) {
     alert("Please fill in all required fields.");
     return;
   }
-  // alert("Data submitted successfully.");
+  alert("Data submitted successfully.");
   this.reset();
 
   const { Client, ID, Databases } = Appwrite;
@@ -154,7 +133,7 @@ contactForm.addEventListener("submit", function (e) {
 
   promise.then(
     function (response) {
-      // console.log({ response }); // Success
+      console.log({ response }); // Success
     },
     function (error) {
       console.log({ error }); // Failure
