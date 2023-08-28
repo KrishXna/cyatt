@@ -228,6 +228,16 @@
       background-size: cover;
       background-position: center;
     }
+    @media (min-width: 1441px) {
+      .hero-section::before {
+        /* top: -50%; */
+        width: 2500px;
+      }
+      .hero-section::after {
+        /* top: -50%; */
+        width: 2500px;
+      }
+    }
 
     @media only screen and (min-width: 1025px) and (max-width: 1240px) {
       .hero-section::before {
@@ -258,7 +268,6 @@
         left: -110%;
       }
     }
-
     @media (max-width: 449px) {
       .hero-section::before {
         height: 1800px;
@@ -270,9 +279,9 @@
   </style>
   <body>
     <!-- Navbar -->
-    <div class="overflow-hidden lg:pb-40 xl:pb-14">
+    <div class="overflow-hidden lg:pb-40 xl:pb-60">
       <div class="relative hero-section">
-        <div id="navbar" class="cursor-pointer fixed z-50 top-0 w-full">
+        <div id="navbar" class="fixed z-50 top-0 w-full">
           <div
             class="flex justify-between items-center mx-auto max-w-7xl px-4 z-10 relative shadow-xl md:shadow-none"
           >
@@ -367,7 +376,7 @@
                   class="relative max-w-[300px] w-[80%] sm:max-w-[370px] mx-auto top-6 h-10 bg-[#c9f31d] rounded-3xl"
                 ></div>
 
-                <div class="bg-[#fff] rounded-2xl p-10 relative">
+                <div class="bg-[#fff] rounded-2xl p-10 relative shadow-lg">
                   <form id="contactForm">
                     <div
                       class="mb-lg-5 mb-3 d-flex align-items-center flex gap-6 w-full"
@@ -519,7 +528,7 @@
         <div class="md:flex w-full">
           <div class="left w-full md:w-1/2">
             <h2
-              class="pt-20 text-[#c9f31d] relative uppercase text-xl font-bold after:absolute after:w-[5%] after:h-0.5 after:bottom-0 after:bg-[#000] before:absolute before:w-[5%] before:h-0.5 before:bottom-0 before:bg-[#000] before:left-0 after:left-0"
+              class="pt-6 text-[#c9f31d] relative uppercase text-xl font-bold after:absolute after:w-[5%] after:h-0.5 after:bottom-0 after:bg-[#000] before:absolute before:w-[5%] before:h-0.5 before:bottom-0 before:bg-[#000] before:left-0 after:left-0"
             >
               Who we are
             </h2>
@@ -704,7 +713,7 @@
           <div class="w-full lg:w-1/2 mt-20 lg:mt-0">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
               <div
-                class="col-span-2 md:col-span-1 shadow-xl p-4 lg:shadow-none"
+                class="col-span-2 md:col-span-1 shadow-xl rounded-xl p-4 lg:shadow-none"
               >
                 <div>
                   <img src="./assets/s1.png" alt="" />
@@ -718,7 +727,7 @@
                 </p>
               </div>
               <div
-                class="col-span-2 md:col-span-1 mt- md:mt-0 shadow-xl p-4 lg:shadow-none"
+                class="col-span-2 md:col-span-1 mt- md:mt-0 shadow-xl rounded-xl p-4 lg:shadow-none"
               >
                 <div>
                   <img src="./assets/s1.png" alt="" />
@@ -732,7 +741,7 @@
                 </p>
               </div>
               <div
-                class="col-span-2 md:col-span-1 shadow-xl p-4 lg:shadow-none"
+                class="col-span-2 md:col-span-1 shadow-xl rounded-xl p-4 lg:shadow-none"
               >
                 <div>
                   <img src="./assets/s1.png" alt="" />
@@ -746,7 +755,7 @@
                 </p>
               </div>
               <div
-                class="col-span-2 md:col-span-1 shadow-xl p-4 lg:shadow-none"
+                class="col-span-2 md:col-span-1 shadow-xl rounded-xl p-4 lg:shadow-none"
               >
                 <div>
                   <img src="./assets/s1.png" alt="" />

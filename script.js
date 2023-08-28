@@ -22,6 +22,8 @@ window.onscroll = function () {
     // navbar.classList.remove("bgwhite");
     // icon.classList.add("active-invert");
     // logo.classList.add("active-invert");
+    // text.classList.add("active-invert");
+    // para.classList.add("active-invert");
   }
 };
 
