@@ -22,11 +22,9 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <style>
-    .swiper {
-      height: 500px;
-    }
     .navbar {
       transition: 0.3s ease-in-out;
     }
@@ -177,7 +175,7 @@
       width: 1px;
       height: 20px;
       position: absolute;
-      right: 45px;
+      right: 37px;
       top: 17px;
     }
     .hero-section:before {
@@ -392,30 +390,24 @@
                       class="mb-lg-5 mb-3 d-flex align-items-center flex gap-6 w-full"
                     >
                       <div
-                        class="rounded-full rocket rounded-bl-lg w-20 h-20 flex justify-center items-center bg-[#c0e0408c] p-4"
+                        class="rounded-full rocket rounded-bl-lg w-20 h-20 flex justify-center items-center bg-[#c9f31d] p-4"
                       >
                         <i>
                           <svg
-                            enable-background="new 0 0 124 124"
-                            height="46"
-                            viewBox="0 0 124 124"
-                            width="52"
                             xmlns="http://www.w3.org/2000/svg"
+                            width="52"
+                            height="46"
+                            fill="none"
+                            viewBox="0 0 449 456"
+                            id="rocket"
                           >
                             <path
-                              d="m82.899 50.646c-6.059 0-10.988-4.918-10.988-10.963s4.929-10.963 10.988-10.963 10.988 4.918 10.988 10.963-4.929 10.963-10.988 10.963zm0-17.979c-3.877 0-7.031 3.147-7.031 7.015s3.154 7.015 7.031 7.015 7.031-3.147 7.031-7.015-3.154-7.015-7.031-7.015z"
+                              fill="#000"
+                              d="M446.604 6.51629C446.204 4.81629 445.004 3.5163 443.304 3.1163C388.904 -10.1837 263.204 37.2163 195.104 105.316C181.804 118.616 170.904 131.716 162.004 144.416C141.004 142.516 120.004 144.116 102.104 151.916C51.6044 174.116 36.9044 232.116 32.8044 257.016C31.8044 262.916 36.7044 268.016 42.6044 267.416L123.704 258.516C123.804 266.316 124.304 272.516 124.804 276.816C125.204 281.016 127.104 284.916 130.104 287.916L161.504 319.316C164.504 322.316 168.404 324.216 172.604 324.616C176.904 325.116 183.104 325.616 190.804 325.716L181.904 406.716C181.304 412.616 186.404 417.516 192.304 416.516C217.204 412.516 275.304 397.816 297.404 347.316C305.204 329.416 306.804 308.516 305.004 287.616C317.704 278.716 330.904 267.816 344.204 254.516C412.604 186.516 459.704 63.6163 446.604 6.51629ZM283.404 166.416C266.704 149.716 266.704 122.716 283.404 106.016C300.104 89.3163 327.104 89.3163 343.804 106.016C360.504 122.716 360.504 149.716 343.804 166.416C327.104 183.116 300.104 183.116 283.404 166.416Z"
                             ></path>
                             <path
-                              d="m122.558 2.183c-.069-.986-.853-1.773-1.841-1.848-14.728-1.125-41.975-.347-58.941 17.482-.002.002-.005.004-.007.007-2.3 2.441-4.418 5.209-6.382 8.136-24.65 8.882-35.589 25.07-38.168 33.298-.376 1.202.496 2.487 1.756 2.582l17.94 1.359c-1.478 3.901-2.824 7.823-4.017 11.748-.215.706-.02 1.472.504 1.992l11.995 11.891c.513.508 1.288.703 1.98.495 4-1.194 7.996-2.545 11.97-4.027l1.381 17.923c.097 1.253 1.377 2.122 2.581 1.752 7.562-2.328 24.216-13.247 33.545-37.919 2.953-1.954 5.73-4.064 8.153-6.359 17.668-16.682 18.58-43.82 17.551-58.512-.07-.987 1.029 14.692 0 0zm-3.878 2.008c.413 7.551.219 17.908-2.38 28.202l-26.124-25.897c10.42-2.625 20.888-2.767 28.504-2.305zm-96.722 53.877c3.21-7.053 12.265-18.732 29.892-26.418-2.945 5.084-5.502 10.331-7.777 15.002-2.04 4.172-3.917 8.403-5.638 12.665zm42.549 42.183-1.267-16.452c4.264-1.695 8.496-3.541 12.668-5.545 4.732-2.244 10.045-4.763 15.169-7.669-7.959 17.563-19.588 26.513-26.57 29.666zm37.752-42.448c-7.489 7.094-18.422 12.277-28.076 16.854-8.762 4.212-17.778 7.744-26.816 10.507l-10.293-10.205c2.785-8.95 6.346-17.879 10.592-26.562 4.394-9.022 9.862-20.251 17.01-27.839 5.992-6.295 13.426-10.299 21.11-12.794l29.252 28.998c-2.497 7.687-6.497 15.108-12.779 21.041z"
-                            ></path>
-                            <path
-                              d="m4.185 122.808c-1.728 0-2.631-2.145-1.437-3.378l27.357-28.26c1.788-1.841 4.666.918 2.874 2.77l-27.357 28.259c-.392.405-.914.609-1.437.609z"
-                            ></path>
-                            <path
-                              d="m23.435 124c-1.688 0-2.609-2.063-1.493-3.318l17.73-19.91c1.71-1.913 4.7.723 2.987 2.648l-17.73 19.91c-.394.444-.943.67-1.494.67z"
-                            ></path>
-                            <path
-                              d="m2.982 104.917c-1.688 0-2.609-2.063-1.493-3.318l17.731-19.91c1.709-1.914 4.7.724 2.987 2.648l-17.731 19.91c-.395.444-.943.67-1.494.67z"
+                              fill="#000"
+                              d="M19.6397 340.01L22.9698 337.294C26.8698 334.418 38.7549 328.182 46.1105 329.636C39.4506 331.493 26.6157 336.801 17.3288 348.527C-8.15055 380.763 -1.38791 415.174 18.9559 449.117L22.8601 455.124C27.173 430.063 33.6056 415.612 46.3748 408.246C50.9593 405.603 56.42 405.142 60.0727 404.211C60.0727 404.211 55.3669 406.903 50.4959 411.252C46.1023 415.142 42.4932 421.617 42.8308 427.507C47.6923 421.487 53.5991 418.805 60.2914 417.625C80.1889 414.127 101.328 429.082 127.239 409.808L128.436 408.793C145.355 394.439 152.785 374.266 149.456 353.737C147.398 359.167 141.574 366.926 132.013 371.624C138.411 364.029 139.613 357.591 141.678 349.933C143.172 344.223 142.653 338.757 140.675 332.849C138.698 326.942 134.658 321.158 130.141 315.834C115.226 298.253 100.008 291.875 82.3962 291.808C64.7844 291.741 52.3923 299.87 40.294 310.134C28.1957 320.398 23.3789 329.09 19.6397 340.01Z"
                             ></path>
                           </svg>
                         </i>
@@ -431,7 +423,7 @@
                     </div>
                     <div class="group-im relative py-4">
                       <div
-                        class="absolute right-[18px] borde top-7 border-l border-[#d3d3d3] pl-2"
+                        class="absolute right-[10px] top-[27px] border-l border-[#d3d3d3] pl-2"
                       >
                         <svg
                           width="18"
@@ -456,7 +448,7 @@
                     </div>
                     <div class="group-im relative pb-2">
                       <div
-                        class="absolute right-4 top-3 border-l border-[#d3d3d3] pl-2"
+                        class="absolute right-[9px] top-3 border-l border-[#d3d3d3] pl-2"
                       >
                         <svg
                           width="20"
@@ -485,7 +477,7 @@
                     </div>
                     <div class="group-img relative pt-2 pb-4">
                       <div
-                        class="absolute -right-7 top-4 border- border-[#d3d3d3]"
+                        class="absolute -right-9 top-[17px] border-[#d3d3d3]"
                       >
                         <svg
                           fill="none"
@@ -519,9 +511,25 @@
                         placeholder="Phone No"
                       />
                     </div>
+                    <p class="text-lg pb-4">Preferred Consult Method:</p>
+                    <div class="flex gap-4 pb-4">
+                      <div
+                        class="flex justify-center items-center gap-2 bg-[#c9f31d] rounded-full px-4 py-2"
+                      >
+                        <input type="checkbox" class="w-4 h-4 rounded-full" />
+                        <p>Virtual</p>
+                      </div>
+
+                      <div
+                        class="flex justify-center items-center gap-2 bg-[#c9f31d] rounded-full px-4 py-2"
+                      >
+                        <input type="checkbox" class="rounded-full w-4 h-4" />
+                        <p>In Office</p>
+                      </div>
+                    </div>
                     <button
                       type="submit"
-                      class="btn batton h-10 w-full rounded-lg bg-[#c9f31d]"
+                      class="btn h-12 w-full rounded-lg bg-[#c9f31d] font-semibold"
                     >
                       Book a Free Consult
                     </button>
@@ -589,20 +597,29 @@
             </h3>
           </div>
           <div class="md:px-20 mt-6 md:mt-0">
-            <h2 class="text-[#c9f61d] font-bold text-5xl slowNumbe counter">
-              19
+            <h2
+              class="text-[#c9f61d] font-bold text-5xl slowNumbe counter"
+              data-max="50"
+            >
+              k<sup>+</sup>
             </h2>
             <p class="text-xl">Happy Satisfied Customers</p>
           </div>
           <div class="md:px-20 mt-6 xl:mt-0">
-            <h2 class="text-[#c9f61d] font-bold text-5xl slowNumber" val="5000">
-              19k <sup>+</sup>
+            <h2
+              class="text-[#c9f61d] font-bold text-5xl slowNumber"
+              data-max="150"
+            >
+              k<sup>+</sup>
             </h2>
             <p class="text-xl">Happy Satisfied Customers</p>
           </div>
           <div class="md:px-20 mt-6 xl:mt-0">
-            <h2 class="text-[#c9f61d] font-bold text-5xl slowNumber" val="1000">
-              19k <sup>+</sup>
+            <h2
+              class="text-[#c9f61d] font-bold text-5xl slowNumber"
+              data-max="250"
+            >
+              k <sup>+</sup>
             </h2>
             <p class="text-xl">Happy Satisfied Customers</p>
           </div>
@@ -813,37 +830,115 @@
             </div>
           </div>
         </div>
-        <!-- Banner -->
-        <div class="bg-[#fffff] w-full mt-20">
-          <div class="flex flex-wrap justify-evenly gap-10">
-            <img
-              src="./assets/smm service/canva icon.png"
-              alt="logo"
-              class="hover:scale-125 cursor-pointer duration-100 delay-100"
-            />
-            <img
-              src="./assets/smm service/adobe illustrator icon.png"
-              alt="logo"
-              class="hover:scale-125 cursor-pointer duration-100 delay-100"
-            />
-            <img
-              src="./assets/smm service/hootsuite icon.png"
-              alt="logo"
-              class="hover:scale-125 cursor-pointer duration-100 delay-100"
-            />
-            <img
-              src="./assets/smm service/photoshop icon.png"
-              alt="logo"
-              class="hover:scale-125 cursor-pointer duration-100 delay-100"
-            />
-          </div>
+      </div>
+    </div>
+
+    <!-- Slider -->
+    <div class="swiper w-full py-20">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper flex">
+        <!-- Slides -->
+        <div class="swiper-slide inline-block w-[200px]">
+          <img
+            src="./assets/smm service/canva icon.png"
+            alt="logo"
+            class="hover:scale-125 cursor-pointer duration-100 delay-100"
+          />
+        </div>
+        <div
+          class="swiper-slide w-[200px]"
+          role="group"
+          aria-label="2 / 6"
+          style="width: 20.2px"
+          data-swiper-slide-index="1"
+        >
+          <img
+            src="./assets/smm service/adobe illustrator icon.png"
+            alt="logo"
+            class="hover:scale-125 cursor-pointer duration-100 delay-100"
+          />
+        </div>
+        <div
+          class="swiper-slide w-[200px]"
+          role="group"
+          aria-label="2 / 6"
+          style="width: 20.2px"
+          data-swiper-slide-index="1"
+        >
+          <img
+            src="./assets/smm service/hootsuite icon.png"
+            alt="logo"
+            class="hover:scale-125 cursor-pointer duration-100 delay-100"
+          />
+        </div>
+        <div
+          class="swiper-slide"
+          role="group"
+          aria-label="2 / 6"
+          style="width: 20.2px"
+          data-swiper-slide-index="2"
+        >
+          <img
+            src="./assets/smm service/photoshop icon.png"
+            alt="logo"
+            class="hover:scale-125 cursor-pointer duration-100 delay-100"
+          />
+        </div>
+        <div
+          class="swiper-slide inline-blockw-[200px]"
+          role="group"
+          aria-label="2 / 6"
+          style="width: 20.2px"
+          data-swiper-slide-index="3"
+        >
+          <img
+            src="./assets/smm service/canva icon.png"
+            alt="logo"
+            class="hover:scale-125 cursor-pointer duration-100 delay-100"
+          />
+        </div>
+        <div
+          class="swiper-slide w-[200px]"
+          role="group"
+          aria-label="2 / 6"
+          style="width: 20.2px"
+          data-swiper-slide-index="4"
+        >
+          <img
+            src="./assets/smm service/adobe illustrator icon.png"
+            alt="logo"
+            class="hover:scale-125 cursor-pointer duration-100 delay-100"
+          />
+        </div>
+        <div class="swiper-slide w-[200px]">
+          <img
+            src="./assets/smm service/hootsuite icon.png"
+            alt="logo"
+            class="hover:scale-125 cursor-pointer duration-100 delay-100"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="./assets/smm service/photoshop icon.png"
+            alt="logo"
+            class="hover:scale-125 cursor-pointer duration-100 delay-100"
+          />
         </div>
       </div>
+      <!-- If we need pagination -->
+      <!-- <div class="swiper-pagination"></div> -->
+
+      <!-- If we need navigation buttons -->
+      <!-- <div class="swiper-button-prev"></div> -->
+      <!-- <div class="swiper-button-next"></div> -->
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar opacity-0 w-full"></div>
     </div>
 
     <!-- client Review -->
     <div id="client">
-      <div class="max-w-7xl px-4 mx-auto pb-20">
+      <div class="max-w-7xl px-4 mx-auto py-20">
         <h2
           class="pt-6 px-4 before:w-full txt relative uppercase text-xl font-semibold inline-block hover:scale-x-110"
         >
@@ -943,7 +1038,7 @@
             <div class="faq-wrapper w-full pr-4">
               <div class="faq max-w-4xl mx-auto cursor-pointer">
                 <div class="question flex justify-between items-center py-4">
-                  <h2 class="text-xl faq-ques">Who are we ?</h2>
+                  <h2 class="text-xl">Who are we ?</h2>
                   <i class="fa-solid fa-angle-down faq-icon"></i>
                 </div>
                 <div
@@ -1086,6 +1181,172 @@
     <div class="w-full text-center text-white py-4 bg-[#363636]">
       &copy; Cyatt 2023-24
     </div>
+
+    <!-- <section class="roll__area">
+      <div
+        class="swiper roll__slider swiper-initialized swiper-horizontal swiper-pointer-events"
+      >
+        <div
+          class="swiper-wrapper roll__wrapper"
+          id="swiper-wrapper-e90931041010345e4b4"
+          aria-live="off"
+          style="
+            transition-duration: 0ms;
+            transform: translate3d(-2431.8px, 0px, 0px);
+          "
+        >
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate"
+            role="group"
+            aria-label="2 / 6"
+            style="width: 270.2px"
+            data-swiper-slide-index="1"
+          >
+            <h2>SEO</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate"
+            role="group"
+            aria-label="3 / 6"
+            style="width: 270.2px"
+            data-swiper-slide-index="2"
+          >
+            <h2>SMM</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate"
+            role="group"
+            aria-label="4 / 6"
+            style="width: 270.2px"
+            data-swiper-slide-index="3"
+          >
+            <h2>UI</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate"
+            role="group"
+            aria-label="5 / 6"
+            style="width: 270.2px"
+            data-swiper-slide-index="4"
+          >
+            <h2>Branding</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+            role="group"
+            aria-label="6 / 6"
+            style="width: 270.2px"
+            data-swiper-slide-index="5"
+          >
+            <h2>UX</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate-active"
+            role="group"
+            aria-label="1 / 6"
+            style="width: 270.2px"
+            data-swiper-slide-index="0"
+          >
+            <h2>Development</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate-next"
+            role="group"
+            aria-label="2 / 6"
+            style="width: 270.2px"
+            data-swiper-slide-index="1"
+          >
+            <h2>SEO</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide"
+            role="group"
+            aria-label="3 / 6"
+            style="width: 270.2px"
+            data-swiper-slide-index="2"
+          >
+            <h2>SMM</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide"
+            role="group"
+            aria-label="4 / 6"
+            style="width: 270.2px"
+            data-swiper-slide-index="3"
+          >
+            <h2>UI</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide"
+            role="group"
+            aria-label="5 / 6"
+            style="width: 270.2px"
+            data-swiper-slide-index="4"
+          >
+            <h2>Branding</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-prev"
+            role="group"
+            aria-label="6 / 6"
+            style="width: 270.2px"
+            data-swiper-slide-index="5"
+          >
+            <h2>UX</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate swiper-slide-active"
+            role="group"
+            aria-label="1 / 6"
+            style="width: 270.2px"
+            data-swiper-slide-index="0"
+          >
+            <h2>Development</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate swiper-slide-next"
+            role="group"
+            aria-label="2 / 6"
+            style="width: 270.2px"
+            data-swiper-slide-index="1"
+          >
+            <h2>SEO</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate"
+            role="group"
+            aria-label="3 / 6"
+            style="width: 270.2px"
+            data-swiper-slide-index="2"
+          >
+            <h2>SMM</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate"
+            role="group"
+            aria-label="4 / 6"
+            style="width: 270.2px"
+            data-swiper-slide-index="3"
+          >
+            <h2>UI</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate"
+            role="group"
+            aria-label="5 / 6"
+            style="width: 270.2px"
+            data-swiper-slide-index="4"
+          >
+            <h2>Branding</h2>
+          </div>
+        </div>
+        <span
+          class="swiper-notification"
+          aria-live="assertive"
+          aria-atomic="true"
+        ></span>
+      </div>
+    </section> -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>

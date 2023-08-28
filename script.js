@@ -58,6 +58,12 @@ function changeIcon() {
 
 // Testimonial Slider
 const swiper = new Swiper(".swiper", {
+  slidesPerView: 5,
+  slidesPerColumn: 2,
+  spaceBetween: 30,
+  centeredSlides: true,
+  // cssMode: true,
+
   // Optional parameters
   direction: "horizontal",
   loop: true,
@@ -81,6 +87,20 @@ const swiper = new Swiper(".swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  // breakpoints: {
+  //   300: {
+  //     slidesPerView: 2,
+  //     slidesPerColumn: 2,
+  //   },
+  //   640: {
+  //     slidesPerView: 3,
+  //     slidesPerColumn: 2,
+  //   },
+  //   1024: {
+  //     slidesPerView: 5,
+  //     slidesPerColumn: 2,
+  //   },
+  // },
 
   // And if we need scrollbar
   scrollbar: {
@@ -147,5 +167,55 @@ faq.forEach((e) => {
       answer.style.borderColor = "#000";
     }
     faqIcon.classList.toggle("active");
+  });
+});
+function inVisible(element) {
+  //Checking if the element is
+  //visible in the viewport
+  var WindowTop = $(window).scrollTop();
+  var WindowBottom = WindowTop + $(window).height();
+  var ElementTop = element.offset().top;
+  var ElementBottom = ElementTop + element.height();
+  //animating the element if it is
+  //visible in the viewport
+  if (ElementBottom <= WindowBottom && ElementTop >= WindowTop)
+    animate(element);
+}
+function animate(element) {
+  //Animating the element if not animated before
+  if (!element.hasClass("ms-animated")) {
+    var maxval = element.data("max");
+    var html = element.html();
+    element.addClass("ms-animated");
+    $({
+      countNum: element.html(),
+    }).animate(
+      {
+        countNum: maxval,
+      },
+      {
+        //duration 5 seconds
+        duration: 5000,
+        easing: "linear",
+        step: function () {
+          element.html(Math.floor(this.countNum) + html);
+        },
+        complete: function () {
+          element.html(this.countNum + html);
+        },
+      }
+    );
+  }
+}
+//When the document is ready
+$(function () {
+  //This is triggered when the
+  //user scrolls the page
+  $(window).scroll(function () {
+    //Checking if each items to animate are
+    //visible in the viewport
+    $("h2[data-max]").each(function () {
+      inVisible($(this));
+    });
   });
 });
