@@ -214,7 +214,7 @@ $(function () {
   $(window).scroll(function () {
     //Checking if each items to animate are
     //visible in the viewport
-    $("h2[data-max]").each(function () {
+    $("[data-max]").each(function () {
       inVisible($(this));
     });
   });
