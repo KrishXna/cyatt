@@ -59,22 +59,21 @@ function changeIcon() {
 // Testimonial Slider
 const swiper = new Swiper(".swiper", {
   loop: true,
-  freemode: true,
   autoplay: {
     delay: 0,
   },
   speed: 3000, //add
-  slidesPerView: 4,
+  slidesPerView: 5,
   slidesPerColumn: 2,
   spaceBetween: 30,
-  // centeredSlides: true,
+  centeredSlides: true,
 
   // centerInsufficientSlides: true,
-  // cssMode: true,
+  cssMode: true,
 
   // Optional parameters
-  direction: "horizontal",
-  // loop: true,
+  // direction: "horizontal",
+  loop: true,
   // autoplay: {
   //   delay: 3000,
   //   disableOnInteraction: false,
@@ -95,20 +94,20 @@ const swiper = new Swiper(".swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  breakpoints: {
-    300: {
-      slidesPerView: 2,
-      slidesPerColumn: 2,
-    },
-    640: {
-      slidesPerView: 3,
-      slidesPerColumn: 2,
-    },
-    1024: {
-      slidesPerView: 5,
-      slidesPerColumn: 2,
-    },
-  },
+  // breakpoints: {
+  //   300: {
+  //     slidesPerView: 2,
+  //     slidesPerColumn: 2,
+  //   },
+  //   640: {
+  //     slidesPerView: 3,
+  //     slidesPerColumn: 2,
+  //   },
+  //   1024: {
+  //     slidesPerView: 5,
+  //     slidesPerColumn: 2,
+  //   },
+  // },
 
   // And if we need scrollbar
   scrollbar: {
