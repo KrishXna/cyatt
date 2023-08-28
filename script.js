@@ -109,12 +109,10 @@ contactForm.addEventListener("submit", function (e) {
   const { name, email, contact, services, Preferredoption } = formDataObj;
   console.log(formDataObj);
 
-  if ((!name || !email || !services || !contact, !Preferredoption)) {
-    alert("Please fill in all required fields.");
+  if (!name || !email || !services || !contact || !Preferredoption) {
+    alert("Please fill  all required fields.");
     return;
   }
-  alert("Data submitted successfully.");
-  this.reset();
 
   const { Client, ID, Databases } = Appwrite;
   const client = new Client();
@@ -133,10 +131,20 @@ contactForm.addEventListener("submit", function (e) {
 
   promise.then(
     function (response) {
-      console.log({ response }); // Success
+      if (response.$id) {
+        alert("Data submitted successfully.");
+        contactForm.reset();
+      } else {
+        alert("An error occurred while submitting the form.");
+      }
     },
     function (error) {
-      console.log({ error }); // Failure
+      console.log({ error }); // Log the error for debugging
+      if (error && error.message) {
+        alert("An error occurred: " + error.message);
+      } else {
+        alert("An error occurred while submitting the form.");
+      }
     }
   );
 });
@@ -207,4 +215,20 @@ $(function () {
       inVisible($(this));
     });
   });
+});
+
+const virtualOption = document.getElementById("virtualOption");
+const inOfficeOption = document.getElementById("inOfficeOption");
+
+const virtualRadio = document.getElementById("virtualRadio");
+const inOfficeRadio = document.getElementById("inOfficeRadio");
+
+virtualRadio.addEventListener("change", function () {
+  virtualOption.style.backgroundColor = "#c9f31d";
+  inOfficeOption.style.backgroundColor = "transparent";
+});
+
+inOfficeRadio.addEventListener("change", function () {
+  inOfficeOption.style.backgroundColor = "#c9f31d";
+  virtualOption.style.backgroundColor = "transparent";
 });
