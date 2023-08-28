@@ -141,6 +141,11 @@ faq.forEach((e) => {
 
   question.addEventListener("click", () => {
     answer.classList.toggle("faq-active");
+    if (answer.classList.contains("faq-active")) {
+      answer.style.borderColor = "#c9f31d";
+    } else {
+      answer.style.borderColor = "#000";
+    }
     faqIcon.classList.toggle("active");
   });
 });
