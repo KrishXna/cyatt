@@ -138,24 +138,6 @@
       right: 37px;
       top: 17px;
     }
-    .hero-section:before {
-      height: 1356px;
-      content: "";
-      position: absolute;
-      width: 1800px;
-      border-radius: 666px;
-      transform: rotate(331deg);
-      top: -93%;
-      left: -10%;
-      z-index: -11;
-      overflow: hidden;
-
-      /* background-color: #5800a0; */
-      background-color: #000;
-      box-shadow: 94px 0px 0px 88px rgb(237 237 237);
-      -webkit-box-shadow: 94px 0px 0px 88px rgb(237 237 237);
-      -moz-box-shadow: 94px 0px 0px 88px rgb(237 237 237);
-    }
     @keyframes spin {
       from {
         transform: rotate(0deg);
@@ -164,12 +146,9 @@
         transform: rotate(360deg);
       }
     }
-    .hero-section:after {
-      /* animation-name: spin; */
-      animation-duration: 100000ms;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-      background-image: url(./assets/herobg.png);
+
+    .hero-section::before {
+      /* border: 2px solid red; */
       height: 1356px;
       content: "";
       position: absolute;
@@ -178,7 +157,28 @@
       transform: rotate(331deg);
       top: -93%;
       left: -10%;
-      z-index: -11;
+      /* z-index: -11; */
+      background-color: #000;
+      box-shadow: 94px 0px 0px 88px rgb(237 237 237);
+      -webkit-box-shadow: 94px 0px 0px 88px rgb(237 237 237);
+      -moz-box-shadow: 94px 0px 0px 88px rgb(237 237 237);
+    }
+
+    .hero-section::after {
+      /* animation-name: spin; */
+      animation-duration: 100000ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      /* background-image: url(./assets/herobg.png); */
+      height: 1356px;
+      content: "";
+      position: absolute;
+      width: 1800px;
+      border-radius: 666px;
+      transform: rotate(331deg);
+      top: -93%;
+      left: -10%;
+      /* z-index: -11; */
       opacity: 0.1;
       background-repeat: no-repeat;
       background-size: cover;
@@ -253,7 +253,18 @@
   <body>
     <!-- Navbar -->
     <div class="overflow-hidden lg:pb-20">
-      <div class="relative hero-section">
+      <div class="relative hero-sectio">
+        <div
+          class="hero-section bg-black -left-[60%] w-[2000px] md:-left-[40%] lg:w-[2300px] h-[1556px] rounded-[666px] overflow-hidden absolute -top-[91%] xl:-left-[10%] lg:-left-[20%] rotate-[331deg] inset-0"
+          style="box-shadow: 94px 0px 0px 88px rgb(237 237 237)"
+        >
+          <img
+            src="./assets/herobg.png"
+            alt=""
+            class="absolute bottom-0 animate-spin-slow opacity-[0.1] -left-[40%] md:-left-[30%] lg:-left-[10%] xl-left-0"
+          />
+        </div>
+
         <div id="navbar" class="fixed z-50 top-0 w-full">
           <div
             class="flex justify-between items-center mx-auto max-w-7xl px-4 z-10 relative shadow-xl md:shadow-none"
@@ -290,7 +301,10 @@
           </div>
 
           <!-- MOBILE NAV MENU -->
-          <div id="navmenu" class="bg-white hide md:hidden pt-40 relative">
+          <div
+            id="navmenu"
+            class="bg-white hide md:hidden pt-40 relative overflow-y-hidden"
+          >
             <ul
               class="flex flex-col justify-center mt- items-center gap-6 uppercase font-bold"
             >
@@ -322,11 +336,11 @@
           </div>
         </div>
 
-        <div id="home" class="overflow-hidden h-auto w-full pt-20 md:pt-40">
+        <div id="home" class="overflow-hidde w-full pt-20 md:pt-40">
           <div class="mx-auto hero-sectio max-w-7xl px-4 overflow-hidden">
             <div class="lg:flex justify-between items-center gap-20 py-20">
               <!-- Hero Left -->
-              <div class="left w-full lg:w-1/2">
+              <div class="left w-full lg:w-1/2 relative">
                 <div class="rounded-4xl">
                   <div class="content">
                     <h1 class="text-2xl sm:text-4xl font-bold text-white">

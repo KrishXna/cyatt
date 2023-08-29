@@ -19,11 +19,11 @@ window.onscroll = function () {
     text.classList.remove("active-invert");
     para.classList.remove("active-invert");
   } else {
-    // navbar.classList.remove("bgwhite");
-    // icon.classList.add("active-invert");
-    // logo.classList.add("active-invert");
-    // text.classList.add("active-invert");
-    // para.classList.add("active-invert");
+    navbar.classList.remove("bgwhite");
+    icon.classList.add("active-invert");
+    logo.classList.add("active-invert");
+    text.classList.add("active-invert");
+    para.classList.add("active-invert");
   }
 };
 
