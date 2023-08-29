@@ -4,6 +4,7 @@ var icon = document.getElementById("icon");
 var logo = document.getElementById("logo");
 var text = document.getElementById("text");
 var para = document.getElementById("para");
+var body = document.getElementById("body");
 
 var contactForm = document.getElementById("contactForm");
 var faq = document.querySelectorAll(".faq");
@@ -37,11 +38,14 @@ navbar.addEventListener("click", function () {
     icon.classList.remove("active-invert");
     text.classList.remove("active-invert");
     para.classList.remove("active-invert");
-
+    body.classList.add("overflow-hidden");
     changeIcon();
   } else {
+    body.classList.remove("overflow-hidden");
     navmenu.classList.remove("show");
     navmenu.classList.add("hide");
+    // icon.classList.add("active-invert");
+    // logo.classList.add("active-invert");
     changeIcon();
   }
 });

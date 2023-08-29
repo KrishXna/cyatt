@@ -25,6 +25,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <style>
+    .overflow-hidden {
+      overflow: hidden;
+    }
     .swiper-wrapper {
       transition-timing-function: linear;
     }
@@ -250,10 +253,10 @@
       cursor: pointer;
     }
   </style>
-  <body>
+  <body id="body" class="abc">
     <!-- Navbar -->
     <div class="overflow-hidden lg:pb-20">
-      <div class="relative hero-sectio">
+      <div class="relative">
         <div
           class="hero-section bg-black -left-[60%] w-[2000px] md:-left-[40%] lg:w-[2300px] h-[1556px] rounded-[666px] overflow-hidden absolute -top-[91%] xl:-left-[10%] lg:-left-[20%] rotate-[331deg] inset-0"
           style="box-shadow: 94px 0px 0px 88px rgb(237 237 237)"
