@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+.drip {
+  animation: drip 10s infinite; /* Apply the animation */
+}
+@keyframes drip {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  35% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  50% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(110vh);
+  }
+}
 select {
   background: transparent;
   background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
@@ -76,7 +95,9 @@ body {
   right: 37px;
   top: 17px;
 }
-
+.transition-text {
+  transition: 0.8s ease;
+}
 .txt {
   transition: 0.3s ease;
 }
