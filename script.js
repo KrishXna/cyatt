@@ -62,14 +62,10 @@ function changeIcon() {
 
 // Testimonial Slider
 const swiper = new Swiper(".swiper", {
-  // freemode: true,
-  speed: 3000, //add
-  // slidesPerView: 4,
-  // slidesPerColumn: 2,
+  draggable: true,
+  freemode: true,
+  speed: 3000,
   spaceBetween: 30,
-  // centeredSlides: true,
-  // centerInsufficientSlides: true,
-  // cssMode: true,
 
   // Optional parameters
   direction: "horizontal",
@@ -208,13 +204,8 @@ function animate(element) {
   }
 }
 
-//When the document is ready
 $(function () {
-  //This is triggered when the
-  //user scrolls the page
   $(window).scroll(function () {
-    //Checking if each items to animate are
-    //visible in the viewport
     $("[data-max]").each(function () {
       inVisible($(this));
     });
