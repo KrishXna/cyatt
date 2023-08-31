@@ -94,6 +94,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+// Form Appwrite Connection
 contactForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -149,6 +150,7 @@ contactForm.addEventListener("submit", function (e) {
   );
 });
 
+// Number Increases on scroll
 faq.forEach((e) => {
   var question = e.querySelector(".question");
   var answer = e.querySelector(".answer");
@@ -203,7 +205,6 @@ function animate(element) {
     );
   }
 }
-
 $(function () {
   $(window).scroll(function () {
     $("[data-max]").each(function () {
@@ -212,6 +213,7 @@ $(function () {
   });
 });
 
+// Form
 const virtualOption = document.getElementById("virtualOption");
 const inOfficeOption = document.getElementById("inOfficeOption");
 
@@ -226,4 +228,20 @@ virtualRadio.addEventListener("change", function () {
 inOfficeRadio.addEventListener("change", function () {
   inOfficeOption.style.backgroundColor = "#c9f31d";
   virtualOption.style.backgroundColor = "transparent";
+});
+
+// Cursor Pointer
+const cursor = document.querySelector(".mousecursor");
+
+document.addEventListener("mousemove", (e) => {
+  cursor.setAttribute(
+    "style",
+    "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
+  );
+});
+document.addEventListener("click", (e) => {
+  cursor.classList.add("expand");
+  setTimeout(() => {
+    cursor.classList.remove("expand");
+  }, 500);
 });
