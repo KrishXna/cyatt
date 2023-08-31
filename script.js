@@ -11,6 +11,7 @@ var faq = document.querySelectorAll(".faq");
 var faqIcon = document.querySelectorAll(".faq-icon");
 
 var sticky = navbar.offsetTop;
+var formsuccessDiv = document.getElementById("formsuccess");
 
 window.onscroll = function () {
   if (window.pageYOffset >= 10) {
@@ -133,7 +134,13 @@ contactForm.addEventListener("submit", function (e) {
   promise.then(
     function (response) {
       if (response.$id) {
-        alert("Data submitted successfully.");
+        if (formsuccessDiv.classList.contains("formsuccesshide")) {
+          formsuccessDiv.classList.remove("formsuccesshide");
+          setTimeout(() => {
+            formsuccessDiv.classList.add("formsuccesshide");
+          }, 1500);
+        }
+        // alert("Data submitted successfully.");
         contactForm.reset();
       } else {
         alert("An error occurred while submitting the form.");
