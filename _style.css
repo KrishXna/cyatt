@@ -3,7 +3,16 @@
 @tailwind utilities;
 
 .drip {
-  animation: drip 10s infinite; /* Apply the animation */
+  animation: drip 10s infinite linear;
+}
+.drip2 {
+  animation: drip 7s linear infinite;
+}
+.drip3 {
+  animation: drip 15s linear infinite;
+}
+.drip4 {
+  animation: drip 5s linear infinite;
 }
 @keyframes drip {
   0% {
@@ -13,9 +22,6 @@
   35% {
     opacity: 1;
     transform: translateY(30px);
-  }
-  50% {
-    transform: translateY(100vh);
   }
   100% {
     transform: translateY(110vh);
