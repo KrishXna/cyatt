@@ -1,0 +1,381 @@
+<div class="overflow-hidden lg:pb-20">
+  <div class="relative">
+    <div
+      class="hero-section bg-black -left-[60%] w-[2000px] md:-left-[40%] lg:w-[2300px] h-[1556px] rounded-[666px] overflow-hidden absolute -top-[91%] xl:-left-[10%] lg:-left-[20%] rotate-[331deg] inset-0"
+      style="box-shadow: 94px 0px 0px 88px rgb(237 237 237)"
+    >
+      <img
+        src="./assets/herobg.png"
+        alt=""
+        class="absolute bottom-0 anim opacity-[0.1] -left-[40%] md:-left-[30%] lg:-left-[10%] xl-left-0 animate-spin-slow"
+      />
+    </div>
+
+    <div id="navbar" class="fixed z-50 top-0 w-full">
+      <div
+        class="flex justify-between items-center mx-auto max-w-7xl px-4 z-10 relative shadow-xl md:shadow-none"
+      >
+        <a href="https://cyatt.com/index.html" target="_blank"
+          ><img
+            src="./assets/Cyatt black logo.png"
+            alt="logo"
+            class="p-4 h-24 active-invert"
+            id="logo"
+        /></a>
+        <div class="hidden md:flex justify-center items-center gap-4">
+          <div class="flex flex-col">
+            <div id="text" class="active-invert">
+              <span class="text-black font-semibold">Need Help ? </span>
+              <span class="text-sm lg:text-lg">Speak with a</span>
+            </div>
+            <p id="para" class="text-sm lg:text-lg active-invert">
+              Licenced Insurance Agent
+            </p>
+          </div>
+          <a href="tel:919521223123">
+            <button class="bg-[#C9F31d] px-2 py-4 rounded-md font-bold">
+              +91-9521 223 123
+            </button>
+          </a>
+        </div>
+
+        <div class="md:hidden block text-3xl pr-2 cursor-pointer">
+          <!-- <i
+              class="fa-solid fa-bars text-black active-invert"
+              id="icon"
+            ></i> -->
+          <div
+            class="flex flex-col gap-1 cursor-pointer"
+            onclick="rotateDiv() "
+          >
+            <div
+              class="rotate-element1 relative w-8 h-1 bg-black active-invert"
+            ></div>
+            <div class="rotate-element3 relative w-8 h-1 bg-white"></div>
+            <div class="rotate-element2 relative w-8 h-1 bg-white"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MOBILE NAV MENU -->
+      <div
+        id="navmenu"
+        class="bg-white hide md:hidden pt-40 relative overflow-y-hidden"
+      >
+        <ul
+          class="flex flex-col justify-center mt- items-center gap-6 uppercase font-bold"
+        >
+          <a
+            href="#home"
+            class="w-1/2 text-2xl text-center py-4 cursor-pointer"
+          >
+            <li class="">Home</li>
+          </a>
+          <a
+            href="#about"
+            class="w-1/2 text-2xl text-center py-4 cursor-pointer"
+          >
+            <li>About</li>
+          </a>
+          <a
+            href="#services"
+            class="w-1/2 text-2xl text-center py-4 cursor-pointer"
+          >
+            <li>Services</li>
+          </a>
+          <a
+            href="#work"
+            class="w-1/2 text-2xl text-center py-4 cursor-pointer"
+          >
+            <li>Work client</li>
+          </a>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <div id="home" class="relative w-full pt-20 md:pt-40">
+      <div
+        id="formsuccess"
+        class="formsuccesshide formSuccess pointer-events-none absolute inset-0 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full md:w-1/2 lg:max-w-[500px] px-4 z-10"
+      >
+        <div
+          class="relative top-6 mx-auto h-10 w-[90%] bg-[#c9f31d] rounded-full"
+        ></div>
+        <div
+          class="flex flex-col justify-center py-10 bg-white shadow-3xl rounded-3xl relative"
+        >
+          <div class="flex flex-col items-center">
+            <div
+              class="w-14 h-14 rounded-full bg-[#c9f31d] mb-4 flex justify-center items-center"
+            >
+              <i class="fa-solid fa-check text-whit text-4xl"></i>
+            </div>
+            <h2 class="text-3xl">Thankyou !</h2>
+            <p class="px-4 text-center pt-8 text-xl">
+              Your request has been submitted successfully. We will contact you
+              soon.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto hero-sectio max-w-7xl px-4 overflow-hidde">
+        <div class="lg:flex justify-between items-center gap-20 py-20">
+          <!-- Hero Left -->
+          <!-- <div class="left w-full lg:w-1/2 relative">
+              <div class="rounded-4xl">
+                <div class="content">
+                  <h1 class="text-2xl sm:text-4xl font-bold text-white">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aspernatur, eius facilis.
+                  </h1>
+                  <p class="py-4 text-white">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Suscipit temporibus quis ullam labore.
+                  </p>
+                </div>
+              </div>
+            </div> -->
+          <!-- Hero Right -->
+          <!-- <div class="right w-full lg:w-1/2 mt-10 md:mt-0">
+              <div
+                class="relative max-w-[500px] md:max-w-[800px] w-[80%] sm:max-w-[370px] mx-auto top-6 h-10 bg-[#c9f31d] rounded-3xl"
+              ></div>
+
+              <div class="bg-[#fff] rounded-2xl p-10 relative shadow-lg">
+                <form id="contactForm" autocomplete="off">
+                  <div
+                    class="mb-lg-5 mb-3 d-flex align-items-center flex gap-6 w-full"
+                  >
+                    <div
+                      class="rounded-full rocket rounded-bl-lg w-20 h-20 flex justify-center items-center bg-[#c9f31d] p-4"
+                    >
+                      <i>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="52"
+                          height="46"
+                          fill="none"
+                          viewBox="0 0 449 456"
+                          id="rocket"
+                        >
+                          <path
+                            fill="#000"
+                            d="M446.604 6.51629C446.204 4.81629 445.004 3.5163 443.304 3.1163C388.904 -10.1837 263.204 37.2163 195.104 105.316C181.804 118.616 170.904 131.716 162.004 144.416C141.004 142.516 120.004 144.116 102.104 151.916C51.6044 174.116 36.9044 232.116 32.8044 257.016C31.8044 262.916 36.7044 268.016 42.6044 267.416L123.704 258.516C123.804 266.316 124.304 272.516 124.804 276.816C125.204 281.016 127.104 284.916 130.104 287.916L161.504 319.316C164.504 322.316 168.404 324.216 172.604 324.616C176.904 325.116 183.104 325.616 190.804 325.716L181.904 406.716C181.304 412.616 186.404 417.516 192.304 416.516C217.204 412.516 275.304 397.816 297.404 347.316C305.204 329.416 306.804 308.516 305.004 287.616C317.704 278.716 330.904 267.816 344.204 254.516C412.604 186.516 459.704 63.6163 446.604 6.51629ZM283.404 166.416C266.704 149.716 266.704 122.716 283.404 106.016C300.104 89.3163 327.104 89.3163 343.804 106.016C360.504 122.716 360.504 149.716 343.804 166.416C327.104 183.116 300.104 183.116 283.404 166.416Z"
+                          ></path>
+                          <path
+                            fill="#000"
+                            d="M19.6397 340.01L22.9698 337.294C26.8698 334.418 38.7549 328.182 46.1105 329.636C39.4506 331.493 26.6157 336.801 17.3288 348.527C-8.15055 380.763 -1.38791 415.174 18.9559 449.117L22.8601 455.124C27.173 430.063 33.6056 415.612 46.3748 408.246C50.9593 405.603 56.42 405.142 60.0727 404.211C60.0727 404.211 55.3669 406.903 50.4959 411.252C46.1023 415.142 42.4932 421.617 42.8308 427.507C47.6923 421.487 53.5991 418.805 60.2914 417.625C80.1889 414.127 101.328 429.082 127.239 409.808L128.436 408.793C145.355 394.439 152.785 374.266 149.456 353.737C147.398 359.167 141.574 366.926 132.013 371.624C138.411 364.029 139.613 357.591 141.678 349.933C143.172 344.223 142.653 338.757 140.675 332.849C138.698 326.942 134.658 321.158 130.141 315.834C115.226 298.253 100.008 291.875 82.3962 291.808C64.7844 291.741 52.3923 299.87 40.294 310.134C28.1957 320.398 23.3789 329.09 19.6397 340.01Z"
+                          ></path>
+                        </svg>
+                      </i>
+                    </div>
+                    <div class="relative">
+                      <p class="p-0 font-semibold sm:text-lg">
+                        Marketing Business campaign
+                      </p>
+                      <h2 class="font-bold text-2xl sm:text-4xl">
+                        Get a Quote
+                      </h2>
+                      <div class="relative flex">
+                        <span
+                          class="drip absolute top-0 w-6 h-6 bg-[#c9f31d] rounded-full z-50"
+                        ></span>
+                        <span
+                          class="drip2 absolute left-20 top-10 w-4 h-4 bg-[#c9f31d] rounded-full z-50"
+                        ></span>
+                        <span
+                          class="drip3 absolute left-32 -top-20 w-6 h-6 bg-[#c9f31d] rounded-full z-50"
+                        ></span>
+                        <span
+                          class="drip4 absolute top-0 left-48 w-6 h-6 bg-[#c9f31d] rounded-full z-50"
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group-im relative py-4">
+                    <div class="input-group relative">
+                      <div
+                        class="absolute right-[10px] top-[10px] border-l border-[#d3d3d3] pl-2"
+                      >
+                        <svg
+                          width="19"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15.364 11.636C14.3837 10.6558 13.217 9.93013 11.9439 9.49085C13.3074 8.55179 14.2031 6.9802 14.2031 5.20312C14.2031 2.33413 11.869 0 9 0C6.131 0 3.79688 2.33413 3.79688 5.20312C3.79688 6.9802 4.69262 8.55179 6.05609 9.49085C4.78308 9.93013 3.61631 10.6558 2.63605 11.636C0.936176 13.3359 0 15.596 0 18H1.40625C1.40625 13.8128 4.81279 10.4062 9 10.4062C13.1872 10.4062 16.5938 13.8128 16.5938 18H18C18 15.596 17.0638 13.3359 15.364 11.636ZM9 9C6.90641 9 5.20312 7.29675 5.20312 5.20312C5.20312 3.1095 6.90641 1.40625 9 1.40625C11.0936 1.40625 12.7969 3.1095 12.7969 5.20312C12.7969 7.29675 11.0936 9 9 9Z"
+                            fill="#555555"
+                          ></path>
+                        </svg>
+                      </div>
+                      <input
+                        class="input-group_input outline-none border border-[#d3d3d3] form-control h-10 w-full rounded-lg pl-4"
+                        id="name"
+                        type="text"
+                        name="name"
+                        required
+                      />
+                      <label
+                        for="name"
+                        class="input-group_label bg-white px-2 absolute top-0 left-[20px]"
+                        >Full Name</label
+                      >
+                    </div>
+                  </div>
+                  <div class="group-im relative pb-2">
+                    <div class="input-group relative">
+                      <div
+                        class="absolute right-[9px] top-3 border-l border-[#d3d3d3] pl-2"
+                      >
+                        <svg
+                          width="20"
+                          height="18"
+                          viewBox="0 0 22 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15.8649 18H6.13513C2.58377 18 0.540527 15.9568 0.540527 12.4054V5.5946C0.540527 2.04324 2.58377 0 6.13513 0H15.8649C19.4162 0 21.4595 2.04324 21.4595 5.5946V12.4054C21.4595 15.9568 19.4162 18 15.8649 18ZM6.13513 1.45946C3.35242 1.45946 1.99999 2.81189 1.99999 5.5946V12.4054C1.99999 15.1881 3.35242 16.5406 6.13513 16.5406H15.8649C18.6476 16.5406 20 15.1881 20 12.4054V5.5946C20 2.81189 18.6476 1.45946 15.8649 1.45946H6.13513Z"
+                            fill="#444444"
+                          ></path>
+                          <path
+                            d="M10.9988 9.8465C10.1815 9.8465 9.35452 9.59352 8.72208 9.07785L5.67668 6.64539C5.36532 6.39241 5.30696 5.93511 5.55992 5.62376C5.8129 5.31241 6.2702 5.25403 6.58155 5.50701L9.62695 7.93947C10.3664 8.53298 11.6215 8.53298 12.361 7.93947L15.4064 5.50701C15.7178 5.25403 16.1848 5.30268 16.428 5.62376C16.681 5.93511 16.6324 6.40214 16.3113 6.64539L13.2659 9.07785C12.6432 9.59352 11.8161 9.8465 10.9988 9.8465Z"
+                            fill="#444444"
+                          ></path>
+                        </svg>
+                      </div>
+                      <input
+                        class="input-group_input outline-none border border-[#d3d3d3] form-control h-10 w-full rounded-lg pl-4"
+                        id="email"
+                        type="email"
+                        name="email"
+                        required
+                      />
+                      <label
+                        for="email"
+                        class="input-group_label bg-white px-2 absolute top-0 left-[20px]"
+                        >Email Address</label
+                      >
+                    </div>
+                  </div>
+                  <div class="group-img relative pt-2 pb-4">
+                    <div class="input-group relative">
+                      <div
+                        class="absolute border-l borde right-[2px] top-[10px] border-[#d3d3d3]"
+                      >
+                        <svg
+                          fill="none"
+                          height="24"
+                          width="35"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g
+                            clip-rule="evenodd"
+                            fill="rgb(0,0,0)"
+                            fill-rule="evenodd"
+                          >
+                            <path
+                              d="m7 2.75c-.41421 0-.75.33579-.75.75v17c0 .4142.33579.75.75.75h10c.4142 0 .75-.3358.75-.75v-17c0-.41421-.3358-.75-.75-.75zm-2.25.75c0-1.24264 1.00736-2.25 2.25-2.25h10c1.2426 0 2.25 1.00736 2.25 2.25v17c0 1.2426-1.0074 2.25-2.25 2.25h-10c-1.24264 0-2.25-1.0074-2.25-2.25z"
+                            ></path>
+                            <path
+                              d="m10.25 5c0-.41421.3358-.75.75-.75h2c.4142 0 .75.33579.75.75s-.3358.75-.75.75h-2c-.4142 0-.75-.33579-.75-.75z"
+                            ></path>
+                            <path
+                              d="m9.25 19c0-.4142.33579-.75.75-.75h4c.4142 0 .75.3358.75.75s-.3358.75-.75.75h-4c-.41421 0-.75-.3358-.75-.75z"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                      <input
+                        class="input-group_input outline-none border border-[#d3d3d3] form-control h-10 w-full rounded-lg pl-4"
+                        id="contact"
+                        type="tel"
+                        name="contact"
+                        required
+                      />
+                      <label
+                        for="contact"
+                        class="input-group_label absolute top-0 left-[20px] bg-white px-2"
+                        >Phone</label
+                      >
+                    </div>
+                  </div>
+                  <div class="group-img relative pt-2 pb-4">
+                    <select
+                      name="services"
+                      id="services "
+                      class="outline-none border border-[#d3d3d3] form-control pl-4 h-10 w-full rounded-lg"
+                    >
+                      <option value="" disabled="" selected="">
+                        Select *
+                      </option>
+                      <option value="Branding Design">Branding</option>
+                      <option value="Social Engine Optimization">
+                        Social Engine Optimization
+                      </option>
+                      <option value="Social Media Marketing">
+                        Social Media Marketing
+                      </option>
+                      <option value="Web Development">Web Development</option>
+                      <option value="Mobile Development">
+                        Mobile Development
+                      </option>
+                      <option value="UI/UX Design">UI/UX Design</option>
+                    </select>
+                  </div>
+                  <p class="text-lg pb-4">Preferred Consult Method:</p>
+                  <div class="flex gap-4 pb-4">
+                    <label
+                      for="virtualRadio"
+                      id="virtualOption"
+                      class="flex justify-center items-center gap-2 bg-[#c9f31d] border rounded-full px-4 py-2 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        id="virtualRadio"
+                        name="Preferredoption"
+                        value="Virtual"
+                        checked
+                        class="w-4 h-4 rounded-full hidden"
+                      />
+                      Virtual
+                    </label>
+                    <label
+                      for="inOfficeRadio"
+                      id="inOfficeOption"
+                      class="flex justify-center items-center gap-2 bg-[#c9f31d border rounded-full px-4 py-2 cursor-pointer"
+                    >
+                      <input
+                        type="radio"
+                        id="inOfficeRadio"
+                        name="Preferredoption"
+                        value="In Office"
+                        class="w-4 h-4 rounded-full hidden"
+                      />
+                      In Office
+                    </label>
+                  </div>
+                  <button
+                    type="submit"
+                    class="h-12 w-full rounded-lg bg-[#c9f31d] font-semibold relative overflow-hidden"
+                  >
+                    <span
+                      class="absolute left-0 top-0 -z-1 w-1/3 h-[100%] bg-transparent opacity-[0.5]"
+                    ></span>
+                    Book a Free Consult
+                    <span
+                      class="absolute right-0 top-0 -z-1 w-1/3 h-[100%] bg-transparent opacity-[0.5]"
+                    ></span>
+                  </button>
+                </form>
+              </div>
+            </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

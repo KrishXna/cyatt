@@ -25,6 +25,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <style>
+    .line1,
+    .line3 {
+      transition: 0.5s ease;
+    }
+    .linehide {
+      display: none;
+    }
     .formsuccesshide {
       display: none;
     }
@@ -174,27 +181,40 @@
                 class="p-4 h-24 active-invert"
                 id="logo"
             /></a>
-            <div class="hidden md:flex justify-center items-center gap-4">
-              <div class="flex flex-col">
-                <div id="text" class="active-invert">
-                  <span class="text-black font-semibold">Need Help ? </span>
-                  <span class="text-sm lg:text-lg">Speak with a</span>
+            <div>
+              <div class="hidden md:block">
+                <div class="md:flex justify-center items-center gap-4">
+                  <div class="flex flex-col">
+                    <div id="text" class="active-invert">
+                      <span class="text-black font-semibold">Need Help ? </span>
+                      <span class="text-sm lg:text-lg">Speak with a</span>
+                    </div>
+                    <p id="para" class="text-sm lg:text-lg active-invert">
+                      Licenced Insurance Agent
+                    </p>
+                  </div>
+                  <a href="tel:919521223123">
+                    <button class="bg-[#C9F31d] px-2 py-4 rounded-md font-bold">
+                      +91-9521 223 123
+                    </button>
+                  </a>
                 </div>
-                <p id="para" class="text-sm lg:text-lg active-invert">
-                  Licenced Insurance Agent
-                </p>
               </div>
-              <a href="tel:919521223123">
-                <button class="bg-[#C9F31d] px-2 py-4 rounded-md font-bold">
-                  +91-9521 223 123
-                </button>
-              </a>
-            </div>
-            <div class="md:hidden block text-3xl pr-2 cursor-pointer">
-              <i
-                class="fa-solid fa-bars text-black active-invert"
-                id="icon"
-              ></i>
+
+              <div class="md:hidden block text-3xl pr-2 cursor-pointer">
+                <!-- <i
+                  class="fa-solid fa-bars text-black active-invert"
+                  id="icon"
+                ></i> -->
+                <div
+                  class="hamburger text-black active-invert flex flex-col gap-1"
+                  id="icon"
+                >
+                  <div class="line1 w-6 h-[2px] bg-black relative"></div>
+                  <div class="line2 hidde w-6 h-[2px] bg-black"></div>
+                  <div class="line3 w-6 h-[2px] relative bg-black"></div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -265,8 +285,8 @@
               <!-- Hero Left -->
               <div
                 class="left w-full lg:w-1/2 relative"
-                data-aos="fade-up"
-                data-aos-duration="5000"
+                data-aoss="fade-up"
+                data-aoss-duration="5000"
               >
                 <div class="rounded-4xl">
                   <div class="content">
@@ -528,7 +548,7 @@
     <div id="about">
       <div class="max-w-7xl px-4 mx-auto">
         <div class="md:flex w-full">
-          <div class="left w-full md:w-1/2" data-aos="fade-right">
+          <div class="left w-full md:w-1/2" data-aoss="fade-right">
             <div
               class="pt-6 px-4 before:w-full txt uppercase text-xl font-semibold inline-block hover:scale-x-110 relative"
             >
@@ -572,14 +592,14 @@
           </div>
           <div
             class="right w-full md:w-1/2 flex justify-end"
-            data-aos="fade-left"
+            data-aoss="fade-left"
           >
             <img src="./assets/we-are.jpg" alt="" />
           </div>
         </div>
         <div
           class="content grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 py-20"
-          data-aos="zoom-in"
+          data-aoss="zoom-in"
         >
           <div class="mt-6 md:mt-0">
             <h3 class="text-3xl font-semibold lg:px-20 xl:px-0">
@@ -624,7 +644,7 @@
           </h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="group relative" data-aos="fade-right">
+          <div class="group relative" data-aoss="fade-right">
             <div
               class="inline-block transition borde relative before:absolute before:-bottom-2 before:w-0 before:h-1 before:bg-[#c9f316] group-hover:w-[50%] group-hover:before:w-[100%] hover"
             >
@@ -649,7 +669,7 @@
               </div>
             </div>
           </div>
-          <div class="group" data-aos="zoom-in">
+          <div class="group" data-aoss="zoom-in">
             <div
               class="inline-block transition borde relative before:absolute before:-bottom-2 before:w-0 before:h-1 before:bg-[#c9f316] group-hover:w-[50%] group-hover:before:w-[100%] hover"
             >
@@ -674,7 +694,7 @@
               </div>
             </div>
           </div>
-          <div class="group" data-aos="fade-left">
+          <div class="group" data-aoss="fade-left">
             <div>
               <div
                 class="inline-block transition borde relative before:absolute before:-bottom-2 before:w-0 before:h-1 before:bg-[#c9f316] group-hover:w-[50%] group-hover:before:w-[100%] hover"
@@ -702,7 +722,7 @@
             </div>
           </div>
         </div>
-        <div class="py-20" data-aos="zoom-out" data-aos-duration="6000">
+        <div class="py-20" data-aoss="zoom-out" data-aoss-duration="6000">
           <div
             class="max-w-5xl mx-auto bg-[#c9f31d] relative h-16 rounded-full top-10"
           ></div>
@@ -987,28 +1007,32 @@
           </div>
         </div>
         <!-- 2 -->
-        <div class="md:flex flex-wrap items-center">
+        <div class="md:flex flex-wrap justify-center items-center">
           <div class="w-full md:w-1/3">
             <!-- <h2 class="text-2xl md:text-5xl font-bold py-8 md:py-14`">
               What Our Awesome Clients Say
             </h2> -->
           </div>
-          <div class="w-full md:w-1/3 relative md:-left-16">
-            <div
-              class="relative top-20 -right-60 border bg-[#000] w-10 h-10 rounded-full flex justify-center items-center"
-            >
-              <img src="./assets/like.png" alt="" />
+          <div class="w-full md:w-1/3 md:relative md:-left-16">
+            <div class="flex justify-center items-center">
+              <div>
+                <div
+                  class="relative top-20 -right-60 border bg-[#000] w-10 h-10 rounded-full flex justify-center items-center"
+                >
+                  <img src="./assets/like.png" alt="" />
+                </div>
+                <img
+                  src="./assets/client-img1.jpg"
+                  alt=""
+                  class="rounded-3xl h-[295px] w-[275px]"
+                />
+                <img
+                  src="./assets/dots.png"
+                  alt=""
+                  class="relative -top-20 -left-10"
+                />
+              </div>
             </div>
-            <img
-              src="./assets/client-img1.jpg"
-              alt=""
-              class="rounded-3xl h-[295px] w-[275px]"
-            />
-            <img
-              src="./assets/dots.png"
-              alt=""
-              class="relative -top-20 -left-10"
-            />
           </div>
 
           <div class="w-full md:w-1/3 relative md:-left-10 lg:-left-20">

@@ -1,23 +1,23 @@
-var navbar = document.getElementById("navbar");
-var navmenu = document.getElementById("navmenu");
-var icon = document.getElementById("icon");
-var logo = document.getElementById("logo");
-var text = document.getElementById("text");
-var para = document.getElementById("para");
-var body = document.getElementById("body");
+const navbar = document.getElementById("navbar");
+const navmenu = document.getElementById("navmenu");
+const icon = document.getElementById("icon");
+const logo = document.getElementById("logo");
+const text = document.getElementById("text");
+const para = document.getElementById("para");
+const body = document.getElementById("body");
 
-var contactForm = document.getElementById("contactForm");
-var faq = document.querySelectorAll(".faq");
-var faqIcon = document.querySelectorAll(".faq-icon");
+const contactForm = document.getElementById("contactForm");
+const faq = document.querySelectorAll(".faq");
+const faqIcon = document.querySelectorAll(".faq-icon");
 
-var sticky = navbar.offsetTop;
-var formsuccessDiv = document.getElementById("formsuccess");
+const sticky = navbar.offsetTop;
+const formsuccessDiv = document.getElementById("formsuccess");
 
 window.onscroll = function () {
   if (window.pageYOffset >= 10) {
     navbar.classList.add("bgwhite");
-    icon.classList.remove("active-invert");
     logo.classList.remove("active-invert");
+    icon.classList.remove("active-invert");
     text.classList.remove("active-invert");
     para.classList.remove("active-invert");
   } else {
@@ -30,6 +30,7 @@ window.onscroll = function () {
 };
 
 navbar.addEventListener("click", function () {
+  rotate();
   if (navmenu.classList.contains("hide")) {
     navmenu.classList.remove("hide");
     navmenu.classList.add("show");
@@ -40,26 +41,48 @@ navbar.addEventListener("click", function () {
     text.classList.remove("active-invert");
     para.classList.remove("active-invert");
     body.classList.add("overflow-hidden");
-    changeIcon();
+    // changeIcon();
   } else {
     body.classList.remove("overflow-hidden");
     navmenu.classList.remove("show");
     navmenu.classList.add("hide");
     // icon.classList.add("active-invert");
     // logo.classList.add("active-invert");
-    changeIcon();
+    // changeIcon();
   }
 });
 
-function changeIcon() {
-  if (icon.classList.contains("fa-bars")) {
-    icon.classList.remove("fa-bars");
-    icon.classList.add("fa-times");
+let rotateElm = true;
+function rotate() {
+  const line1 = document.querySelector(".line1");
+  const line2 = document.querySelector(".line2");
+  const line3 = document.querySelector(".line3");
+
+  if (rotateElm) {
+    line1.style.transform = "rotate(45deg)";
+    line1.style.top = "5px";
+    line2.classList.add("linehide");
+    line3.style.transform = "rotate(-45deg)";
+    line3.style.top = "-2px";
   } else {
-    icon.classList.remove("fa-times");
-    icon.classList.add("fa-bars");
+    line1.style.transform = "none";
+    line1.style.top = "0";
+    line2.classList.remove("linehide");
+    line3.style.transform = "none";
+    line3.style.top = "0";
   }
+  rotateElm = !rotateElm;
 }
+
+// function changeIcon() {
+//   if (icon.classList.contains("fa-bars")) {
+//     icon.classList.remove("fa-bars");
+//     icon.classList.add("fa-times");
+//   } else {
+//     icon.classList.remove("fa-times");
+//     icon.classList.add("fa-bars");
+//   }
+// }
 
 // Testimonial Slider
 const swiper = new Swiper(".swiper", {
@@ -220,7 +243,7 @@ $(function () {
   });
 });
 
-// Form
+// form option Virtual or Office
 const virtualOption = document.getElementById("virtualOption");
 const inOfficeOption = document.getElementById("inOfficeOption");
 
