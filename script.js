@@ -5,6 +5,7 @@ const logo = document.getElementById("logo");
 const text = document.getElementById("text");
 const para = document.getElementById("para");
 const body = document.getElementById("body");
+const menu = document.querySelectorAll(".menu");
 
 const contactForm = document.getElementById("contactForm");
 const faq = document.querySelectorAll(".faq");
@@ -29,7 +30,10 @@ window.onscroll = function () {
   }
 };
 
-navbar.addEventListener("click", function () {
+icon.addEventListener("click", handleNav);
+
+function handleNav() {
+  console.log("lkk");
   rotate();
   if (navmenu.classList.contains("hide")) {
     navmenu.classList.remove("hide");
@@ -41,16 +45,16 @@ navbar.addEventListener("click", function () {
     text.classList.remove("active-invert");
     para.classList.remove("active-invert");
     body.classList.add("overflow-hidden");
-    // changeIcon();
   } else {
     body.classList.remove("overflow-hidden");
     navmenu.classList.remove("show");
     navmenu.classList.add("hide");
-    // icon.classList.add("active-invert");
-    // logo.classList.add("active-invert");
-    // changeIcon();
   }
-});
+}
+
+for (let i = 0; i < menu.length; i++) {
+  menu[i].addEventListener("click", handleNav);
+}
 
 let rotateElm = true;
 function rotate() {
@@ -85,7 +89,7 @@ function rotate() {
 // }
 
 // Testimonial Slider
-const swiper = new Swiper(".swiper", {
+const swiper2 = new Swiper(".swiper2", {
   draggable: true,
   freemode: true,
   speed: 3000,
@@ -274,4 +278,67 @@ document.addEventListener("click", (e) => {
   setTimeout(() => {
     cursor.classList.remove("expand");
   }, 500);
+});
+
+// Testimonial Slider
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
+
+const swiper1 = new Swiper(".swiper1", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
 });
