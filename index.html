@@ -292,6 +292,7 @@
           <div class="mx-auto hero-sectio max-w-7xl px-4 overflow-hidde">
             <div class="lg:flex justify-between items-center gap-20 py-20">
               <!-- Hero Left -->
+
               <div
                 class="left w-full lg:w-1/2 relative"
                 data-aoss="fade-up"
@@ -397,6 +398,10 @@
                           class="input-group_label bg-white absolute top-0 left-[20px]"
                           >Full Name</label
                         >
+                        <div
+                          id="error-name"
+                          class="pl-2 text-sm text-red-500"
+                        ></div>
                       </div>
                     </div>
                     <div class="group-im relative pb-2">
@@ -421,18 +426,24 @@
                             ></path>
                           </svg>
                         </div>
+
                         <input
                           class="input-group_input outline-none border border-[#d3d3d3] form-control h-10 w-full rounded-lg pl-4"
                           id="email"
-                          type="email"
+                          type="text"
                           name="email"
                           required
                         />
+
                         <label
                           for="email"
                           class="input-group_label bg-white absolute top-0 left-[20px]"
                           >Email Address</label
                         >
+                        <div
+                          id="error-email"
+                          class="pl-2 text-sm text-red-500"
+                        ></div>
                       </div>
                     </div>
                     <div class="group-img relative pt-2 pb-4">
@@ -467,7 +478,7 @@
                         <input
                           class="input-group_input outline-none border border-[#d3d3d3] form-control h-10 w-full rounded-lg pl-4"
                           id="contact"
-                          type="tel"
+                          type="number"
                           name="contact"
                           required
                         />
@@ -476,6 +487,10 @@
                           class="input-group_label absolute top-0 left-[20px] bg-white"
                           >Phone</label
                         >
+                        <div
+                          id="error-contact"
+                          class="pl-2 text-sm text-red-500"
+                        ></div>
                       </div>
                     </div>
                     <div class="group-img relative pt-2 pb-4">

@@ -123,25 +123,123 @@ const swiper2 = new Swiper(".swiper2", {
 });
 
 // Form Appwrite Connection
+// contactForm.addEventListener("submit", function (e) {
+//   e.preventDefault();
+
+//   const formData = new FormData(this);
+
+//   const formDataObj = {};
+
+//   formData.forEach(function (value, key) {
+//     formDataObj[key] = value;
+//   });
+
+//   // Validate form fields
+
+//   const { name, email, contact, services, Preferredoption } = formDataObj;
+//   console.log(formDataObj);
+
+//   if (!name || !email || !services || !contact || !Preferredoption) {
+//     alert("Please fill  all required fields.");
+//     return;
+//   }
+
+//   const { Client, ID, Databases } = Appwrite;
+//   const client = new Client();
+//   const databases = new Databases(client);
+
+//   client
+//     .setEndpoint("https://cloud.appwrite.io/v1") // Your API Endpoint
+//     .setProject("64ba1b7466f6731fb61e"); // Your project ID
+
+//   const promise = databases.createDocument(
+//     "64ba4ae247cd5174dd91", //databaseId
+//     "64e5a0031d0afb07bac9", //collectionId
+//     ID.unique(),
+//     formDataObj
+//   );
+
+//   promise.then(
+//     function (response) {
+//       if (response.$id) {
+//         if (formsuccessDiv.classList.contains("formsuccesshide")) {
+//           formsuccessDiv.classList.remove("formsuccesshide");
+//           setTimeout(() => {
+//             formsuccessDiv.classList.add("formsuccesshide");
+//           }, 1500);
+//         }
+//         // alert("Data submitted successfully.");
+//         contactForm.reset();
+//       } else {
+//         alert("An error occurred while submitting the form.");
+//       }
+//     },
+//     function (error) {
+//       console.log({ error }); // Log the error for debugging
+//       if (error && error.message) {
+//         alert("An error occurred: " + error.message);
+//       } else {
+//         alert("An error occurred while submitting the form.");
+//       }
+//     }
+//   );
+// });
+
+function formValidate() {
+  let username = document.getElementById("name").value;
+  let useremail = document.getElementById("email").value;
+  let usercontact = document.getElementById("contact").value;
+
+  let nameErr = document.getElementById("error-name");
+  let emailErr = document.getElementById("error-email");
+  let contactErr = document.getElementById("error-contact");
+
+  let emailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,4}))$/;
+  const emailR = emailRegex.test(useremail);
+
+  if (!username) {
+    nameErr.innerText = "Name is required";
+  } else if (username.length < 3) {
+    nameErr.innerText = "Name must be at least 3 characters";
+  } else {
+    nameErr.innerText = "";
+  }
+
+  if (!useremail) {
+    emailErr.innerText = "Email is required";
+  } else if (emailR == false) {
+    emailErr.innerText = "Invalid email type";
+  } else {
+    emailErr.innerText = "";
+  }
+
+  if (!usercontact) {
+  } else if (usercontact.length < 10 || usercontact.length > 13) {
+    contactErr.innerText = "Phone Number between 10-13 digits is valid only";
+  } else {
+    contactErr.innerText = "";
+  }
+
+  if (nameErr.innerText || emailErr.innerText || contactErr.innerText) {
+    return false;
+  }
+
+  return true;
+}
+
 contactForm.addEventListener("submit", function (e) {
   e.preventDefault();
+  if (!formValidate()) {
+    return;
+  }
 
   const formData = new FormData(this);
-
   const formDataObj = {};
 
   formData.forEach(function (value, key) {
     formDataObj[key] = value;
   });
-
-  // Validate form fields
-  const { name, email, contact, services, Preferredoption } = formDataObj;
-  console.log(formDataObj);
-
-  if (!name || !email || !services || !contact || !Preferredoption) {
-    alert("Please fill  all required fields.");
-    return;
-  }
 
   const { Client, ID, Databases } = Appwrite;
   const client = new Client();
@@ -157,32 +255,22 @@ contactForm.addEventListener("submit", function (e) {
     ID.unique(),
     formDataObj
   );
-
-  promise.then(
-    function (response) {
-      if (response.$id) {
-        if (formsuccessDiv.classList.contains("formsuccesshide")) {
-          formsuccessDiv.classList.remove("formsuccesshide");
-          setTimeout(() => {
-            formsuccessDiv.classList.add("formsuccesshide");
-          }, 1500);
-        }
-        // alert("Data submitted successfully.");
-        contactForm.reset();
-      } else {
-        alert("An error occurred while submitting the form.");
+  promise.then(function (response) {
+    if (response.$id) {
+      if (formsuccessDiv.classList.contains("formsuccesshide")) {
+        formsuccessDiv.classList.remove("formsuccesshide");
+        setTimeout(() => {
+          formsuccessDiv.classList.add("formsuccesshide");
+        }, 1500);
       }
-    },
-    function (error) {
-      console.log({ error }); // Log the error for debugging
-      if (error && error.message) {
-        alert("An error occurred: " + error.message);
-      } else {
-        alert("An error occurred while submitting the form.");
-      }
+      contactForm.reset();
+    } else {
+      console.log("An error occurred while submitting the form.");
     }
-  );
+  });
 });
+
+//pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9]+\.[a-z]{2,}"
 
 // Number Increases on scroll
 faq.forEach((e) => {
