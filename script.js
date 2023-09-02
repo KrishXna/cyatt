@@ -124,22 +124,23 @@ const swiper2 = new Swiper(".swiper2", {
 // Form Appwrite Connection
 function formValidate() {
   let username = document.getElementById("name").value;
+  console.log(username);
+  let trimName = username.trim();
+  console.log(trimName);
   let useremail = document.getElementById("email").value;
   let usercontact = document.getElementById("contact").value;
-  console.log(typeof +usercontact);
 
   let nameErr = document.getElementById("error-name");
   let emailErr = document.getElementById("error-email");
   let contactErr = document.getElementById("error-contact");
 
   let nameRegex = /^[a-zA-Z]{3,}$/;
-  const nameR = nameRegex.test(username);
+  const nameR = nameRegex.test(trimName);
   let emailRegex =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,4}))$/;
   const emailR = emailRegex.test(useremail);
   let phoneRegex = /^[0-9]{10,13}$/;
   const phoneR = phoneRegex.test(usercontact);
-  console.log(phoneR);
 
   if (!username) {
     nameErr.innerText = "Name is required";
