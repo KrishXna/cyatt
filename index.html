@@ -57,14 +57,15 @@
       content: "";
       position: absolute;
       z-index: -1;
-      background: #c1da60;
+      /* background: #c1da60; */
+      background-color: red;
       width: 10%;
       aspect-ratio: 1;
       border-radius: 50%;
       inset: 0;
       margin: auto;
       opacity: 0;
-      transition: transform 1000ms 200ms, opacity 200ms;
+      transition: transform 1000ms 200ms, opacity 500ms;
     }
 
     button:active::before {
@@ -292,7 +293,6 @@
           <div class="mx-auto hero-sectio max-w-7xl px-4 overflow-hidde">
             <div class="lg:flex justify-between items-center gap-20 py-20">
               <!-- Hero Left -->
-
               <div
                 class="left w-full lg:w-1/2 relative"
                 data-aoss="fade-up"
@@ -354,7 +354,7 @@
                         </h2>
                         <div class="relative flex">
                           <span
-                            class="drip absolute top-0 w-6 h-6 bg-[#c9f31d] rounded-full z-50"
+                            class="drip absolute top-0 w-6 h-6 bg-[#c9f31d] rounded-full z-"
                           ></span>
                           <span
                             class="drip2 absolute left-20 top-10 w-4 h-4 bg-[#c9f31d] rounded-full z-50"
@@ -395,7 +395,7 @@
                         />
                         <label
                           for="name"
-                          class="input-group_label bg-white absolute top-0 left-[20px]"
+                          class="input-group_label px-2 -ml-3 bg-white absolute top-0 left-[20px]"
                           >Full Name</label
                         >
                         <div
@@ -437,7 +437,7 @@
 
                         <label
                           for="email"
-                          class="input-group_label bg-white absolute top-0 left-[20px]"
+                          class="input-group_label px-2 -ml-3 bg-white absolute top-0 left-[20px]"
                           >Email Address</label
                         >
                         <div
@@ -478,13 +478,13 @@
                         <input
                           class="input-group_input outline-none border border-[#d3d3d3] form-control h-10 w-full rounded-lg pl-4"
                           id="contact"
-                          type="number"
+                          type="text"
                           name="contact"
                           required
                         />
                         <label
                           for="contact"
-                          class="input-group_label absolute top-0 left-[20px] bg-white"
+                          class="px-2 -ml-3 input-group_label absolute top-0 left-[20px] bg-white"
                           >Phone</label
                         >
                         <div
@@ -671,12 +671,14 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="group relative" data-aoss="fade-right">
             <div
-              class="inline-block transition borde relative before:absolute before:-bottom-2 before:w-0 before:h-1 before:bg-[#c9f316] group-hover:w-[50%] group-hover:before:w-[100%] hover"
+              class="inline-block transition relative before:absolute before:-bottom-2 before:w-0 before:h-1 before:bg-[#c9f316] group-hover:w-[50%] group-hover:before:w-[100%] hover"
             >
               01.
             </div>
-            <h2 class="font-semibold text-3xl pt-6">
-              Send us a free email with all the infomration.
+            <h2
+              class="text-3xl font-semibold text- pt-6 transitio relative before:absolute before:-bottom-2 before:w-0 before:h-1 before:bg-[#c9f316] group-hover:before:w-[10%] hover"
+            >
+              Send us a free .
             </h2>
             <p class="py-6 text-xl">
               Here at Zungo we provide world-class services for every type of
