@@ -124,9 +124,7 @@ const swiper2 = new Swiper(".swiper2", {
 // Form Appwrite Connection
 function formValidate() {
   let username = document.getElementById("name").value;
-  console.log(username);
   let trimName = username.trim();
-  console.log(trimName);
   let useremail = document.getElementById("email").value;
   let usercontact = document.getElementById("contact").value;
 
