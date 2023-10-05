@@ -409,6 +409,7 @@ standardRadio.addEventListener("change", function () {
   premiumOption.style.backgroundColor = "#fff";
   if (standardPlan.classList.contains("hide")) {
     standardPlan.classList.remove("hide");
+    ``;
     basicPlan.classList.add("hide");
     premiumPlan.classList.add("hide");
   }
