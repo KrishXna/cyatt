@@ -294,20 +294,20 @@ inOfficeRadio.addEventListener("change", function () {
 });
 
 // Cursor Pointer
-const cursor = document.querySelector(".mousecursor");
+// const cursor = document.querySelector(".mousecursor");
 
-document.addEventListener("mousemove", (e) => {
-  cursor.setAttribute(
-    "style",
-    "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
-  );
-});
-document.addEventListener("click", (e) => {
-  cursor.classList.add("expand");
-  setTimeout(() => {
-    cursor.classList.remove("expand");
-  }, 500);
-});
+// document.addEventListener("mousemove", (e) => {
+//   cursor.setAttribute(
+//     "style",
+//     "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
+//   );
+// });
+// document.addEventListener("click", (e) => {
+//   cursor.classList.add("expand");
+//   setTimeout(() => {
+//     cursor.classList.remove("expand");
+//   }, 500);
+// });
 
 // Testimonial Slider
 const swiper = new Swiper(".swiper", {
