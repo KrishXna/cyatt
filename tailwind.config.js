@@ -21,7 +21,9 @@ module.exports = {
       animation: {
         "trans-bottom": "trans-bottom 5s ease-in-out infinite",
         "trans-top": "trans-bottom 2.5s ease-in-out infinite",
-        "spin-slowest": "spin 20s linear infinite",
+        "spin-slowest": "spin 360s linear infinite",
+        "spin-slowest1": "spin 20s linear infinite",
+
         "spin-slowest2": "spin 15s linear infinite",
 
         "spin-slow": "spin-slow 30s linear infinite",

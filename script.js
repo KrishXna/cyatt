@@ -124,7 +124,7 @@ const swiper2 = new Swiper(".swiper2", {
 // Form Appwrite Connection
 function formValidate() {
   let username = document.getElementById("name").value;
-  let trimName = username.trim();
+  let trimName = username.trimStart();
   let useremail = document.getElementById("email").value;
   let usercontact = document.getElementById("contact").value;
 
@@ -132,12 +132,12 @@ function formValidate() {
   let emailErr = document.getElementById("error-email");
   let contactErr = document.getElementById("error-contact");
 
-  let nameRegex = /^[a-zA-Z]{3,}$/;
+  let nameRegex = /^[a-zA-Z\s]{3,}$/;
   const nameR = nameRegex.test(trimName);
   let emailRegex =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,4}))$/;
   const emailR = emailRegex.test(useremail);
-  let phoneRegex = /^[0-9]{10,13}$/;
+  let phoneRegex = /^[+0-9]{10,13}$/;
   const phoneR = phoneRegex.test(usercontact);
 
   if (!username) {
@@ -190,11 +190,11 @@ contactForm.addEventListener("submit", function (e) {
 
   client
     .setEndpoint("https://cloud.appwrite.io/v1") // Your API Endpoint
-    .setProject("64ba1b7466f6731fb61e"); // Your project ID
+    .setProject("64fc06fba3efbe47dbf7"); // Your project ID
 
   const promise = databases.createDocument(
-    "64ba4ae247cd5174dd91", //databaseId
-    "64e5a0031d0afb07bac9", //collectionId
+    "64fc071f07499a09505a", //databaseId
+    "64fc072e799e7c3f1c91", //collectionId
     ID.unique(),
     formDataObj
   );
@@ -370,4 +370,57 @@ const swiper1 = new Swiper(".swiper1", {
   scrollbar: {
     el: ".swiper-scrollbar",
   },
+});
+
+const items = document.querySelectorAll(".items");
+
+for (let i = 0; i < items.length; i++) {
+  items[i].addEventListener("click", function () {
+    [].forEach.call(items, function (el) {
+      el.classList.remove("active");
+    });
+    items[i].classList.add("active");
+  });
+}
+
+const basicRadio = document.getElementById("basicRadio");
+const standardRadio = document.getElementById("standardRadio");
+const premiumRadio = document.getElementById("premiumRadio");
+
+const basicOption = document.getElementById("basicOption");
+const standardOption = document.getElementById("standardOption");
+const premiumOption = document.getElementById("premiumOption");
+
+const basicPlan = document.getElementById("basicPlan");
+basicRadio.addEventListener("change", function () {
+  basicOption.style.backgroundColor = "#c9f31d";
+  standardOption.style.backgroundColor = "#fff";
+  premiumOption.style.backgroundColor = "#fff";
+  if (basicPlan.classList.contains("hide")) {
+    basicPlan.classList.remove("hide");
+    standardPlan.classList.add("hide");
+    premiumPlan.classList.add("hide");
+  }
+});
+const standardPlan = document.getElementById("standardPlan");
+standardRadio.addEventListener("change", function () {
+  standardOption.style.backgroundColor = "#c9f31d";
+  basicOption.style.backgroundColor = "#fff";
+  premiumOption.style.backgroundColor = "#fff";
+  if (standardPlan.classList.contains("hide")) {
+    standardPlan.classList.remove("hide");
+    basicPlan.classList.add("hide");
+    premiumPlan.classList.add("hide");
+  }
+});
+const premiumPlan = document.getElementById("premiumPlan");
+premiumRadio.addEventListener("change", function () {
+  premiumOption.style.backgroundColor = "#c9f31d";
+  basicOption.style.backgroundColor = "#fff";
+  standardOption.style.backgroundColor = "#fff";
+  if (premiumPlan.classList.contains("hide")) {
+    premiumPlan.classList.remove("hide");
+    standardPlan.classList.add("hide");
+    basicPlan.classList.add("hide");
+  }
 });
