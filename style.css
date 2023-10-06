@@ -1294,11 +1294,6 @@ video {
   padding-bottom: 2.5rem;
 }
 
-.py-14 {
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
-}
-
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -1399,6 +1394,10 @@ video {
 
 .pt-\[100\%\] {
   padding-top: 100%;
+}
+
+.pb-32 {
+  padding-bottom: 8rem;
 }
 
 .text-left {
