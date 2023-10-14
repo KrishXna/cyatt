@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cyatt</title>
-    <meta name="robots" content="all" />
-    <meta name="description" content="Cyatt one solution for every problem." />
-    <link rel="cononical" href="https://www.contact.cyatt.com/" />
     <meta
-      name="google-site-verification"
-      content="DFRLRNIThOMAEfDGTdesgETHKUqokEf_KeRGW4NYF6w"
+      name="description"
+      content="Cyatt IT Development: Your Partner in Tech Innovation. We deliver custom software solutions, web applications, and IT consulting services. Empower your business with cutting-edge technology."
     />
+    <title>Cyatt IT Development</title>
+    <meta name="robots" content="all" />
+    <link rel="cononical" href="https://www.contact.cyatt.com/" />
     <meta property="og:title" content="cyatt" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://contact.cyatt.com/" />
-    <meta property="og:image" content="/images/cyatt.png" />
+    <!-- <meta property="og:image" content="/images/cyatt.png" />  -->
+
     <link rel="icon" href="assets/cyattlogo.png" />
     <link
       rel="stylesheet"
@@ -32,15 +32,16 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <style>
       @keyframes upper {
         0% {
           transform: translate(-4px, -4px);
         }
+
         50% {
           transform: translate(-16px, -16px);
         }
+
         100% {
           transform: translate(-4px, -4px);
         }
@@ -50,9 +51,11 @@
         0% {
           transform: translate(4px, 4px);
         }
+
         50% {
           transform: translate(16px, 16px);
         }
+
         100% {
           transform: translate(4px, 4px);
         }
@@ -80,6 +83,15 @@
         animation-duration: 1s;
         z-index: 1;
       }
+
+      /* .swiper-slide{
+        height: 650px;
+      }*/
+
+      .swiper-slide-active {
+        height: 100%;
+      }
+
       .swiper-wrapper {
         transition-timing-function: linear;
       }
@@ -98,6 +110,24 @@
         padding: 5px 0px;
         border-radius: 6px;
         cursor: pointer;
+        font-weight: 600;
+      }
+
+      .swiper-pagination-bullet:nth-child(1):before {
+        content: "Basic";
+      }
+
+      .swiper-pagination-bullet:nth-child(2):before {
+        content: "Advanced";
+      }
+
+      .swiper-pagination-bullet:nth-child(3):before {
+        content: "Professional";
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: #c9f31d;
+
       }
       .portfolioSwiper .swiper-pagination-bullet {
         display: none;
@@ -110,6 +140,7 @@
         align-items: center;
       }
 
+
       .swiper-pagination-bullet:nth-child(1):before {
         content: "Basic";
       }
@@ -119,33 +150,58 @@
       .swiper-pagination-bullet:nth-child(3):before {
         content: "Premium";
       }
-      .swiper-pagination-bullet-active {
-        background-color: #c9f31d;
-      }
-      .portfolioSwiper .swiper-pagination-bullet:nth-child(1):before {
-        content: "UI&UX";
+
+
+        content: "BRANDING";
       }
       .portfolioSwiper .swiper-pagination-bullet:nth-child(2):before {
-        content: "LOGO DESIGN";
+        content: "BRANDING";
       }
       .portfolioSwiper .swiper-pagination-bullet:nth-child(3):before {
-        content: "DEVELOPMENT";
+        content: "DESIGN";
       }
       .portfolioSwiper .swiper-pagination-bullet:nth-child(4):before {
-        content: "Marketing";
+        content: "MARKETING";
       }
       .portfolioSwiper .swiper-pagination-bullet:nth-child(5):before {
-        content: "Social Media Handle";
+        content: "LOGO DESIGN";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(6):before {
+        content: "LOGO DESIGN";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(7):before {
+        content: "SOCIAL MEDIA";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(8):before {
+        content: "UI/UX";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(9):before {
+        content: "UI/UX";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(10):before {
+        content: "UI/UX";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(11):before {
+        content: "DEVELOPMENT";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(12):before {
+        content: "DEVELOPMENT";
+      }
+      .portfolioSwiper .swiper-pagination-bullet:nth-child(13):before {
+        content: "DEVELOPMENT";
       }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
 
   <body id="body" class="">
-    <!-- Navbar & Hero Section -->
+    <!-- Navbar -->
+    <!-- Navbar -->
+
     <div class="overflow-hidden lg:pb-20">
       <div class="relative">
         <div
-          class="hero-section bg-black -left-[60%] w-[2000px] md:-left-[40%] lg:w-[2300px] h-[1556px] rounded-[666px] overflow-hidden absolute -top-[91%] xl:-left-[10%] lg:-left-[20%] rotate-[331deg] inset-0"
+          class="hero-section bg-black -left-[60%] w-[2200px] md:-left-[40%] h-[1456px] rounded-[666px] overflow-hidden absolute -top-[100%] xl:-left-[10%] lg:-left-[20%] rotate-[331deg] inset-0"
           style="box-shadow: 94px 0px 0px 88px rgb(237 237 237)"
         >
           <img
@@ -181,7 +237,7 @@
                 href="https://calendly.com/cyatt/30min?back=1&month=2023-09"
                 target="_blank"
                 ><button
-                  class="text-black rounded-md px-2 py-4 font-bold bg-[#c9f31d] relative overflow-hidden"
+                  class="text-black rounded-lg px-2 py-4 font-bold bg-[#c9f31d] relative overflow-hidden"
                 >
                   <span
                     class="absolute left-0 top-0 -z-1 w-1/3 h-[100%] bg-transparent opacity-[0.5]"
@@ -192,8 +248,8 @@
                   ></span></button
               ></a>
               <!-- <a href="https://calendly.com/cyatt/30min?back=1&month=2023-09" target="_blank" class="bg-[#C9F31d] px-2 py-4 rounded-md font-bold">
-               Book Appointment
-              </a> -->
+           Book Appointment
+          </a> -->
             </div>
             <div class="md:hidden block text-3xl pr-2 cursor-pointer">
               <div
@@ -244,68 +300,35 @@
         </div>
 
         <!-- Hero -->
+
         <div id="home" class="overflow-hidde w-full pt-10 md:pt-40">
-          <!-- Thankyou Pop Up Model After Form Submission -->
-          <div
-            id="formsuccess"
-            class="formsuccesshide formSuccess pointer-events-none absolute inset-0 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full md:w-1/2 lg:max-w-[500px] px-4 z-10"
-          >
-            <div
-              class="relative top-6 mx-auto h-10 w-[90%] bg-[#c9f31d] rounded-full"
-            ></div>
-            <div
-              class="flex flex-col justify-center py-10 bg-white shadow-3xl rounded-3xl relative"
-            >
-              <div class="flex flex-col items-center">
-                <div
-                  class="w-14 h-14 rounded-full bg-[#c9f31d] mb-4 flex justify-center items-center"
-                >
-                  <i class="fa-solid fa-check text-whit text-4xl"></i>
-                </div>
-                <h2 class="text-3xl">Thankyou!</h2>
-                <p class="px-4 text-center pt-8 text-xl">
-                  Your request has been submitted successfully. We will contact
-                  you soon.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="mx-auto max-w-7xl px-4 overflow-hidden">
-            <div class="lg:flex justify-between items-center gap-20 py-20">
-              <!-- Hero Left -->
-              <div class="left w-full lg:w-1/2 relative">
-                <div class="rounded-4xl">
-                  <div class="content">
-                    <h1 class="text-2xl sm:text-6xl font-bold text-white">
-                      WE MAKE IT EASY FOR YOU TO
-                      <span class="text-[#c9f31d]">GET ONLINE!</span>
-                    </h1>
-                    <div class="flex flex-wrap gap-4 mt-4">
+
+                    <div class="flex gap-x-4 mt-4">
                       <a
                         href="https://drive.google.com/file/d/1R5RQSmxIF_aqqBGAXIv_bbxmzQ9trB9o/view?usp=drive_link"
                       >
                         <button
-                          class="h-12 px-4 text-center flex justify-center items-center rounded-lg bg-[#c9f31d] font-medium relative overflow-hidden hover:bg-[#c9f31d]/80"
+                          class="h-12 px-2 sm:px-4 text-center flex justify-center items-center rounded-lg bg-[#c9f31d] font-medium relative overflow-hidden hover:bg-[#c9f31d]/80"
                           download
                         >
                           View E-Book
                         </button>
                       </a>
-                      <a href="">
-                        <button
-                          class="h-12 px-4 flex justify-center items-center rounded-lg bg-[#c9f31d] font-medium relative overflow-hidden hover:bg-[#c9f31d]/80"
-                        >
-                          Book Free Audit
-                        </button>
-                      </a>
+                      <button
+                        class="h-12 px-2 sm:px-4 flex justify-center items-center rounded-lg bg-[#c9f31d] font-medium relative overflow-hidden hover:bg-[#c9f31d]/80"
+                      >
+                        Book Free Audit
+                      </button>
+
                     </div>
 
                     <!-- <p class="py-4 text-white">
-                      For a limited time, unlock our comprehensive social media package offer for just ₹15,000*
-                    </p> -->
+                  For a limited time, unlock our comprehensive social media package offer for just ₹15,000*
+                </p> -->
                   </div>
                 </div>
               </div>
+
               <!-- Hero Right -->
               <div id="contactform" class="right w-full lg:w-1/2 pt-10 lg:mt-0">
                 <div
@@ -321,7 +344,7 @@
                         class="rounded-full rocket rounded-bl-lg w-20 h-20 flex justify-center items-center bg-[#c9f31d] p-4"
                       >
                         <img
-                          src="/assets/Rocket-fire-GIF.gif"
+                          src="assets/Rocket-fire-GIF.gif"
                           alt=""
                           class="max-w-[185px]"
                         />
@@ -536,116 +559,116 @@
     </div>
 
     <!-- Roll area start -->
-    <div class="h-[100px] overflow-hidden">
-      <section class="roll__area overflow-hidden mb-20 mt-10">
+    <!-- Slider -->
+    <section class="roll__area overflow-hidden mb-20 mt-10">
+      <div
+        class="swiper2 bg-[#c9f31d] py-6 roll__slider swiper-initialized swiper-horizontal swiper-pointer-events"
+      >
+
         <div
-          class="swiper2 bg-[#c9f31d] py-6 roll__slider swiper-initialized swiper-horizontal swiper-pointer-events"
+          class="swiper-wrapper roll__wrapper"
+          id="swiper-wrapper-56ee7dcec5bfe72d"
+          aria-live="off"
+          style="transition-duration: 0ms"
         >
           <div
-            class="swiper-wrapper roll__wrapper"
-            id="swiper-wrapper-56ee7dcec5bfe72d"
-            aria-live="off"
-            style="transition-duration: 0ms"
+            class="swiper-slide roll__slide swiper-slide-duplicate"
+            role="group"
+            aria-label="1 / 6"
+            style="width: 261.75px"
+            data-swiper-slide-index="0"
           >
-            <div
-              class="swiper-slide roll__slide swiper-slide-duplicate"
-              role="group"
-              aria-label="1 / 6"
-              style="width: 261.75px"
-              data-swiper-slide-index="0"
-            >
-              <h2 class="text-[26px] uppercase text-center">Development</h2>
-            </div>
-            <div
-              class="swiper-slide roll__slide swiper-slide-duplicate"
-              role="group"
-              aria-label="2 / 6"
-              style="width: 261.75px"
-              data-swiper-slide-index="1"
-            >
-              <h2 class="text-[26px] uppercase text-center">SEO</h2>
-            </div>
-            <div
-              class="swiper-slide roll__slide swiper-slide-duplicate"
-              role="group"
-              aria-label="3 / 6"
-              style="width: 261.75px"
-              data-swiper-slide-index="2"
-            >
-              <h2 class="text-[26px] uppercase text-center">User Interface</h2>
-            </div>
-            <div
-              class="swiper-slide roll__slide swiper-slide-duplicate swiper-slide-duplicate-prev"
-              role="group"
-              aria-label="4 / 6"
-              style="width: 261.75px"
-              data-swiper-slide-index="3"
-            >
-              <h2 class="text-[26px] uppercase text-center">Social Media</h2>
-            </div>
-            <div
-              class="swiper-slide roll__slide swiper-slide-duplicate swiper-slide-duplicate-active"
-              role="group"
-              aria-label="5 / 6"
-              style="width: 261.75px"
-              data-swiper-slide-index="4"
-            >
-              <h2 class="text-[26px] uppercase text-center">Branding</h2>
-            </div>
-            <div
-              class="swiper-slide roll__slide swiper-slide-duplicate swiper-slide-duplicate-next"
-              role="group"
-              aria-label="6 / 6"
-              style="width: 261.75px"
-              data-swiper-slide-index="5"
-            >
-              <h2 class="text-[26px] uppercase text-center">User experience</h2>
-            </div>
-            <div
-              class="swiper-slide roll__slide swiper-slide-duplicate"
-              role="group"
-              aria-label="1 / 6"
-              style="width: 261.75px"
-              data-swiper-slide-index="0"
-            >
-              <h2 class="text-[26px] uppercase text-center">Cyber Security</h2>
-            </div>
-            <div
-              class="swiper-slide roll__slide swiper-slide-duplicate"
-              role="group"
-              aria-label="2 / 6"
-              style="width: 261.75px"
-              data-swiper-slide-index="1"
-            >
-              <h2 class="text-[26px] uppercase text-center">Development</h2>
-            </div>
-            <div
-              class="swiper-slide roll__slide swiper-slide-duplicate"
-              role="group"
-              aria-label="3 / 6"
-              style="width: 261.75px"
-              data-swiper-slide-index="2"
-            >
-              <h2 class="text-[26px] uppercase text-center">Google Ads</h2>
-            </div>
-            <div
-              class="swiper-slide roll__slide swiper-slide-duplicate"
-              role="group"
-              aria-label="4 / 6"
-              style="width: 261.75px"
-              data-swiper-slide-index="3"
-            >
-              <h2 class="text-[26px] uppercase text-center">User experience</h2>
-            </div>
+            <h2 class="text-[26px] uppercase text-center">Development</h2>
           </div>
-          <span
-            class="swiper-notification"
-            aria-live="assertive"
-            aria-atomic="true"
-          ></span>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate"
+            role="group"
+            aria-label="2 / 6"
+            style="width: 261.75px"
+            data-swiper-slide-index="1"
+          >
+            <h2 class="text-[26px] uppercase text-center">SEO</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate"
+            role="group"
+            aria-label="3 / 6"
+            style="width: 261.75px"
+            data-swiper-slide-index="2"
+          >
+            <h2 class="text-[26px] uppercase text-center">User Interface</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+            role="group"
+            aria-label="4 / 6"
+            style="width: 261.75px"
+            data-swiper-slide-index="3"
+          >
+            <h2 class="text-[26px] uppercase text-center">Social Media</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate swiper-slide-duplicate-active"
+            role="group"
+            aria-label="5 / 6"
+            style="width: 261.75px"
+            data-swiper-slide-index="4"
+          >
+            <h2 class="text-[26px] uppercase text-center">Branding</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate swiper-slide-duplicate-next"
+            role="group"
+            aria-label="6 / 6"
+            style="width: 261.75px"
+            data-swiper-slide-index="5"
+          >
+            <h2 class="text-[26px] uppercase text-center">User experience</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate"
+            role="group"
+            aria-label="1 / 6"
+            style="width: 261.75px"
+            data-swiper-slide-index="0"
+          >
+            <h2 class="text-[26px] uppercase text-center">Cyber Security</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate"
+            role="group"
+            aria-label="2 / 6"
+            style="width: 261.75px"
+            data-swiper-slide-index="1"
+          >
+            <h2 class="text-[26px] uppercase text-center">Development</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate"
+            role="group"
+            aria-label="3 / 6"
+            style="width: 261.75px"
+            data-swiper-slide-index="2"
+          >
+            <h2 class="text-[26px] uppercase text-center">Google Ads</h2>
+          </div>
+          <div
+            class="swiper-slide roll__slide swiper-slide-duplicate"
+            role="group"
+            aria-label="4 / 6"
+            style="width: 261.75px"
+            data-swiper-slide-index="3"
+          >
+            <h2 class="text-[26px] uppercase text-center">User experience</h2>
+          </div>
         </div>
-      </section>
-    </div>
+        <span
+          class="swiper-notification"
+          aria-live="assertive"
+          aria-atomic="true"
+        ></span>
+      </div>
+    </section>
     <!-- Roll area end -->
 
     <!--Some Features  -->
@@ -658,13 +681,16 @@
         </h2>
         <div class="max-w-3xl">
           <h2 class="text-2xl md:text-5xl font-bold py-8 md:py-14">
-            We're Your One-Stop Shop for Crafting Tech Wonders!
+            Kickstart your business online with our seamless IT solutions!
           </h2>
         </div>
 
         <div class="mt-14 md:mt-0 lg:flex w-full">
           <div class="max-w- col-span-2 w-full lg:w-1/2">
-            <img src="./assets/business-deal-in-jaipur.png" alt="" />
+            <img
+              src="./assets/business-deal-in-jaipur.png"
+              alt="successfull business deal"
+            />
           </div>
           <div class="w-full lg:w-1/2 mt-20 lg:mt-0">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
@@ -672,21 +698,27 @@
                 class="col-span-2 md:col-span-1 shadow-xl rounded-xl p-4 lg:shadow-none"
               >
                 <div>
-                  <img src="./assets/uiux-design-course.png" alt="" />
+                  <img
+                    src="./assets/uiux-design-course.png"
+                    alt="Ui/Ux Service"
+                  />
                 </div>
-                <h2 class="text-xl md:text-2xl font-semibold pt-4">
-                  User Experience Design
-                </h2>
+                <h2 class="text-xl md:text-2xl font-semibold pt-4">Branding</h2>
                 <p class="text-lg pt-4">
-                  Our seasoned team of UI/UX designers is dedicated to crafting
-                  captivating web designs centered around your brand.
+                  Branding is your business's superpower, creating a standout
+                  identity both online and offline. We specialize in crafting
+                  logos, banners, company merchandise, business cards, and more,
+                  all working together to define your unique identity.
                 </p>
               </div>
               <div
                 class="col-span-2 md:col-span-1 mt- md:mt-0 shadow-xl rounded-xl p-4 lg:shadow-none"
               >
                 <div>
-                  <img src="./assets/web-development-and-mobile.png" alt="" />
+                  <img
+                    src="./assets/web-development-and-mobile.png"
+                    alt="Web and Mobile Development Service"
+                  />
                 </div>
                 <h2 class="text-xl md:text-2xl font-semibold pt-4">
                   Web/Mobile App Development
@@ -700,30 +732,38 @@
                 class="col-span-2 md:col-span-1 shadow-xl rounded-xl p-4 lg:shadow-none"
               >
                 <div>
-                  <img src="./assets/digital-marketing-in-india.png" alt="" />
+                  <img
+                    src="./assets/digital-marketing-in-india.png"
+                    alt="Branding & Digital Marketing"
+                  />
                 </div>
                 <h2 class="text-xl md:text-2xl font-semibold pt-4">
-                  Branding & Digital Marketing
+                  SEO & SMM
                 </h2>
                 <p class="text-lg pt-4">
-                  We believe in transforming brands beyond colors and logos!
-                  Elevate your online presence and ignite business growth with
-                  our cutting-edge branding strategies.
+                  We elevate your online presence with current & innovative SEO
+                  services. Also create SMM solutions to your goals, offering
+                  strategy, content creation, management, PPC, audits, and
+                  analytics for maximum impact.
                 </p>
               </div>
               <div
                 class="col-span-2 md:col-span-1 shadow-xl rounded-xl p-4 lg:shadow-none"
               >
                 <div>
-                  <img src="./assets/cybersecuirty.png" alt="" />
+                  <img
+                    src="./assets/ads-service.png"
+                    alt="ads_campaign_service"
+                  />
                 </div>
                 <h2 class="text-xl md:text-2xl font-semibold pt-4">
-                  Cybersecurity
+                  Leadpages & Ad Campaigns
                 </h2>
                 <p class="text-lg pt-4">
-                  We boasts a team of highly-skilled OSCP & DevOps certified
-                  cyber security professionals who continues to match highly
-                  fluid cyber threat landscape in the current world.
+                  We excel in dynamic lead page generation, Ad campaign
+                  services, audience research, and target market analysis, all
+                  aimed at propelling your business by capturing customer
+                  interest and strategically engaging your audience.
                 </p>
               </div>
             </div>
@@ -743,16 +783,19 @@
         <div class="md:flex px-6 md:px-20 py-20">
           <div class="left w-full md:w-1/2 md:mt-[25px]">
             <h2 class="md:text-4xl text-3xl font-bold">
-              Limited-time offer: Get our comprehensive social media package for
-              <span class="text-[#c9f31d]">just ₹15,000* !</span>
+              Limited-time offer: Get our comprehensive social media packages
+              <!-- <span class="text-[#c9f31d]">just ₹15,000* !</span> -->
             </h2>
             <p class="py-6 text-xl">
               Act now and get noticed on social media with our affordable
-              package. Offer ends soon!
+              packages. Offer ends soon!
             </p>
           </div>
           <div class="right w-full md:w-1/2 flex justify-center lg:justify-end">
-            <img src="./assets/business-growth-ideas.png" alt="" />
+            <img
+              src="./assets/business-growth-ideas.png"
+              alt="Business growth ideas"
+            />
           </div>
         </div>
       </div>
@@ -775,27 +818,27 @@
                     class="mx-auto max-w-sm bg-[#000] rounded-2xl text-white/80 overflow-hidden group-hover:-translate-y-6 group-hover:cursor-pointer delay-100 duration-300"
                   >
                     <div class="text-center pt-6">
-                      <p class="text-2xl font-bold">Personal</p>
-                      <p>Website</p>
+                      <p class="text-2xl font-bold">Basic</p>
+                      <!-- <p>Website</p> -->
                     </div>
                     <div
-                      class="bg-[#c9f31d] text-center py-4 text-3xl font-extrabold mt-6 mb-6 text-black"
+                      class="bg-[#c9f31d] text-center py-4 text-2xl font-extrabold mt-6 mb-6 text-black"
                     >
-                      Rs.6999
+                      Rs.10,000
                     </div>
-                    <p class="mb-6 px-6">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Aliquid, magni.
+                    <p class="mb-6 px-6 text-xl">
+                      Tailored for small businesses looking to make a big impact
+                      in the digital world.
                     </p>
                     <div class="relative overflow-hidden shadow-md">
                       <table
                         class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
                       >
-                        <tbody class="">
+                        <tbody class="text-lg">
                           <tr class="bg-[#121212]">
                             <th scope="row" class="px-6 py-4 font-medium">
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; WordPress Website
+                              &nbsp; 15 Creative Posts
                             </th>
                           </tr>
                           <tr class="bg-black">
@@ -804,13 +847,13 @@
                               class="px-6 py-4 font-medium text-white/80"
                             >
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; 3 Sub Pages
+                              &nbsp; 15 Stories
                             </th>
                           </tr>
                           <tr class="bg-[#121212]">
                             <th scope="row" class="px-6 py-4 font-medium">
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; WordPress Website
+                              &nbsp; Social Cover Image
                             </th>
                           </tr>
                           <tr class="bg-black">
@@ -819,13 +862,13 @@
                               class="px-6 py-4 font-medium text-white/80"
                             >
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; 3 Sub Pages
+                              &nbsp; Target Audience Research
                             </th>
                           </tr>
                           <tr class="bg-[#121212]">
                             <th scope="row" class="px-6 py-4 font-medium">
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; WordPress Website
+                              &nbsp; 5% Expected Organic Growth
                             </th>
                           </tr>
                           <tr class="bg-black">
@@ -834,7 +877,7 @@
                               class="px-6 py-4 font-medium text-white/80"
                             >
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; 3 Sub Pages
+                              &nbsp; Highlight Covers
                             </th>
                           </tr>
                         </tbody>
@@ -856,27 +899,26 @@
                     class="mx-auto max-w-sm bg-[#000] rounded-2xl text-white/80 overflow-hidden group-hover:-translate-y-6 group-hover:cursor-pointer delay-100 duration-300"
                   >
                     <div class="text-center pt-6">
-                      <p class="text-2xl font-bold">Standard</p>
-                      <p>Website</p>
+                      <p class="text-2xl font-bold">Advanced</p>
+                      <!-- <p>Website</p> -->
                     </div>
                     <div
-                      class="bg-[#c9f31d] text-center py-4 text-3xl font-extrabold mt-6 mb-6 text-black"
+                      class="bg-[#c9f31d] text-center py-4 text-2xl font-extrabold mt-6 mb-6 text-black"
                     >
-                      Rs.9999k
+                      Rs.20,000
                     </div>
-                    <p class="mb-6 px-6">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Aliquid, magni.
+                    <p class="mb-6 px-6 text-xl">
+                      Tailored for growing business with ambitious goals.
                     </p>
                     <div class="relative overflow-hidden shadow-md">
                       <table
                         class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
                       >
-                        <tbody>
+                        <tbody class="text-lg">
                           <tr class="bg-[#121212]">
                             <th scope="row" class="px-6 py-4 font-medium">
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; WordPress Website
+                              &nbsp; 20 Creative Posts
                             </th>
                           </tr>
                           <tr class="bg-black">
@@ -885,13 +927,13 @@
                               class="px-6 py-4 font-medium text-white/80"
                             >
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; 3 Sub Pages
+                              &nbsp; 20 Stories
                             </th>
                           </tr>
                           <tr class="bg-[#121212]">
                             <th scope="row" class="px-6 py-4 font-medium">
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; WordPress Website
+                              &nbsp; Social Cover Image
                             </th>
                           </tr>
                           <tr class="bg-black">
@@ -900,13 +942,13 @@
                               class="px-6 py-4 font-medium text-white/80"
                             >
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; 3 Sub Pages
+                              &nbsp; Google My Business Profile
                             </th>
                           </tr>
                           <tr class="bg-[#121212]">
                             <th scope="row" class="px-6 py-4 font-medium">
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; WordPress Website
+                              &nbsp; Target Audience Research
                             </th>
                           </tr>
                           <tr class="bg-black">
@@ -915,7 +957,61 @@
                               class="px-6 py-4 font-medium text-white/80"
                             >
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; 3 Sub Pages
+                              &nbsp; 10% Expected Organic Growth
+                            </th>
+                          </tr>
+                          <tr class="bg-black">
+                            <th
+                              scope="row"
+                              class="px-6 py-4 font-medium text-white/80"
+                            >
+                              <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                              &nbsp; Monthly Analysis Report
+                            </th>
+                          </tr>
+                          <tr class="bg-black">
+                            <th
+                              scope="row"
+                              class="px-6 py-4 font-medium text-white/80"
+                            >
+                              <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                              &nbsp; Highlight Covers
+                            </th>
+                          </tr>
+                          <tr class="bg-black">
+                            <th
+                              scope="row"
+                              class="px-6 py-4 font-medium text-white/80"
+                            >
+                              <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                              &nbsp; Post Caption
+                            </th>
+                          </tr>
+                          <tr class="bg-black">
+                            <th
+                              scope="row"
+                              class="px-6 py-4 font-medium text-white/80"
+                            >
+                              <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                              &nbsp; Auto-Messaging
+                            </th>
+                          </tr>
+                          <tr class="bg-black">
+                            <th
+                              scope="row"
+                              class="px-6 py-4 font-medium text-white/80"
+                            >
+                              <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                              &nbsp; SMM - Friendly Bio
+                            </th>
+                          </tr>
+                          <tr class="bg-black">
+                            <th
+                              scope="row"
+                              class="px-6 py-4 font-medium text-white/80"
+                            >
+                              <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                              &nbsp; Hashtags Strategy
                             </th>
                           </tr>
                         </tbody>
@@ -937,27 +1033,27 @@
                     class="mx-auto max-w-sm bg-[#000] rounded-2xl text-white/80 overflow-hidden group-hover:-translate-y-6 group-hover:cursor-pointer delay-100 duration-300"
                   >
                     <div class="text-center pt-6">
-                      <p class="text-2xl font-bold">Premium</p>
-                      <p>Website</p>
+                      <p class="text-2xl font-bold">Professional</p>
+                      <!-- <p>Website</p> -->
                     </div>
                     <div
-                      class="bg-[#c9f31d] text-center py-4 text-3xl font-extrabold mt-6 mb-6 text-black"
+                      class="bg-[#c9f31d] text-center py-4 text-2xl font-extrabold mt-6 mb-6 text-black"
                     >
-                      Rs.11999
+                      Rs.30,000
                     </div>
-                    <p class="mb-6 px-6">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Aliquid, magni.
+                    <p class="mb-6 px-6 text-xl">
+                      The ultimate choice for big businesses ready to dominate
+                      the online landscape.
                     </p>
                     <div class="relative overflow-hidden shadow-md">
                       <table
                         class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
                       >
-                        <tbody class="">
+                        <tbody class="text-lg">
                           <tr class="bg-[#121212]">
                             <th scope="row" class="px-6 py-4 font-medium">
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; WordPress Website
+                              &nbsp; 30 Creative Posts
                             </th>
                           </tr>
                           <tr class="bg-black">
@@ -966,13 +1062,13 @@
                               class="px-6 py-4 font-medium text-white/80"
                             >
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; 3 Sub Pages
+                              &nbsp; 30 Stories
                             </th>
                           </tr>
                           <tr class="bg-[#121212]">
                             <th scope="row" class="px-6 py-4 font-medium">
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; WordPress Website
+                              &nbsp; Social Cover Image
                             </th>
                           </tr>
                           <tr class="bg-black">
@@ -981,13 +1077,13 @@
                               class="px-6 py-4 font-medium text-white/80"
                             >
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; 3 Sub Pages
+                              &nbsp; Meta Ad Account Set up
                             </th>
                           </tr>
                           <tr class="bg-[#121212]">
                             <th scope="row" class="px-6 py-4 font-medium">
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; WordPress Website
+                              &nbsp; Google My Business Profile
                             </th>
                           </tr>
                           <tr class="bg-black">
@@ -996,13 +1092,13 @@
                               class="px-6 py-4 font-medium text-white/80"
                             >
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; 3 Sub Pages
+                              &nbsp; Target Audience Research
                             </th>
                           </tr>
                           <tr class="bg-[#121212]">
                             <th scope="row" class="px-6 py-4 font-medium">
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; WordPress Website
+                              &nbsp; 15% Expected Organic Growth
                             </th>
                           </tr>
                           <tr class="bg-black">
@@ -1011,13 +1107,14 @@
                               class="px-6 py-4 font-medium text-white/80"
                             >
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; 3 Sub Pages
+                              &nbsp; Logo - Digital & Printable
                             </th>
                           </tr>
+
                           <tr class="bg-[#121212]">
                             <th scope="row" class="px-6 py-4 font-medium">
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; WordPress Website
+                              &nbsp; Weekly Analysis Report
                             </th>
                           </tr>
                           <tr class="bg-black">
@@ -1026,13 +1123,13 @@
                               class="px-6 py-4 font-medium text-white/80"
                             >
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; 3 Sub Pages
+                              &nbsp; Highlight Covers
                             </th>
                           </tr>
                           <tr class="bg-[#121212]">
                             <th scope="row" class="px-6 py-4 font-medium">
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; WordPress Website
+                              &nbsp; Post Caption
                             </th>
                           </tr>
                           <tr class="bg-black">
@@ -1041,13 +1138,13 @@
                               class="px-6 py-4 font-medium text-white/80"
                             >
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; 3 Sub Pages
+                              &nbsp; Auto-Messaging
                             </th>
                           </tr>
                           <tr class="bg-[#121212]">
                             <th scope="row" class="px-6 py-4 font-medium">
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; WordPress Website
+                              &nbsp; SMM - Friendly Bio
                             </th>
                           </tr>
                           <tr class="bg-black">
@@ -1056,22 +1153,7 @@
                               class="px-6 py-4 font-medium text-white/80"
                             >
                               <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; 3 Sub Pages
-                            </th>
-                          </tr>
-                          <tr class="bg-[#121212]">
-                            <th scope="row" class="px-6 py-4 font-medium">
-                              <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; WordPress Website
-                            </th>
-                          </tr>
-                          <tr class="bg-black">
-                            <th
-                              scope="row"
-                              class="px-6 py-4 font-medium text-white/80"
-                            >
-                              <i class="fa-solid fa-check text-[#c9f31d]"></i>
-                              &nbsp; 3 Sub Pages
+                              &nbsp; Hashtags Strategy
                             </th>
                           </tr>
                         </tbody>
@@ -1090,59 +1172,51 @@
         <div class="swiper-scrollbar hidden"></div>
       </div>
       <div class="flex justify-center">
-        <a href="#contactform">
-          <button
-            id="btns"
-            class="bg-[#c9f31d] text-black font-semibold px-6 h-14 rounded-full"
-          >
-            Avial Now
-          </button>
-        </a>
+        <button
+          id="btns"
+          class="bg-[#c9f31d] text-black font-semibold px-6 h-14 rounded-lg text-base"
+        >
+          Avail Now
+        </button>
       </div>
     </div>
 
-    <!-- Pricing Card for Desktop -->
-    <div class="max-w-7xl mx-auto mb-20 hidden md:block px-4">
+    <!-- Pricing Card inside black div for Desktop -->
+    <div class="max-w-7xl mx-auto hidden md:block mb-20 px-4">
       <div
-        class="mt-14 pt-6 px-4 before:w-full txt uppercase text-xl font-semibold inline-block hover:scale-x-110 relative"
-      >
-        <h2
-          class="relative before:absolute before:bg-[#adc555] before:top-7 before:w-0 before:h-1 hover:before:w-[100%] txt"
-        >
-          Package
-        </h2>
-      </div>
-      <div>
-        <div
-          class="max-w-5xl mx-auto bg-[#c9f31d] relative h-16 rounded-full top-10"
-        ></div>
-        <div class="w-full bg-[#000] text-white rounded-3xl z-10 relative pb-4">
-          <div class="px-6 md:px-20 py-6">
-            <div class="md:flex items-center pb-10">
-              <div class="left w-full md:w-1/2 md:mt-[25px]">
-                <h2 class="md:text-4xl text-3xl font-bold">
-                  Limited-time offer: Get our comprehensive social media package
-                  for
-                  <span class="text-[#c9f31d]">just ₹15,000* !</span>
-                </h2>
-                <p class="py-6 text-xl">
-                  Act now and get noticed on social media with our affordable
-                  package. Offer ends soon!
-                </p>
-                <!-- <a
-                    href="https://calendly.com/cyatt/30min?back=1&month=2023-09"
-                    target="_blank"
-                    ><button
-                      class="font-bold mt-10 block h-14 w-full md:w-1/2 text-black rounded-lg bg-[#c9f31d] relative overflow-hidden"
-                    >
-                      <span
-                        class="absolute left-0 top-0 -z-1 w-1/3 h-[100%] bg-transparent opacity-[0.5]"
-                      ></span>
-                      Book a Free Consultation
-                      <span
-                        class="absolute right-0 top-0 -z-1 w-1/3 h-[100%] bg-transparent opacity-[0.5]"
-                      ></span></button
-                  ></a> -->
+        class="mt-5 px-4 before:w-full uppercase text-xl font-semibold inline-block hover:scale-x-110 relative"
+      ></div>
+
+      <div data-aoss="zoom-out" data-aoss-duration="6000">
+        <div class="">
+          <div
+            class="max-w-5xl mx-auto bg-[#c9f31d] relative h-16 rounded-full top-10"
+          ></div>
+          <div
+            class="w-full bg-[#000] text-white rounded-3xl z-10 relative pb-4"
+          >
+            <div class="px-6 md:px-20 py-6">
+              <div class="md:flex items-center pb-10">
+                <div class="left w-full md:w-1/2 md:mt-[25px]">
+                  <h2 class="md:text-4xl text-3xl font-bold">
+                    Limited-time offer: Get our comprehensive social media
+                    packages.
+                    <!-- <span class="text-[#c9f31d]">just ₹15,000* !</span> -->
+                  </h2>
+                  <p class="py-6 text-xl">
+                    Act now and get noticed on social media with our affordable
+                    packages. Offer ends soon!
+                  </p>
+                </div>
+                <div
+                  class="right w-full md:w-1/2 flex justify-center lg:justify-end mt-14 md:mt-0"
+                >
+                  <img
+                    src="./assets/business-growth-ideas.png"
+                    alt="Business growth ideas"
+                  />
+                </div>
+
               </div>
               <div
                 class="right w-full md:w-1/2 flex justify-center lg:justify-end mt-14 md:mt-0"
@@ -1157,6 +1231,255 @@
                 <thead
                   class="text-xl text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
                 >
+
+                  <thead
+                    class="text-xl text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+                  >
+                    <tr class="bg-[#c9f31d] text-[#000]">
+                      <th scope="col" class="px-6 py-3">Package</th>
+                      <th scope="col" class="px-6 py-3">
+                        <span class="text-xl">₹10,000 </span><br />Basic
+                      </th>
+                      <th scope="col" class="px-6 py-3">
+                        <span class="text-xl text-center">₹20,000 </span
+                        ><br />Standard
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-6 py-3 flex-col justify-center items-center"
+                      >
+                        <span class="text-xl">₹30,000 </span><br />Premium
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-white text-base">
+                    <tr class="bg-black">
+                      <th
+                        scope="row"
+                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      >
+                        Creative Posts
+                      </th>
+                      <td class="px-6 py-4">
+                        <p>15</p>
+                        <!-- <i class="fa-solid fa-check"></i> -->
+                      </td>
+                      <td class="px-6 py-4">
+                        <p>20</p>
+                        <!-- <i class="fa-solid fa-check text-[#c9f31d]"></i> -->
+                      </td>
+                      <td class="px-6 py-4">
+                        <p>30</p>
+                        <!-- <i class="fa-solid fa-check text-[#c9f31d]"></i> -->
+                      </td>
+                    </tr>
+                    <tr class="bg-[#121212]">
+                      <th scope="row" class="px-6 py-4 font-medium">Stories</th>
+                      <td class="px-6 py-4">
+                        <p>15</p>
+                        <!-- <i class="fa-solid fa-check"></i> -->
+                      </td>
+                      <td class="px-6 py-4">
+                        <p>20</p>
+                        <!-- <i class="fa-solid fa-check text-[#c9f31d]"></i> -->
+                      </td>
+                      <td class="px-6 py-4">
+                        <p>30</p>
+                        <!-- <i class="fa-solid fa-check text-[#c9f31d]"></i> -->
+                      </td>
+                    </tr>
+                    <tr class="bg-black">
+                      <th
+                        scope="row"
+                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      >
+                        Social Cover Image
+                      </th>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                    </tr>
+                    <tr class="bg-[#121212]">
+                      <th scope="row" class="px-6 py-4 font-medium">
+                        Meta Ad Account Set up
+                      </th>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-x"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-x"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                    </tr>
+                    <tr class="bg-black">
+                      <th
+                        scope="row"
+                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      >
+                        Google My Business Profile
+                      </th>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-x"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                    </tr>
+                    <tr class="bg-[#121212]">
+                      <th scope="row" class="px-6 py-4 font-medium">
+                        Target Audience Research
+                      </th>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                    </tr>
+                    <tr class="bg-black">
+                      <th
+                        scope="row"
+                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      >
+                        Expected Organic Growth
+                      </th>
+                      <td class="px-6 py-4">
+                        <p>5%</p>
+                        <!-- <i class="fa-solid fa-check text-[#c9f31d]"></i> -->
+                      </td>
+                      <td class="px-6 py-4">
+                        <p>10%</p>
+                        <!-- <i class="fa-solid fa-check text-[#c9f31d]"></i> -->
+                      </td>
+                      <td class="px-6 py-4">
+                        <p>15%</p>
+                        <!-- <i class="fa-solid fa-check text-[#c9f31d]"></i> -->
+                      </td>
+                    </tr>
+                    <tr class="bg-[#121212]">
+                      <th scope="row" class="px-6 py-4 font-medium">
+                        Logo - Digital & Printable
+                      </th>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-x"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-x"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                    </tr>
+                    <tr class="bg-black">
+                      <th scope="row" class="px-6 py-4 font-medium">
+                        Analysis Report
+                      </th>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-x"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                    </tr>
+                    <tr class="bg-[#c9f31d]">
+                      <th
+                        colspan="4"
+                        scope="row"
+                        class="px-6 py-4 text-black uppercase text-xl text-center"
+                      >
+                        Instagram Profile optimization
+                      </th>
+                    </tr>
+                    <tr class="bg-[#121212]">
+                      <th scope="row" class="px-6 py-4 font-medium">
+                        Highlight Covers
+                      </th>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                    </tr>
+                    <tr class="bg-black">
+                      <th scope="row" class="px-6 py-4 font-medium">
+                        Post Caption
+                      </th>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-x"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                    </tr>
+                    <tr class="bg-[#121212]">
+                      <th scope="row" class="px-6 py-4 font-medium">
+                        Auto-Messaging
+                      </th>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-x"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                    </tr>
+                    <tr class="bg-black">
+                      <th scope="row" class="px-6 py-4 font-medium">
+                        SMM - Friendly Bio
+                      </th>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-x"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                    </tr>
+                    <tr class="bg-[#121212]">
+                      <th scope="row" class="px-6 py-4 font-medium">
+                        Hashtags Strategy
+                      </th>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-x"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                      <td class="px-6 py-4">
+                        <i class="fa-solid fa-check text-[#c9f31d]"></i>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="flex justify-center mt-10">
                   <tr class="bg-[#c9f31d] text-[#000]">
                     <th scope="col" class="px-6 py-3">Package</th>
                     <th scope="col" class="px-6 py-3">
@@ -1405,12 +1728,9 @@
               </table>
               <div class="flex justify-center mt-10">
                 <a href="#contactform">
-                  <button
-                    class="bg-[#c9f31d] text-black px-6 h-14 rounded-lg font-bold"
-                  >
-                    Avail Now
-                  </button>
-                </a>
+
+                </div>
+
               </div>
             </div>
           </div>
@@ -1467,7 +1787,7 @@
           <div class="right w-full md:w-1/2 flex justify-end">
             <img
               src="./assets/people-discussion-about-website development and design.png"
-              alt=""
+              alt="Website development & design"
             />
           </div>
         </div>
@@ -1512,7 +1832,7 @@
 
     <!-- logo slider mobile -->
     <div>
-      <div class="max-w-7xl px-4 mx-auto pb-0 pt-5">
+      <div class="max-w-7xl px-4 mx-auto pb-0">
         <h2 class="max-w-2xl text-3xl md:text-5xl font-bold py-8 md:py-14">
           We are happy to work with global recognized brands
         </h2>
@@ -1523,7 +1843,10 @@
                 <div
                   class="flex flex-col justify-center items-center px-4 gap-4"
                 >
-                  <img src="./assets/Bsides-goa-business-client.png" alt="" />
+                  <img
+                    src="./assets/Bsides-goa-business-client.png"
+                    alt="Client Logo"
+                  />
                 </div>
               </div>
             </div>
@@ -1533,7 +1856,10 @@
                 <div
                   class="flex flex-col justify-center items-center px-4 gap-4"
                 >
-                  <img src="./assets/ezulix-business-client.png" alt="" />
+                  <img
+                    src="./assets/ezulix-business-client.png"
+                    alt="Business client"
+                  />
                 </div>
               </div>
             </div>
@@ -1543,7 +1869,7 @@
                 <div
                   class="flex flex-col justify-center items-center px-4 gap-4"
                 >
-                  <img src="./assets/Client-Logos.png" alt="" />
+                  <img src="./assets/noble-logo.png" alt="client Logos" />
                 </div>
               </div>
             </div>
@@ -1553,7 +1879,10 @@
                 <div
                   class="flex flex-col justify-center items-center px-4 gap-4"
                 >
-                  <img src="./assets/business-work-client.png" alt="" />
+                  <img
+                    src="./assets/business-work-client.png"
+                    alt="client Logos"
+                  />
                 </div>
               </div>
             </div>
@@ -1563,7 +1892,10 @@
                 <div
                   class="flex flex-col justify-center items-center px-4 gap-4"
                 >
-                  <img src="./assets/business-project-client.png" alt="" />
+                  <img
+                    src="./assets/business-project-client.png"
+                    alt="client Logos"
+                  />
                 </div>
               </div>
             </div>
@@ -1573,10 +1905,31 @@
                 <div
                   class="flex flex-col justify-center items-center px-4 gap-4"
                 >
-                  <img src="./assets/Client Logo's.png" alt="" />
+                  <img src="./assets/Client-Logo's.png" alt="client Logos" />
                 </div>
               </div>
             </div>
+            <!--  -->
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-[500px] mx-auto">
+                <div
+                  class="flex flex-col justify-center items-center px-4 gap-4"
+                >
+                  <img src="./assets/dronum-logo.jpg" alt="client Logos" />
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-[500px] mx-auto">
+                <div
+                  class="flex flex-col justify-center items-center px-4 gap-4"
+                >
+                  <img src="./assets/pucca-logo.jpg" alt="client Logos" />
+                </div>
+              </div>
+            </div>
+            <!--  -->
           </div>
           <div class="swiper-pagination hidden"></div>
           <!-- <div class="swiper-button-prev cursor-pointer"></div>
@@ -1593,7 +1946,7 @@
               <div class="brand__item border-b border-r">
                 <div class="imgBox1">
                   <img
-                    src="assets/Bsides-goa-business-client.png"
+                    src="assets/business-project-client.png"
                     alt="Brand Logo"
                     class="mx-auto cursor-pointer"
                   />
@@ -1602,7 +1955,7 @@
               <div class="brand__item border-b lg:border-r">
                 <div class="imgBox1">
                   <img
-                    src="assets/ezulix-business-client.png"
+                    src="assets/Bsides-goa-business-client.png"
                     alt="Brand Logo"
                     class="mx-auto cursor-pointer"
                   />
@@ -1611,22 +1964,49 @@
               <div class="brand__item border-b border-r lg:border-r-0">
                 <div class="imgBox1">
                   <img
+                    src="assets/noble-logo.png"
+                    alt="Brand Logo"
+                    class="mx-auto cursor-pointer"
+                  />
+                </div>
+              </div>
+              <div class="brand__item md:border-b lg:border-r">
+                <div class="imgBox1">
+                  <img
+                    src="assets/Client-Logo's.png"
+                    alt="Brand Logo"
+                    class="mx-auto cursor-pointer"
+                  />
+                </div>
+              </div>
+              <div class="brand__item border-b border-r">
+                <div class="imgBox1">
+                  <img
+                    src="assets/pucca-logo.jpg"
+                    alt="Brand Logo"
+                    class="mx-auto cursor-pointer"
+                  />
+                </div>
+              </div>
+              <div class="brand__item md:border-b">
+                <div class="imgBox1">
+                  <img
+                    src="assets/dronum-logo.jpg"
+                    alt="Brand Logo"
+                    class="mx-auto cursor-pointer"
+                  />
+                </div>
+              </div>
+              <div class="brand__item md:border-b lg:border-b-0 border-r">
+                <div class="imgBox1">
+                  <img
                     src="assets/Client-Logos.png"
                     alt="Brand Logo"
                     class="mx-auto cursor-pointer"
                   />
                 </div>
               </div>
-              <div class="brand__item md:border-b lg:border-b-0 lg:border-r">
-                <div class="imgBox1">
-                  <img
-                    src="assets/Client Logo's.png"
-                    alt="Brand Logo"
-                    class="mx-auto cursor-pointer"
-                  />
-                </div>
-              </div>
-              <div class="brand__item lg:border-b-0 border-r">
+              <div class="brand__item md:border-b lg:border-b-0 border-r">
                 <div class="imgBox1">
                   <img
                     src="assets/business-work-client.png"
@@ -1635,10 +2015,10 @@
                   />
                 </div>
               </div>
-              <div class="brand__item brand__item2">
+              <div class="brand__item brand__item2 md:col-span-2 lg:col-span-1">
                 <div class="imgBox1">
                   <img
-                    src="assets/business-project-client.png"
+                    src="assets/ezulix-business-client.png"
                     alt="Brand Logo"
                     class="mx-auto cursor-pointer"
                   />
@@ -1653,7 +2033,7 @@
             <div class="left w-full py-10">
               <p class="text-xl font-thin">
                 Note: As we are working under confidentiality agreements with
-                some of our valued clients, we are unable to display their works
+                some of our valued clients, we are unable to display their work
                 publicly.
               </p>
             </div>
@@ -1661,177 +2041,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Our work/portfolio -->
-    <!-- <div>
-      <div class="max-w-7xl px-4 mx-auto pb-0 pt-10">
-        <h2
-          class="cursor-pointer pt-6 px-4 before:w-full txt txt3 relative uppercase text-xl font-semibold inline-block hover:scale-x-110"
-        >
-          Our Work
-        </h2>
-
-        <div
-          class="max-w-6xl mx-auto lg:flex flex flex-col lg:flex-row justify-center items-center lg:gap-20 px-4 pt-14"
-        >
-          <div class="container max-w-xl cursor-pointer">
-            <div class="card-container relative">
-              <div class="cards one relative overflow-hidden">
-                <img
-                  src="./assets/banner.jpeg"
-                  alt="clientwork_img"
-                  class="w-full rounded-lg object-contain"
-                />
-              </div>
-              <div
-                class="cards two absolute top-0 bottom-0 right-0 left-0 overflow-hidden"
-              >
-                <img
-                  src="./assets/Social Media Management.png"
-                  alt="clientwork_img"
-                  class="rounded-lg w-full object-contain"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="max-w-3xl py-10 md:py-0">
-            <h2 class="text-3xl py-2 font-semibold">
-              BSides Ahmedabad
-              <span>
-                <i class="fa-solid fa-arrow-right -rotate-45"></i>
-              </span>
-            </h2>
-            <div
-              class="flex justify-start flex-wrap sm:justify-start gap-2 sm:gap-4 mt-4"
-            >
-              <button
-                class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
-              >
-                Development
-              </button>
-              <button
-                class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
-              >
-                Designing
-              </button>
-              <button
-                class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
-              >
-                Branding
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="max-w-6xl mx-auto lg:flex flex flex-col lg:flex-row justify-center items-center lg:gap-20 px-4 pt-14"
-        >
-          <div class="container max-w-xl cursor-pointer">
-            <div class="card-container relative">
-              <div class="cards one relative overflow-hidden">
-                <img
-                  src="./assets/banner.jpeg"
-                  alt="clientwork_img"
-                  class="w-full rounded-lg object-contain"
-                />
-              </div>
-              <div
-                class="cards two absolute top-0 bottom-0 right-0 left-0 overflow-hidden"
-              >
-                <img
-                  src="./assets/Social Media Management.png"
-                  alt="clientwork_img"
-                  class="rounded-lg w-full object-contain"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="max-w-3xl py-10 md:py-0">
-            <h2 class="text-3xl py-2 font-semibold">
-              Pucca Skin Care
-              <span>
-           
-                <i class="fa-solid fa-arrow-right -rotate-45"></i>
-              </span>
-            </h2>
-
-            <div
-              class="flex justify-start flex-wrap sm:justify-start gap-2 sm:gap-4 mt-4"
-            >
-              <button
-                class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
-              >
-                Social Media
-              </button>
-              <button
-                class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
-              >
-                Designing
-              </button>
-              <button
-                class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
-              >
-                Branding
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="max-w-6xl mx-auto lg:flex flex flex-col lg:flex-row justify-center items-center lg:gap-20 px-4 pt-14"
-        >
-          <div class="container max-w-xl cursor-pointer">
-            <div class="card-container relative">
-              <div class="cards one relative overflow-hidden">
-                <img
-                  src="./assets/banner.jpeg"
-                  alt="clientwork_img"
-                  class="w-full rounded-lg object-contain"
-                />
-              </div>
-              <div
-                class="cards two absolute top-0 bottom-0 right-0 left-0 overflow-hidden"
-              >
-                <img
-                  src="./assets/Social Media Management.png"
-                  alt="clientwork_img"
-                  class="rounded-lg w-full object-contain"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="max-w-3xl py-10 md:py-0">
-            <h2 class="text-3xl py-2 font-semibold">
-              BSides Goa
-              <span>
-            
-                <i class="fa-solid fa-arrow-right -rotate-45"></i>
-              </span>
-            </h2>
-            <div
-              class="flex justify-start flex-wrap sm:justify-start gap-2 sm:gap-4 mt-4"
-            >
-              <button
-                class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
-              >
-                Development
-              </button>
-              <button
-                class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
-              >
-                Designing
-              </button>
-              <button
-                class="uppercase px-4 py-2 border rounded-full hover:bg-[#C9F31D]"
-              >
-                Branding
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
     <!--How It Works  -->
     <!-- <div id="work">
@@ -1953,27 +2162,68 @@
       </div>
     </div> -->
 
-    <!-- Portfolio -->
-    <div class="max-w-7xl px-4 mx-auto py-20">
+    <!-- portfolio upper -->
+
+    <!-- Our Last Prooject -->
+    <div class="max-w-7xl px-4 mx-auto">
+
       <div
-        class="mb-8 pt-6 px-4 before:w-full txt uppercase text-xl font-semibold inline-block hover:scale-x-110 relative"
+        class="pt-6 px-4 pb-6 before:w-full txt uppercase text-xl font-semibold inline-block hover:scale-x-110 relative"
       >
         <h2
-          class="relative before:absolute before:bg-[#adc555] before:top-7 before:w-0 before:h-1 hover:before:w-[100%] txt"
+          class="relative before:absolute cursor-pointer before:top-7 before:w-0 before:h-1 hover:before:w-[100%] txt"
         >
-          Portfolio
+          Our Portfolio
         </h2>
       </div>
+      <h2 class="max-w-2xl text-3xl md:text-5xl font-bold py-8">
+        Our latest work
+      </h2>
+      <div class="py-2 justify-end items-end flex gap-2">
+        <button class="border px-4 py-2 rounded-lg" id="idesktop">
+          <i class="fa-solid fa-desktop"></i>
+        </button>
+        <button class="border px-4 py-2 rounded-lg" id="itablet">
+          <i class="fa-solid fa-tablet"></i>
+        </button>
+        <button class="border px-4 py-2 rounded-lg" id="iphone">
+          <i class="fa-solid fa-mobile"></i>
+        </button>
+      </div>
+      <div class="h-[800px] max-w-7xl mx-auto flex justify-center">
+        <iframe
+          id="iframeSection"
+          src="https://bsidesahmedabad.in/"
+          height="700"
+          width="1240"
+          name="iframe"
+          title="This is my video"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Portfolio -->
+    <div class="max-w-7xl px-4 mx-auto">
+      <div
+        class="pt-6 px-4 before:w-full uppercase text-xl font-semibold inline-block hover:scale-x-110 relative"
+      >
+        <!-- <h2
+  class="cursor-pointer  pt-6 px-4 before:w-full txt txt3 relative uppercase text-xl font-semibold inline-block hover:scale-x-110">
+  Our Portfolio
+</h2> -->
+      </div>
       <div class="portfolioSwiper">
-        <div class="swiper portfolioswiper pt-20 max-w-7xl mx-auto rounded-2xl">
-          <div class="swiper-wrapper flex w-1/2">
+        <div class="swiper portfolioswiper max-w-4xl mx-auto rounded-2xl">
+          <div class="swiper-wrapper flex">
+
             <div class="swiper-slide px-4 md:px-0">
               <!-- <div class="rounded-2xl w-full px-20 mx-auto"> -->
               <div class="flex justify-center items-center px-4">
                 <img
-                  class="w-full"
-                  src="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1696464000&semt=sph"
-                  alt=""
+                  class="md:w-[672px] md:h-[672px]"
+                  src="assets/Bsides-Ahm-Event-Sold-Out.jpg"
+                  alt="Our Portfolio"
+
                 />
               </div>
               <!-- </div> -->
@@ -1981,41 +2231,152 @@
             <div class="swiper-slide px-4 md:px-0">
               <div class="rounded-2xl max-w-7xl mx-auto">
                 <div class="flex justify-center items-center px-4">
-                  <img class="w-full" src="./assets/banner.jpeg" alt="" />
+                  <img
+                    class="md:w-[672px] md:h-[672px]"
+                    src="./assets/Bsides-Ahm-LANYARD-SPONSOR.jpg"
+                    alt="Our Portfolio"
+                  />
+
                 </div>
               </div>
             </div>
             <div class="swiper-slide px-4 md:px-0">
               <div class="rounded-2xl max-w-7xl mx-auto">
                 <div class="flex justify-center items-center px-4">
-                  <img class="w-full" src="./assets/banner.jpeg" alt="" />
+                  <img
+                    class="md:w-[672px] md:h-[672px]"
+                    src="./assets/client-branding.jpg"
+                    alt="Our Portfolio"
+                  />
+
                 </div>
               </div>
             </div>
             <div class="swiper-slide px-4 md:px-0">
               <div class="rounded-2xl max-w-7xl mx-auto">
                 <div class="flex justify-center items-center px-4">
-                  <img class="w-full" src="./assets/banner.jpeg" alt="" />
+                  <img
+                    class="md:w-[672px] md:h-[672px]"
+                    src="./assets/Client-branding-design.jpg"
+                    alt="Our Portfolio"
+                  />
+
                 </div>
               </div>
             </div>
             <div class="swiper-slide px-4 md:px-0">
               <div class="rounded-2xl max-w-7xl mx-auto">
                 <div class="flex justify-center items-center px-4">
-                  <img class="w-full" src="./assets/banner.jpeg" alt="" />
+                  <img
+                    class="md:w-[672px] md:h-[672px]"
+                    src="./assets/Client-Logos-Sample.png"
+                    alt="Our Portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="w-full md:w-[672px] md:h-[672px]"
+                    src="./assets/business-Logos.png"
+                    alt="Our Portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="w-full md:w-[672px] md:h-[672px]"
+                    src="./assets/Fitful-Post-3.jpg"
+                    alt="Our Portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="w-full md:w-[672px] md:h-[672px]"
+                    src="./assets/Home-pages-mock-up.png"
+                    alt="Our Portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="w-full md:w-[672px] md:h-[672px]"
+                    src="./assets/Dao-Ui-UX.png"
+                    alt="Our Portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="w-full md:w-[672px] md:h-[672px]"
+                    src="./assets/Gardening-Homepage.png"
+                    alt="Our Portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="w-full md:w-[672px] md:h-[672px]"
+                    src="./assets/Visual-Designer-Mock-up.jpg"
+                    alt="Our Portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="w-full md:w-[672px] md:h-[672px]"
+                    src="./assets/Website-hosting-Mock-up.jpg"
+                    alt="Our Portfolio"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide px-4 md:px-0">
+              <div class="rounded-2xl max-w-7xl mx-auto">
+                <div class="flex justify-center items-center px-4">
+                  <img
+                    class="w-full md:w-[672px] md:h-[672px]"
+                    src="./assets/Real-Estate-Mockup.jpg"
+                    alt="Our Portfolio"
+                  />
+
                 </div>
               </div>
             </div>
           </div>
           <div class="swiper-pagination mt-4"></div>
-          <div class="swiper-button-prev cursor-pointer hidden md:block"></div>
-          <div class="swiper-button-next cursor-pointer hidden md:block"></div>
+          <div class="swiper-button-prev cursor-pointer block"></div>
+          <div class="swiper-button-next cursor-pointer block"></div>
+
           <!-- <div class="swiper-scrollbar hidden"></div> -->
         </div>
       </div>
     </div>
+
+
     <!-- client Review -->
-    <div id="clients" class="hidden md:block">
+    <div id="clients" class="hidden md:block pt-20">
       <div class="max-w-7xl px-4 mx-auto">
         <h2
           class="cursor-pointer pt-6 px-4 before:w-full txt txt3 relative uppercase text-xl font-semibold inline-block hover:scale-x-110"
@@ -2034,7 +2395,7 @@
               <div
                 class="relative top-20 -right-60 border bg-[#000] w-10 h-10 rounded-full flex justify-center items-center"
               >
-                <img src="./assets/like.png" alt="" />
+                <img src="./assets/like.png" alt="Like emoji" />
               </div>
               <img
                 src="./assets/testimonial-picture.jpg"
@@ -2043,7 +2404,7 @@
               />
               <img
                 src="./assets/dots.png"
-                alt=""
+                alt="Dots image"
                 class="relative -top-20 -left-10"
               />
             </div>
@@ -2073,16 +2434,16 @@
                 <div
                   class="relative top-20 -right-60 border bg-[#000] w-10 h-10 rounded-full flex justify-center items-center"
                 >
-                  <img src="./assets/like.png" alt="" />
+                  <img src="./assets/like.png" alt="Like Emoji" />
                 </div>
                 <img
                   src="./assets/clients-review.jpg"
-                  alt=""
+                  alt="client picture"
                   class="rounded-3xl h-[295px] w-[275px]"
                 />
                 <img
                   src="./assets/dots.png"
-                  alt=""
+                  alt="Dots Image"
                   class="relative -top-20 -left-10"
                 />
               </div>
@@ -2103,20 +2464,14 @@
     </div>
 
     <!-- Client Review For Mobile -->
-    <div id="client" class="max-w-7xl mx-auto md:hidden block">
+    <div id="client" class="max-w-7xl mx-auto md:hidden block pt-20">
       <div class="max-w-7xl px-4 mx-auto">
         <h2
           class="pt-6 px-4 before:w-full txt txt3 relative uppercase text-xl font-semibold inline-block hover:scale-x-110"
         >
           CLIENT REVIEWS
         </h2>
-        <div class="flex justify-center pt-20">
-          <!-- <div class="text-center max-w-lg">
-          <h2 class="py-4 relative text-3xl font-semibold text-center uppercase after:absolute after:w-16 after:h-1 after:top-[50px] after:bg-[#C9F31D] after:left-[50%]
-          before:absolute before:w-16 before:h-1 before:top-[50px] before:bg-[#C9F31D] before:right-[50%] ">
-          TESTIMONIAL
-          </h2> -->
-        </div>
+        <div class="flex justify-center pt-20"></div>
       </div>
       <div class="swiper testimonialswiper">
         <div class="swiper-wrapper flex">
@@ -2125,7 +2480,7 @@
               <div class="flex flex-col justify-center items-center px-4 gap-4">
                 <img
                   src="./assets/testimonial-picture.jpg"
-                  alt=""
+                  alt="testimonial-picture"
                   class="w-40"
                 />
                 <p class="text-xl text-center">
@@ -2152,7 +2507,7 @@
               <div class="flex flex-col justify-center items-center px-4 gap-4">
                 <img
                   src="./assets/client-testimonial.jpg"
-                  alt=""
+                  alt="Client testimonial"
                   class="w-40"
                 />
                 <p class="text-xl text-center">
@@ -2174,7 +2529,11 @@
           <div class="swiper-slide px-4 md:px-0">
             <div class="rounded-2xl max-w-[500px] mx-auto">
               <div class="flex flex-col justify-center items-center px-4 gap-4">
-                <img src="./assets/clients-review.jpg" alt="" class="w-40" />
+                <img
+                  src="./assets/clients-review.jpg"
+                  alt="Client review"
+                  class="w-40"
+                />
                 <p class="text-xl text-center">
                   "We were so impressed with the results of our marketing
                   campaign from CYATT. They totally crushed it and helped us
@@ -2204,7 +2563,7 @@
           <div class="left w-full md:w-1/2">
             <img
               src="./assets/people-working-on-laptop.png"
-              alt=""
+              alt="Team working"
               class="hidden md:block"
             />
           </div>

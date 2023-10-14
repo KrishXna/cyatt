@@ -188,14 +188,18 @@ const swiper = new Swiper(".swiper", {
 const swiperSlideNext = document.querySelector(".swiper").swiper;
 swiperSlideNext.slideNext();
 
-// portfolioswiper
+
+// portfolio Slider
+
 const portfolioswiper = new Swiper(".portfolioswiper", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
   autoplay: {
-    delay: 5000,
-    disableOnInteraction: true,
+
+    delay: 3000,
+    disableOnInteraction: false,
+
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -429,4 +433,20 @@ virtualRadio.addEventListener("change", function () {
 inOfficeRadio.addEventListener("change", function () {
   inOfficeOption.style.backgroundColor = "#c9f31d";
   virtualOption.style.backgroundColor = "transparent";
+});
+
+const iframeDesktop = document.getElementById("idesktop");
+const iframeTablet = document.getElementById("itablet");
+const iframePhone = document.getElementById("iphone");
+
+const iframeSection = document.getElementById("iframeSection");
+
+iframeDesktop.addEventListener("click", () => {
+  iframeSection.style.width = "1240px";
+});
+iframeTablet.addEventListener("click", () => {
+  iframeSection.style.width = "768px";
+});
+iframePhone.addEventListener("click", () => {
+  iframeSection.style.width = "360px";
 });
