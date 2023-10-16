@@ -77,7 +77,7 @@ function rotate() {
   rotateElm = !rotateElm;
 }
 
-// Logo slider
+// // Logo slider
 const swiper1 = new Swiper(".swiper1", {
   // Optional parameters
   direction: "horizontal",
@@ -109,42 +109,12 @@ const swiper1 = new Swiper(".swiper1", {
   },
 });
 
-// Testimonial Slider
-const testimonialswiper = new Swiper(".testimonialswiper", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
-
-// Pricing Card
+// // Pricing Card
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
+  allowTouchMove: false,
+
   // slidesPerView: 1,
   // initialSlide: 1,
   // loop: true,
@@ -161,6 +131,11 @@ const swiper = new Swiper(".swiper", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    renderBullet: function (index, className) {
+      const arr = ["Basic", "Advanced", "Professional"];
+
+      return `<span class=${className}>${arr[index]}</span>`;
+    },
   },
 
   // Navigation arrows
@@ -188,18 +163,66 @@ const swiper = new Swiper(".swiper", {
 const swiperSlideNext = document.querySelector(".swiper").swiper;
 swiperSlideNext.slideNext();
 
-
 // portfolio Slider
-
 const portfolioswiper = new Swiper(".portfolioswiper", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
+  slidesPerView: 1,
+  allowTouchMove: false,
   autoplay: {
+    delay: 5000,
+    disableOnInteraction: true,
+  },
 
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: false,
+    renderBullet: function (index, className) {
+      const arr = [
+        "BRANDING",
+        "BRANDING",
+        "DESIGN",
+        "MARKETING",
+        "LOGO DESIGN",
+        "LOGO DESIGN",
+        "SOCIAL MEDIA",
+        "UI/UX",
+        "UI/UX",
+        "UI/UX",
+        "DEVELOPMENT",
+        "DEVELOPMENT",
+        "DEVELOPMENT",
+      ];
+      return `<span class=${className}>${arr[index]}</span>`;
+    },
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: false,
+  },
+});
+// // Testimonial Slider
+const testimonialswiper = new Swiper(".testimonialswiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  autoplay: {
     delay: 3000,
     disableOnInteraction: false,
-
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -209,7 +232,7 @@ const portfolioswiper = new Swiper(".portfolioswiper", {
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
+    clickable: false,
   },
 
   // Navigation arrows
@@ -443,10 +466,19 @@ const iframeSection = document.getElementById("iframeSection");
 
 iframeDesktop.addEventListener("click", () => {
   iframeSection.style.width = "1240px";
+  iframeDesktop.classList.add("active");
+  iframeTablet.classList.remove("active");
+  iframePhone.classList.remove("active");
 });
 iframeTablet.addEventListener("click", () => {
   iframeSection.style.width = "768px";
+  iframeTablet.classList.add("active");
+  iframePhone.classList.remove("active");
+  iframeDesktop.classList.remove("active");
 });
 iframePhone.addEventListener("click", () => {
   iframeSection.style.width = "360px";
+  iframePhone.classList.add("active");
+  iframeTablet.classList.remove("active");
+  iframeDesktop.classList.remove("active");
 });
