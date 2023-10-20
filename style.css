@@ -2205,6 +2205,10 @@ button:has(:last-child:active)::before {
     display: flex;
   }
 
+  .lg\:h-\[400px\] {
+    height: 400px;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
