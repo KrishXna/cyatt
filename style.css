@@ -727,6 +727,10 @@ video {
   margin-top: 6px;
 }
 
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
 .block {
   display: block;
 }
@@ -801,6 +805,10 @@ video {
 
 .h-\[800px\] {
   height: 800px;
+}
+
+.h-\[400px\] {
+  height: 400px;
 }
 
 .max-h-0 {
@@ -1016,6 +1024,10 @@ video {
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-40 {
+  gap: 10rem;
 }
 
 .gap-x-4 {
@@ -1318,6 +1330,10 @@ video {
 
 .pt-\[72px\] {
   padding-top: 72px;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .text-left {
@@ -2045,6 +2061,10 @@ button:has(:last-child:active)::before {
     margin-top: 25px;
   }
 
+  .md\:-mt-6 {
+    margin-top: -1.5rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2119,6 +2139,14 @@ button:has(:last-child:active)::before {
 
   .md\:pt-14 {
     padding-top: 3.5rem;
+  }
+
+  .md\:pb-14 {
+    padding-bottom: 3.5rem;
+  }
+
+  .md\:pt-8 {
+    padding-top: 2rem;
   }
 
   .md\:text-2xl {
