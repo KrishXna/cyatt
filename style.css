@@ -1177,11 +1177,6 @@ video {
   background-color: rgb(201 243 29 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#c6c6c6\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(198 198 198 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#c9f31d\] {
   --tw-bg-opacity: 1;
   background-color: rgb(201 243 29 / var(--tw-bg-opacity));
@@ -1555,7 +1550,7 @@ video {
 }
 
 .portfolioSwiper {
-  --swiper-navigation-size: 25px;
+  --swiper-navigation-size: 20px;
 }
 
 .navbar {
