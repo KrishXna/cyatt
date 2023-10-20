@@ -77,8 +77,43 @@ function rotate() {
   rotateElm = !rotateElm;
 }
 
+//Text Swiper  Roll over
+const textswiper = new Swiper(".textswiper", {
+  draggable: true,
+  freemode: true,
+  speed: 3000,
+  spaceBetween: 30,
+
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  allowTouchMove: false,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+
+  breakpoints: {
+    // 300: {
+    //   slidesPerView: 2,
+    //   slidesPerColumn: 2,
+    // },
+    640: {
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+    },
+    1024: {
+      slidesPerView: 5,
+      slidesPerColumn: 2,
+    },
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
+
 // // Logo slider
-const swiper1 = new Swiper(".swiper1", {
+const logoswiper = new Swiper(".logoswiper", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
@@ -109,8 +144,95 @@ const swiper1 = new Swiper(".swiper1", {
   },
 });
 
+// portfolio Slider
+const portfolioswiper = new Swiper(".portfolioswiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: 1,
+  allowTouchMove: false,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: false,
+    renderBullet: function (index, className) {
+      const arr = [
+        "BRANDING",
+        "BRANDING",
+        "DESIGN",
+        "MARKETING",
+        "LOGO DESIGN",
+        "LOGO DESIGN",
+        "SOCIAL MEDIA",
+        "BRANDING",
+        "DESIGN",
+        "DESIGN",
+        "BRANDING",
+        "BRANDING",
+        "DESIGN",
+        "BRANDING",
+      ];
+      return `<span class=${className}>${arr[index]}</span>`;
+    },
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: false,
+  },
+});
+
+// // Testimonial Slider
+const testimonialswiper = new Swiper(".testimonialswiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  // slidesPerView: 1,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    // clickable: false,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
+
 // // Pricing Card
-const swiper = new Swiper(".swiper", {
+const pricingswiper = new Swiper(".pricingswiper", {
   // Optional parameters
   direction: "horizontal",
   allowTouchMove: false,
@@ -150,137 +272,21 @@ const swiper = new Swiper(".swiper", {
   },
 });
 (() => {
-  const swiperSliders = swiper[0].slides;
+  const swiperSliders = pricingswiper.slides;
 
   const slidersHeight = swiperSliders.map((swiper) => swiper.clientHeight);
+  console.log({ slidersHeight, pricingswiper });
 
-  swiper[0].on("activeIndexChange", (swiper) => {
+  const handleEvent = (swiper) => {
     const activeIndex = swiper.realIndex;
 
-    swiper.el.style.height = slidersHeight[activeIndex] + 100 + "px";
-  });
+    pricingswiper.el.style.height = slidersHeight[activeIndex] + 100 + "px";
+  };
+
+  pricingswiper.on("activeIndexChange", handleEvent);
+
+  handleEvent(pricingswiper);
 })();
-const swiperSlideNext = document.querySelector(".swiper").swiper;
-swiperSlideNext.slideNext();
-
-// portfolio Slider
-const portfolioswiper = new Swiper(".portfolioswiper", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: true,
-  slidesPerView: 1,
-  allowTouchMove: false,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: true,
-  },
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: false,
-    renderBullet: function (index, className) {
-      const arr = [
-        "BRANDING",
-        "BRANDING",
-        "DESIGN",
-        "MARKETING",
-        "LOGO DESIGN",
-        "LOGO DESIGN",
-        "SOCIAL MEDIA",
-        "UI/UX",
-        "UI/UX",
-        "UI/UX",
-        "DEVELOPMENT",
-        "DEVELOPMENT",
-        "DEVELOPMENT",
-      ];
-      return `<span class=${className}>${arr[index]}</span>`;
-    },
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: false,
-  },
-});
-// // Testimonial Slider
-const testimonialswiper = new Swiper(".testimonialswiper", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: false,
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
-
-// Roll over
-const swiper2 = new Swiper(".swiper2", {
-  draggable: true,
-  freemode: true,
-  speed: 3000,
-  spaceBetween: 30,
-
-  // Optional parameters
-  direction: "horizontal",
-  loop: true,
-  allowTouchMove: false,
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false,
-  },
-
-  breakpoints: {
-    // 300: {
-    //   slidesPerView: 2,
-    //   slidesPerColumn: 2,
-    // },
-    640: {
-      slidesPerView: 2,
-      slidesPerColumn: 2,
-    },
-    1024: {
-      slidesPerView: 5,
-      slidesPerColumn: 2,
-    },
-  },
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
 
 // Form Appwrite Connection
 function formValidate() {
